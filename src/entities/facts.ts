@@ -159,7 +159,13 @@ export async function proposeFactFromArticle(
   }
 
   const accepted = await tryPromoteFact(db, fact.id);
+  await attachFactToArticle(db, article.id, fact.id);
   return { proposed: true, accepted, factId: fact.id };
+}
+
+/** News record → fact pointer (source of truth §3.1.1). Extra coverage still attaches via evidence_article_ids. */
+export async function attachFactToArticle(db: Db, articleId: string, factId: string): Promise<void> {
+  await db.update(articles).set({ factId, updatedAt: new Date() }).where(eq(articles.id, articleId));
 }
 
 /** Promotion rule (FR-9): >=2 distinct publisher domains OR any tier-1 source. */

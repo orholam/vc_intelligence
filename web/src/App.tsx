@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import { Footer, Nav } from "./components/chrome";
 import Landing from "./pages/Landing";
 import Playground from "./pages/Playground";
@@ -32,7 +32,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/playground" element={<Playground />} />
-        <Route path="/latest" element={<Latest />} />
+        <Route path="/updates" element={<Latest view="updates" />} />
+        <Route path="/analytics" element={<Latest view="analytics" />} />
+        <Route path="/latest" element={<Navigate to="/updates" replace />} />
         <Route path="/exoskeleton" element={<Exoskeleton />} />
         <Route path="*" element={<Landing />} />
       </Routes>

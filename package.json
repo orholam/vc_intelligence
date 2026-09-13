@@ -50,6 +50,7 @@
     "worker:start": "node --env-file=.env dist/index.js --mode=worker",
     "api:start": "node --env-file=.env dist/index.js --mode=api",
     "mcp:start": "node --env-file=.env dist/mcp/server.js",
+    "companies:dupes": "tsx --env-file-if-exists=.env.local src/scripts/find-duplicate-companies.ts",
     "rubric:remediate": "tsx --env-file-if-exists=.env.local src/scripts/rubric-remediate.ts",
     "rubric:score": "tsx --env-file-if-exists=.env.local src/scripts/rubric.ts",
     "recluster-facts": "tsx --env-file-if-exists=.env.local src/scripts/recluster-facts.ts",

@@ -8,7 +8,7 @@ import { extractTitleSubject } from "../lib/title-subject.js";
 import { enrichmentMissingFields, writeArticleSummary } from "../enrichment/pipeline.js";
 import { clusterArticle } from "../clustering/cluster.js";
 import { resolveArticle, persistResolution } from "../resolution/resolver.js";
-import { proposeFactFromArticle } from "../entities/facts.js";
+import { proposeFactFromArticle, attachFactToArticle } from "../entities/facts.js";
 import { backfillEntityBaselines } from "../entities/baseline.js";
 import { recordTrace } from "../ops/traces.js";
 import { enqueueArticleDeliveries } from "../webhooks/deliver.js";
@@ -505,6 +505,16 @@ export async function runHarness(deps: PipelineDeps, runId?: string): Promise<Ha
             })
             .onConflictDoNothing({ target: facts.dedupKey })
             .returning({ id: facts.id });
+          const launchFactId =
+            ins[0]?.id ??
+            (
+              await db
+                .select({ id: facts.id })
+                .from(facts)
+                .where(eq(facts.dedupKey, `launch:${l.domain}:${l.day}:${l.itemId}`))
+                .limit(1)
+            )[0]?.id;
+          if (launchFactId) await attachFactToArticle(db, article.id, launchFactId);
           if (ins.length) {
             summary.facts_proposed += 1;
             summary.facts_accepted += 1;
@@ -540,6 +550,16 @@ export async function runHarness(deps: PipelineDeps, runId?: string): Promise<Ha
             })
             .onConflictDoNothing({ target: facts.dedupKey })
             .returning({ id: facts.id });
+          const formdFactId =
+            ins[0]?.id ??
+            (
+              await db
+                .select({ id: facts.id })
+                .from(facts)
+                .where(eq(facts.dedupKey, `formd:${f.accession}`))
+                .limit(1)
+            )[0]?.id;
+          if (formdFactId) await attachFactToArticle(db, article.id, formdFactId);
           if (ins.length) {
             summary.facts_proposed += 1;
             void recordTrace(db, {

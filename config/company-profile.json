@@ -24,12 +24,7 @@
     "location",
     "industry",
     "funding_detail",
-    "mna_and_investment",
-    "management_profile",
-    "product_offering",
-    "business_model",
-    "customer_profile",
-    "technology"
+    "management_profile"
   ],
   "section_tiers": {
     "firmographic": "big",

@@ -1,5 +1,6 @@
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import type { FastifyInstance } from "fastify";
+import { eq } from "drizzle-orm";
 import { createTestDb, isolateConfig, normalizeExecuteShape, type TestDb } from "../helpers/db.js";
 import type { Db } from "../../src/db/index.js";
 import { opaqueId } from "../../src/lib/ulid.js";
@@ -66,6 +67,20 @@ async function seedWorld() {
     confidence: 0.9,
     needsBackfill: false,
     ventureBand: "E2",
+  });
+
+  const publicId = opaqueId("ent");
+  await db.insert(entities).values({
+    id: publicId,
+    canonicalName: "Acme Public Co",
+    website: "acmepublic.example",
+    type: "public",
+    status: "operating",
+    country: "US",
+    industryTags: ["robotics_hardware"],
+    tickers: ["ACME"],
+    confidence: 0.9,
+    needsBackfill: false,
   });
   await db.insert(aliases).values({
     id: opaqueId("als"),
@@ -163,23 +178,31 @@ async function seedWorld() {
   }
 
   // Accepted FR-9 fact so /v1/events has a structured event to serve
-  await db.insert(facts).values({
-    id: opaqueId("fct"),
-    entityId: entId,
-    type: "funding_round",
-    payload: {
-      funding_stage: "series_a",
-      amount_usd_est: 12_000_000,
-      lead_investors: ["Sequoia Capital"],
-      event_date: "2026-08-20",
-    },
-    status: "accepted",
-    evidenceArticleIds: artIds,
-    distinctPublishers: 1,
-    bestSourceTier: 1,
-    dedupKey: "test:acme:funding_round:series_a",
-    promotedAt: new Date(),
-  });
+  const [factRow] = await db
+    .insert(facts)
+    .values({
+      id: opaqueId("fct"),
+      entityId: entId,
+      type: "funding_round",
+      payload: {
+        funding_stage: "series_a",
+        amount_usd_est: 12_000_000,
+        lead_investors: ["Sequoia Capital"],
+        event_date: "2026-08-20",
+      },
+      status: "accepted",
+      evidenceArticleIds: artIds,
+      distinctPublishers: 1,
+      bestSourceTier: 1,
+      dedupKey: "test:acme:funding_round:series_a",
+      promotedAt: new Date(),
+    })
+    .returning({ id: facts.id });
+  if (factRow) {
+    for (const id of artIds) {
+      await db.update(articles).set({ factId: factRow.id }).where(eq(articles.id, id));
+    }
+  }
   return entId;
 }
 
@@ -237,6 +260,9 @@ describe("FR-18 GET /v1/news/", () => {
     expect(art.text_available).toBe(false); // NFR-8 default
     expect(art.excerpt.length).toBeLessThanOrEqual(401);
     expect(art.tags.some((t: { name: string }) => t.name === "funding.series_a")).toBe(true);
+    expect(art.fact_id).toMatch(/^fct_/);
+    expect(art.fact).toMatchObject({ type: "funding_round", funding_stage: "series_a" });
+    expect(art.related_sources.length).toBeGreaterThanOrEqual(1);
   });
 
   it("returns news for a company related in a secondary role too", async () => {
@@ -318,6 +344,20 @@ describe("FR-19 companies endpoints", () => {
     const parsed = CompanySearchResponse.safeParse(res.json());
     expect(parsed.success).toBe(true);
     expect(res.json().data[0].canonical_name).toBe("Acme Robotics");
+  });
+
+  it("default search excludes public companies; entity_type=public still finds them", async () => {
+    const def = await app.inject({ method: "GET", url: "/v1/companies/search?q=Acme&limit=50", headers: H() });
+    const names = def.json().data.map((e: { canonical_name: string }) => e.canonical_name);
+    expect(names).toContain("Acme Robotics");
+    expect(names).not.toContain("Acme Public Co");
+
+    const pub = await app.inject({
+      method: "GET",
+      url: "/v1/companies/search?q=Acme&entity_type=public&limit=50",
+      headers: H(),
+    });
+    expect(pub.json().data.map((e: { canonical_name: string }) => e.canonical_name)).toContain("Acme Public Co");
   });
 
   it("search supports entity_type and funding_stage filters", async () => {
@@ -450,6 +490,7 @@ describe("FR-21 GET /v1/feed", () => {
     expect(parsedFirst.success).toBe(true);
     expect(first.json().events).toHaveLength(1);
     expect(first.json().next_cursor).toBeTruthy();
+    expect(first.json().events[0].article.fact_id).toMatch(/^fct_/);
 
     const second = await app.inject({
       method: "GET",
@@ -477,6 +518,10 @@ describe("GET /v1/news/latest", () => {
     expect(new Date(first.published_date).getTime()).toBeGreaterThanOrEqual(
       new Date(res.json().data[res.json().data.length - 1].published_date).getTime(),
     );
+    expect(first.fact_id).toMatch(/^fct_/);
+    expect(first.fact).toMatchObject({ type: "funding_round", funding_stage: "series_a" });
+    expect(first.related_sources.length).toBeGreaterThanOrEqual(1);
+    expect(first.related_sources[0].url).toMatch(/^https:\/\/techcrunch\.com/);
   });
 
   it("supports category filter and offset paging", async () => {

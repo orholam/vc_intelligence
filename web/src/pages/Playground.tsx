@@ -80,6 +80,39 @@ const ENDPOINTS: EndpointDef[] = [
     ),
   },
   {
+    id: "latest",
+    method: "GET",
+    path: "/v1/news/latest",
+    name: "All-news feed",
+    blurb:
+      "Recent kept news across the index, not just one company. Every row has at least one company. Use unique_article to collapse a story cluster.",
+    params: [
+      { key: "unique_article", label: "unique_article", type: "select", options: ["", "true", "false"] },
+      { key: "start_date", label: "start_date", type: "date" },
+      { key: "end_date", label: "end_date", type: "date" },
+      { key: "category", label: "category", placeholder: "funding.series_a,mna.acquisition" },
+      { key: "limit", label: "limit", type: "number", placeholder: "10" },
+      { key: "offset", label: "offset", type: "number", placeholder: "0" },
+    ],
+  },
+  {
+    id: "facts",
+    method: "GET",
+    path: "/v1/events/",
+    name: "Structured facts",
+    blurb:
+      "Typed objects (funding round, acquisition, …) with amount, stage, and related fields. News of those types points at a row here.",
+    params: [
+      { key: "type", label: "type", placeholder: "funding_round,acquisition" },
+      { key: "stage", label: "stage", placeholder: "series_a" },
+      { key: "country", label: "country", placeholder: "US" },
+      { key: "start_date", label: "start_date", type: "date" },
+      { key: "end_date", label: "end_date", type: "date" },
+      { key: "limit", label: "limit", type: "number", placeholder: "10" },
+      { key: "offset", label: "offset", type: "number", placeholder: "0" },
+    ],
+  },
+  {
     id: "feed",
     method: "GET",
     path: "/v1/feed",
@@ -100,6 +133,8 @@ const DEFAULTS: Record<string, Record<string, string>> = {
   company: {},
   search: { q: "robotics" },
   listgen: {},
+  latest: { unique_article: "true" },
+  facts: { type: "funding_round" },
   feed: { entities: "ent_00000l1" },
 };
 
@@ -132,10 +167,16 @@ const PRESETS: Preset[] = [
     endpointId: "listgen",
   },
   {
-    title: "Sync your stack",
-    desc: "Poll new articles per watched entity with cursor paging — built for CRM background sync.",
-    endpointId: "feed",
-    values: { entities: "ent_00000l1" },
+    title: "Scan the index",
+    desc: "Recent kept news across every company, one row per story.",
+    endpointId: "latest",
+    values: { unique_article: "true" },
+  },
+  {
+    title: "List raises",
+    desc: "Structured funding facts — amount, stage, date — not a pile of headlines.",
+    endpointId: "facts",
+    values: { type: "funding_round" },
   },
 ];
 
@@ -320,7 +361,7 @@ export default function Playground() {
       <section className="mx-auto max-w-6xl px-4 pt-14 sm:px-6">
         <Eyebrow>API playground</Eyebrow>
         <h1 className="mt-3 max-w-3xl font-serif text-4xl leading-[1.08] tracking-tight text-paper-900 md:text-5xl">
-          Query the intelligence layer <em className="italic text-brand-700">right here.</em>
+          Query the news API <em className="italic text-brand-700">right here.</em>
         </h1>
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-paper-600">
           These are live requests against this deployment of the service, sent same-origin to{" "}

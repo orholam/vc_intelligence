@@ -215,16 +215,17 @@ function Hero() {
         <Reveal className="text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] py-1.5 pl-3 pr-3.5 text-xs font-medium text-paper-300 backdrop-blur-sm">
             <span className="rounded-full bg-brand-500 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-paper-50">
-              Sister service
+              News API
             </span>
-            Plugs straight into Copyr deal flow over REST &amp; webhooks
+            Company-resolved signals for VCs — anyone with a key
           </span>
           <h1 className="mx-auto mt-7 max-w-4xl font-serif text-[44px] leading-[1.04] tracking-tight text-paper-50 sm:text-6xl md:text-7xl">
             Every market move, <em className="italic text-brand-300">already resolved.</em>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-paper-400">
-            Copyr Intelligence continuously reads the business news, resolves every story to the right
-            company — namesake-safe — and serves enriched signals to your agents through one clean API.
+            Continuously read the business press, hold it in a waiting room, then publish news
+            records that point at real companies — and at structured facts when the story is a raise,
+            a deal, or similar.
           </p>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
             <a href="mailto:api@copyr.example" className={btnLight}>Get an API key</a>
@@ -235,7 +236,7 @@ function Hero() {
               Try the API live →
             </Link>
           </div>
-          <p className="mt-4 text-xs text-paper-500">OpenAPI 3.1 spec generated from contracts · excerpt-only licensing by default</p>
+          <p className="mt-4 text-xs text-paper-500">OpenAPI 3.1 from the same contracts that validate the API</p>
         </Reveal>
         <Reveal delay={150} className="mt-14 md:mt-20">
           <HeroMock />
@@ -249,9 +250,9 @@ function Hero() {
 
 function ChipMarquee() {
   const chips = [
-    "Entity resolution", "80+ event types", "Sentiment scoring", "Newsworthiness tiers",
-    "Story clustering", "ListGen queries", "GDELT recall", "Alias index matching",
-    "Funding-stage facts", "Industry & geo tags", "AI summaries", "HMAC webhooks",
+    "Company-resolved news", "Waiting room", "Structured facts", "ListGen queries",
+    "Story clustering", "Company cards", "Industry & geo tags", "AI summaries",
+    "Source registry", "Harness editorial", "OpenAPI", "MCP tools",
   ];
   const row = [...chips, ...chips];
   return (
@@ -276,10 +277,10 @@ function ChipMarquee() {
 
 function StatsBand() {
   const stats: Array<[string, string]> = [
-    ["15 min", "from publish to a searchable, enriched signal — p90"],
-    ["80+",    "event types across funding, M&A, leadership and more"],
-    ["$0.001", "blended LLM cost per enriched article, capped monthly"],
-    ["133",    "companies scored every month on the open benchmark"],
+    ["Hold", "nothing publishes until it is kept — junk stays out of the API"],
+    ["Point", "every published story names a real company, not a headline fragment"],
+    ["Facts", "a raise is amount + stage + date, not only a tag on the news"],
+    ["API", "news, cards, search, lists — for anyone with a key"],
   ];
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
@@ -301,10 +302,10 @@ function StatsBand() {
 
 function HowItWorks() {
   const steps: Array<[string, string]> = [
-    ["Ingest", "Hundreds of curated RSS feeds plus GDELT, polled politely and deduped at the door."],
-    ["Resolve", "Every article is tied to a company via alias indexes and domain evidence — LLM judges only the ties."],
-    ["Enrich", "Event taxonomy, sentiment, newsworthiness, industry, geography and a neutral AI summary."],
-    ["Serve", "Signals land on a clean REST API under /v1, ready for Copyr, agents or your own stack."],
+    ["Ingest", "Curated RSS and other collectors, polled politely and deduped at the door."],
+    ["Waiting room", "Cheap cleaning, then hold. Noise here is cheaper than missing a real company."],
+    ["Harness", "Keep, discard, create companies, attach facts. Incomplete rows do not ship."],
+    ["Serve", "News, cards, search, lists, and structured facts on a clean REST API."],
   ];
   return (
     <section id="pipeline" className="scroll-mt-20 border-y border-paper-900/[0.08] bg-white/40">
@@ -335,9 +336,11 @@ function HowItWorks() {
 
 const ENDPOINTS = [
   "GET /v1/news",
+  "GET /v1/news/latest",
   "GET /v1/companies/:id",
   "GET /v1/companies/search",
   "POST /v1/list/generate/companies",
+  "GET /v1/events",
   "GET /v1/feed",
 ];
 
@@ -368,16 +371,16 @@ function ApiSection() {
               Built for agents first, humans welcome.
             </h2>
             <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-paper-400">
-              Like Copyr itself, the intelligence layer treats agents as first-class clients:
-              a thin REST surface with predictable shapes, an OpenAPI spec generated from zod
-              contracts, and an MCP server exposing the same core tools.
+              Agents are first-class clients: a thin REST surface with predictable shapes,
+              an OpenAPI spec generated from the same contracts, and an MCP server exposing
+              the same core tools. No CRM required.
             </p>
             <ul className="mt-7 space-y-2.5 text-sm text-paper-300">
               {[
                 "Auth via hashed x-api-key keys, rate-limited per key",
                 "Pagination envelopes with total/count/offset on every list",
-                "Excerpt + attribution by default; takedown endpoint honored",
-                "Webhooks with signed payloads and backoff retries",
+                "Headline + source link; we do not republish the article",
+                "Typed news points at a structured fact row",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <IconCheck className="mt-0.5 text-emerald-400" />
@@ -426,7 +429,7 @@ function FinalCta() {
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-paper-600">
             Point a client at <span className="font-mono text-base">/v1</span> and pull your first
-            resolved signals in minutes — no schema mapping, no scraping.
+            resolved signals in minutes.
           </p>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
             <a href="mailto:api@copyr.example" className={btnDark}>Get an API key</a>

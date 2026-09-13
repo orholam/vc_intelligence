@@ -1,12 +1,14 @@
 # Copyr Intelligence
 
-A standalone news-intelligence API service: **entity-resolved company news signals**
-and **natural-language company list generation (ListGen)** — the market-intelligence
-layer for Copyr (and any other API-keyed client).
+A standalone **news-intelligence API for VCs**: collect company-relevant news,
+hold it in a waiting room, publish records that point at real companies (and
+at structured facts when the story is a raise, a deal, or similar).
 
-Per `REQUIREMENTS.md` §1.1 this is a fully independent service: own package.json +
-lockfile, own Postgres (pgvector), own object storage, own CI, zero imports from the
-Copyr monorepo (`apps/*`, `packages/*`). Integration is REST + webhooks only.
+**Spec:** [`source_of_truth.md`](./source_of_truth.md). **Cleanup order:**
+[`CLEANUP-PLAN.md`](./CLEANUP-PLAN.md). `REQUIREMENTS.md` is historical.
+
+This is its own product (own DB, own deploy). Copyr the CRM may call it later.
+Until then, ignore Copyr.
 
 ---
 
@@ -82,20 +84,22 @@ Tests run **without Docker**: the integration suite uses in-process Postgres
 | `pnpm import:edgar -- --enrich=500` | FR-7 SEC EDGAR filers (+submissions enrichment) |
 | `pnpm import:companies-house -- --queries="fintech london"` | FR-7 UK Companies House |
 | `pnpm import:seeds` | FR-7 curated seed lists from `config/seeds/*.json\|csv` |
-| `pnpm benchmark:run -- --window-days=7` | FR-23 self-benchmark vs akta methodology |
+| `pnpm benchmark:run -- --window-days=7` | optional eval (not a product success bar) |
 | `pnpm pipeline:replay -- --article=<id> [--from=enrich]` | R02: re-drive one article through the uniform stage chain |
 | `pnpm profile:run -- [--entity=ent_x] [--limit=50] [--no-crawl]` | FR-25: manual company-profile sweep (same engine as the hourly tick) |
 | `pnpm pipeline:reconcile -- --window-days=31` | R04/G5/R05: raw-item reconciliation + zero-row enrichment assertions (exit 1 on fail) |
 | `pnpm rubric:probes -- --window-days=31` | OUTPUT-RUBRIC probe pack (P0-P13, gates G1/G2/G4, R05/R06/R07/R09/R10) as markdown |
 | `pnpm rubric:sample -- --window-days=31` | §8 judgment protocol: stratified samples + fixed-column `rubric/YYYY-MM/judgments.csv` |
-| `pnpm mcp:start` | FR-22 MCP server (stdio): 3 agent tools |
-| `tsx src/scripts/backup.ts` | NFR-3 daily `pg_dump` w/ 14-day rotation |
+| `pnpm mcp:start` | MCP: product API + waiting-room list / harness fire |
+| `tsx src/scripts/find-duplicate-companies.ts` | same-website duplicate cards (merge via admin API) |
 
 ## HTTP API v1 (auth: `x-api-key`; errors `{error:{code,message}}`; envelope `{total,count,offset,data}`)
 
-| Endpoint | FR |
+| Endpoint | Notes |
 |---|---|
-| `GET /v1/news/?company=<id\|slug\|domain\|url>&start_date&end_date&category=a,b&unique_article&blacklisted=d1,d2&limit&offset` | FR-18 |
+| `GET /v1/news/?company=<id\|slug\|domain\|url>&start_date&end_date&category=a,b&unique_article&blacklisted=d1,d2&limit&offset` | news by company |
+| `GET /v1/news/latest` — all kept news with a company attached (`fact_id` when typed) | all-news feed |
+| `GET /v1/events/` — structured facts (funding, M&A, …) | facts list |
 | `GET /v1/news/overview?days&topic_limit` — state-of-the-index aggregates: deduped daily kept volume (by newsworthiness), noise-stage lifecycle snapshot, top event tags | FR-18 |
 | `GET /v1/companies/:id` · `GET /v1/companies/search?q&industry&country&venture_band` | FR-19 |
 | `GET /v1/companies/mix` — canonical-set venture-band / HQ-country / entity-type distributions for monitoring views | FR-19 |
@@ -110,8 +114,10 @@ Tests run **without Docker**: the integration suite uses in-process Postgres
 | `GET /v1/admin/dashboard` (budget state, per-stage LLM $, volumes, discard rate) | NFR-4 |
 | `GET /openapi.json` — OpenAPI **3.1** generated from the same zod contracts that validate requests/responses | FR-18 AC |
 
-MCP tools mirror the core: `get_company_news`, `search_companies`,
-`generate_company_list`, `get_company_enrichment`.
+MCP tools wrap the product API: `get_company_news` (includes `fact_id`),
+`search_companies`, `generate_company_list`, `get_company_enrichment`,
+`list_facts`. Admin: `list_waiting_room`, `run_waiting_room_harness`
+(claim loop stays `GET /internal/llm/claim`).
 
 ## Pipeline (pg-boss on Postgres — no Redis/Kafka)
 

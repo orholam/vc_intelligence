@@ -39,7 +39,7 @@ export async function queryRankedCompanies(
     sql`e.needs_backfill = false`,
     // Funds are not operating companies; a "pre-seed fintech" list must not
     // return pooled investment vehicles that filed their own Form Ds.
-    sql`(e.type IS NULL OR e.type NOT IN ('fund','person-org'))`,
+    sql`(e.type IS NULL OR e.type NOT IN ('fund','person-org','public'))`,
   ];
   // C4 swarm demotion: E3 entities never appear on discovery surfaces unless
   // the query explicitly targets the stages where swarm companies live.

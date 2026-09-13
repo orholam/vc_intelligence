@@ -5,6 +5,7 @@ import { getConfig } from "../../config.js";
 import { Errors } from "../../lib/errors.js";
 import { autocreateEntity } from "../../entities/autocreate.js";
 import { excerpt } from "../../lib/text.js";
+import { TRACKED_COMPANY_SQL } from "../../entities/tracked.js";
 import type { AppDeps } from "../deps.js";
 import { registerRoute } from "../openapi.js";
 import {
@@ -55,6 +56,39 @@ type ArticleOut = z.infer<typeof NewsResponse>["data"][number];
 
 type EntityLink = { id: string; name: string; role: "primary" | "secondary" };
 
+type RelatedSource = {
+  id: string;
+  url: string;
+  publisher: string;
+  published_date: string;
+};
+
+type FactSnippet = {
+  id: string;
+  type: string;
+  status: "proposed" | "accepted" | "rejected";
+  funding_stage: string | null;
+  amount_usd_est: number | null;
+  lead_investors: string[];
+  event_date: string | null;
+};
+
+function factSnippetFromRow(r: Record<string, unknown>): FactSnippet {
+  const payload = (r.payload ?? {}) as Record<string, unknown>;
+  const status = r.status === "accepted" || r.status === "rejected" ? r.status : "proposed";
+  return {
+    id: String(r.id),
+    type: String(r.type ?? ""),
+    status,
+    funding_stage: typeof payload.funding_stage === "string" ? payload.funding_stage : null,
+    amount_usd_est: payload.amount_usd_est != null ? Number(payload.amount_usd_est) : null,
+    lead_investors: Array.isArray(payload.lead_investors)
+      ? payload.lead_investors.map((x) => String(x))
+      : [],
+    event_date: typeof payload.event_date === "string" ? payload.event_date : null,
+  };
+}
+
 /** All companies related to each of the given articles (any role), primary first. */
 async function hydrateEntities(
   db: AppDeps["db"],
@@ -82,10 +116,75 @@ async function hydrateEntities(
   return map;
 }
 
-function toArticle(
+export async function hydrateFacts(
+  db: AppDeps["db"],
+  rows: Array<Record<string, unknown>>,
+): Promise<Map<string, FactSnippet>> {
+  const map = new Map<string, FactSnippet>();
+  const ids = [
+    ...new Set(rows.map((r) => (r.fact_id != null ? String(r.fact_id) : "")).filter(Boolean)),
+  ];
+  if (!ids.length) return map;
+  const facts = await db.execute<Record<string, unknown>>(sql`
+    SELECT id, type, status, payload FROM facts
+    WHERE id IN (${sql.join(ids.map((id) => sql`${id}`), sql`, `)})
+  `);
+  const byId = new Map(facts.map((f) => [String(f.id), factSnippetFromRow(f)]));
+  for (const r of rows) {
+    const fid = r.fact_id != null ? String(r.fact_id) : "";
+    const snippet = fid ? byId.get(fid) : undefined;
+    if (snippet) map.set(String(r.id), snippet);
+  }
+  return map;
+}
+
+export async function hydrateRelatedSources(
+  db: AppDeps["db"],
+  rows: Array<Record<string, unknown>>,
+): Promise<Map<string, RelatedSource[]>> {
+  const map = new Map<string, RelatedSource[]>();
+  const clusters = [
+    ...new Set(
+      rows
+        .map((r) => (r.story_cluster_id != null ? String(r.story_cluster_id) : ""))
+        .filter(Boolean),
+    ),
+  ];
+  if (!clusters.length) return map;
+  const sibs = await db.execute<Record<string, unknown>>(sql`
+    SELECT id, story_cluster_id, url, publisher_domain, published_at
+    FROM articles
+    WHERE noise_stage = 'kept'
+      AND story_cluster_id IN (${sql.join(clusters.map((id) => sql`${id}`), sql`, `)})
+    ORDER BY is_cluster_representative DESC, published_at DESC
+  `);
+  const byCluster = new Map<string, RelatedSource[]>();
+  for (const s of sibs) {
+    const cid = String(s.story_cluster_id);
+    const list = byCluster.get(cid) ?? [];
+    list.push({
+      id: String(s.id),
+      url: String(s.url ?? ""),
+      publisher: String(s.publisher_domain ?? ""),
+      published_date: new Date(String(s.published_at)).toISOString(),
+    });
+    byCluster.set(cid, list);
+  }
+  for (const r of rows) {
+    const cid = r.story_cluster_id != null ? String(r.story_cluster_id) : "";
+    if (!cid) continue;
+    const others = (byCluster.get(cid) ?? []).filter((x) => x.id !== String(r.id)).slice(0, 8);
+    if (others.length) map.set(String(r.id), others);
+  }
+  return map;
+}
+
+export function toArticle(
   r: Record<string, unknown>,
   passthrough: boolean,
   links: EntityLink[],
+  fact: FactSnippet | null = null,
+  related: RelatedSource[] = [],
 ): ArticleOut {
   const primary = links.find((l) => l.role === "primary");
   return {
@@ -111,6 +210,9 @@ function toArticle(
     excerpt: excerpt(String(r.excerpt_text ?? r.title ?? ""), 400),
     text_available: passthrough,
     first_coverage: Boolean(r.first_coverage),
+    fact_id: fact?.id ?? (r.fact_id != null ? String(r.fact_id) : null),
+    fact,
+    related_sources: related,
   };
 }
 
@@ -261,8 +363,16 @@ export function registerNewsRoutes(app: FastifyInstance, deps: AppDeps) {
 
     const passthrough = getConfig().TEXT_PASSTHROUGH;
     const linksByArticle = await hydrateEntities(deps.db, rows.map((r) => String(r.id)));
+    const factsByArticle = await hydrateFacts(deps.db, rows);
+    const relatedByArticle = await hydrateRelatedSources(deps.db, rows);
     const data: ArticleOut[] = rows.map((r) =>
-      toArticle(r, passthrough, linksByArticle.get(String(r.id)) ?? []),
+      toArticle(
+        r,
+        passthrough,
+        linksByArticle.get(String(r.id)) ?? [],
+        factsByArticle.get(String(r.id)) ?? null,
+        relatedByArticle.get(String(r.id)) ?? [],
+      ),
     );
 
     return reply.send({
@@ -331,10 +441,18 @@ export function registerNewsRoutes(app: FastifyInstance, deps: AppDeps) {
 
     const passthrough = getConfig().TEXT_PASSTHROUGH;
     const linksByArticle = await hydrateEntities(deps.db, rows.map((r) => String(r.id)));
+    const factsByArticle = await hydrateFacts(deps.db, rows);
+    const relatedByArticle = await hydrateRelatedSources(deps.db, rows);
     const data = rows.map((r) => {
       const links = linksByArticle.get(String(r.id)) ?? [];
       return {
-        ...toArticle(r, passthrough, links),
+        ...toArticle(
+          r,
+          passthrough,
+          links,
+          factsByArticle.get(String(r.id)) ?? null,
+          relatedByArticle.get(String(r.id)) ?? [],
+        ),
         entity_name: links.find((l) => l.role === "primary")?.name ?? links[0]?.name ?? "",
       };
     });
@@ -360,7 +478,7 @@ export function registerNewsRoutes(app: FastifyInstance, deps: AppDeps) {
   app.get("/v1/news/stats", async (_request, reply) => {
     // Canonical company set — identical predicate to /v1/companies/search's
     // default view, so "companies tracked" never disagrees across surfaces.
-    const COMPANY = sql`merged_into IS NULL AND needs_backfill = false AND type NOT IN ('fund', 'person-org')`;
+    const COMPANY = TRACKED_COMPANY_SQL;
     const counts = await deps.db.execute<Record<string, unknown>>(sql`
       SELECT
         (SELECT COUNT(*)::int FROM entities WHERE ${COMPANY}) AS total_entities,

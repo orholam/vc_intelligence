@@ -3,8 +3,7 @@ import type { FastifyInstance } from "fastify";
 import { FeedQuery, FeedResponse } from "../contracts.js";
 import type { AppDeps } from "../deps.js";
 import { registerRoute } from "../openapi.js";
-import { excerpt } from "../../lib/text.js";
-import { FIRST_COVERAGE_COL } from "./news.js";
+import { FIRST_COVERAGE_COL, hydrateFacts, hydrateRelatedSources, toArticle } from "./news.js";
 import { getConfig } from "../../config.js";
 
 /**
@@ -79,35 +78,20 @@ export function registerFeedRoutes(app: FastifyInstance, deps: AppDeps) {
     }
 
     const passthrough = getConfig().TEXT_PASSTHROUGH;
+    const factsByArticle = await hydrateFacts(deps.db, rows);
+    const relatedByArticle = await hydrateRelatedSources(deps.db, rows);
     const events = rows.map((r) => {
       const row = r as Record<string, unknown>;
       const links = linksByArticle.get(String(row.id)) ?? [];
       return {
         type: "article" as const,
-        article: {
-          id: String(row.id),
-          entity_id: links.find((l) => l.role === "primary")?.id ?? links[0]?.id ?? "",
-          entities: links,
-          title: String(row.title ?? ""),
-          url: String(row.url ?? ""),
-          publisher: String(row.publisher_domain ?? ""),
-          published_date: new Date(String(row.published_at)).toISOString(),
-          language: String(row.language ?? "en"),
-          ai_summary: (row.ai_summary as string | null) ?? null,
-          sentiment: (row.sentiment as "positive" | "negative" | "neutral" | null) ?? null,
-          sentiment_score: (row.sentiment_score as number | null) ?? null,
-          newsworthiness: (row.newsworthiness as "high" | "medium" | "low" | null) ?? null,
-          tags: (((row.all_tags as string[] | null)) ?? []).map((t) => ({
-            name: t,
-            is_primary: t === row.primary_tag,
-          })),
-          industry_primary: (row.industry_primary as string | null) ?? null,
-          industry_secondary: (row.industry_secondary as string[] | null) ?? [],
-          countries: (row.countries as string[] | null) ?? [],
-          excerpt: excerpt(String(row.excerpt_text ?? row.title ?? ""), 400),
-          text_available: passthrough,
-          first_coverage: Boolean(row.first_coverage),
-        },
+        article: toArticle(
+          row,
+          passthrough,
+          links,
+          factsByArticle.get(String(row.id)) ?? null,
+          relatedByArticle.get(String(row.id)) ?? [],
+        ),
       };
     });
 

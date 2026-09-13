@@ -18,6 +18,7 @@ import { registerRoute } from "../openapi.js";
 import { Errors } from "../../lib/errors.js";
 import { getCompanyProfileConfig, type ProfileSectionId } from "../../config-files.js";
 import { readEntityProfile } from "../../entities/profile.js";
+import { TRACKED_COMPANY_SQL } from "../../entities/tracked.js";
 
 /** FR-19: company entity card + filtered search. */
 
@@ -140,7 +141,7 @@ export function registerCompanyRoutes(app: FastifyInstance, deps: AppDeps) {
     // explicitly via entity_type, so counts agree with /v1/news/stats.
     const conds = [sql`merged_into IS NULL`, sql`needs_backfill = false`];
     if (q.entity_type) conds.push(sql`type = ${q.entity_type}`);
-    else conds.push(sql`type NOT IN ('fund', 'person-org')`);
+    else conds.push(sql`type NOT IN ('fund', 'person-org', 'public')`);
     if (q.q?.trim()) conds.push(sql`lower(canonical_name) LIKE ${"%" + q.q.trim().toLowerCase() + "%"}`);
     if (q.industry)
       conds.push(
@@ -231,7 +232,7 @@ export function registerCompanyRoutes(app: FastifyInstance, deps: AppDeps) {
     const q = CompanyGrowthQuery.parse(request.query ?? {});
     // Canonical company set — identical predicate to /v1/companies/search's
     // default view, so the series ends exactly at "companies tracked".
-    const COMPANY = sql`merged_into IS NULL AND needs_backfill = false AND type NOT IN ('fund', 'person-org')`;
+    const COMPANY = TRACKED_COMPANY_SQL;
 
     // Build the bucket grid ending at the current bucket so zero-add buckets
     // still appear (and cumulative lines up with COUNT(*)).
@@ -288,7 +289,7 @@ export function registerCompanyRoutes(app: FastifyInstance, deps: AppDeps) {
     const q = CompanyIndustriesQuery.parse(request.query ?? {});
     // Canonical company set — identical predicate to /v1/companies/search's
     // default view, so bubble counts sum against "companies tracked".
-    const COMPANY = sql`merged_into IS NULL AND needs_backfill = false AND type NOT IN ('fund', 'person-org')`;
+    const COMPANY = TRACKED_COMPANY_SQL;
 
     const totals = await deps.db.execute<Record<string, unknown>>(sql`
       SELECT COUNT(*)::int AS n,
@@ -331,7 +332,7 @@ export function registerCompanyRoutes(app: FastifyInstance, deps: AppDeps) {
     const q = CompanyMixQuery.parse(request.query ?? {});
     // Canonical company set — identical predicate to /v1/companies/search's
     // default view, so every bucket sums against "companies tracked".
-    const COMPANY = sql`merged_into IS NULL AND needs_backfill = false AND type NOT IN ('fund', 'person-org')`;
+    const COMPANY = TRACKED_COMPANY_SQL;
 
     const totals = await deps.db.execute<Record<string, unknown>>(sql`
       SELECT COUNT(*)::int AS n

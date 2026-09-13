@@ -39,7 +39,7 @@ export function registerWebhookAndTakedownRoutes(app: FastifyInstance, deps: App
         entityIds: body.entity_ids,
       })
       .returning();
-    return reply.status(201).send(toSubDto(row!));
+    return reply.status(201).send({ ...toSubDto(row!), secret: row!.secret });
   });
 
   registerRoute({

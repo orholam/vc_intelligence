@@ -781,7 +781,7 @@ export async function dueProfileEntities(db: Db, limit: number): Promise<string[
     LEFT JOIN prof ON prof.entity_id = e.id
     WHERE e.merged_into IS NULL
       AND e.needs_backfill = false
-      AND e.type NOT IN ('fund', 'person-org')
+      AND e.type NOT IN ('fund', 'person-org', 'public')
       AND COALESCE(prof.failed_n, 0) = 0
       AND COALESCE(prof.fresh_complete, 0) < ${cfg.mandated_sections.length}
     ORDER BY e.is_monitored DESC, e.confidence DESC, e.updated_at DESC
@@ -804,7 +804,7 @@ export async function profileProgress(db: Db): Promise<{
   );
   const eligible = await db.execute<{ n: number }>(sql`
     SELECT COUNT(*)::int AS n FROM entities
-    WHERE merged_into IS NULL AND needs_backfill = false AND type NOT IN ('fund','person-org')
+    WHERE merged_into IS NULL AND needs_backfill = false AND type NOT IN ('fund','person-org','public')
   `);
   const counts = await db.execute<{
     complete: number;

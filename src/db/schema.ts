@@ -274,6 +274,8 @@ export const articles = pgTable(
     industrySecondary: text("industry_secondary").array().notNull().default(sql`'{}'::text[]`),
     countries: text("countries").array().notNull().default(sql`'{}'::text[]`),
     aiSummary: text("ai_summary"),
+    /** Structured fact this news record points at (funding, M&A, …). Null when untyped. FK in SQL. */
+    factId: text("fact_id"),
 
     // Clustering (FR-17).
     storyClusterId: text("story_cluster_id"),
@@ -311,6 +313,7 @@ export const articles = pgTable(
     index("articles_publisher_domain_idx").on(t.publisherDomain),
     index("articles_newsworthiness_idx").on(t.newsworthiness),
     index("articles_primary_tag_idx").on(t.primaryTag),
+    index("articles_fact_id_idx").on(t.factId),
     index("articles_countries_idx").on(t.countries),
     index("articles_industry_primary_idx").on(t.industryPrimary),
     index("articles_embedding_hnsw_idx").using(

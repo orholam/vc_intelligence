@@ -1,9 +1,12 @@
 # Intelligence Service — Requirements Document
 
-> **Status:** Draft v1 · **Owner:** Copyr platform team
-> **Scope:** A standalone, decoupled news-intelligence API service ("the service").
-> It is NOT part of the Copyr SaaS monorepo runtime — it is a separate deployable
-> service that Copyr (and other clients) consume as an external intelligence layer.
+> **Historical.** This was the original build spec (akta-parity, milestones,
+> budget envelopes). The living product spec is [`source_of_truth.md`](./source_of_truth.md).
+> The cleanup order is [`CLEANUP-PLAN.md`](./CLEANUP-PLAN.md). Where they
+> conflict, **source of truth wins**. Do not treat the FR/NFR list below as
+> a reason to keep code.
+
+---
 
 ---
 

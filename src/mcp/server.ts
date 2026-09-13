@@ -14,9 +14,8 @@ import { interpretQuery } from "../listgen/interpret.js";
 import { queryRankedCompanies } from "../listgen/pipeline.js";
 
 /**
- * FR-22: thin MCP wrapper exposing the same core functions as the REST API:
- *   get_company_news, search_companies, generate_company_list
- * Run: pnpm mcp:start   (stdio transport; agent-friendly per Copyr principles)
+ * Public MCP wrapping the product API: news, search, ListGen, company card, facts.
+ * Run: pnpm mcp:start   (stdio transport)
  */
 
 async function main(): Promise<void> {
@@ -66,7 +65,7 @@ async function main(): Promise<void> {
         const tags = category.split(",").map((t) => t.trim()).filter(Boolean);
         rows = await db.execute(sql`
           SELECT a.title, a.url, a.publisher_domain, a.published_at, a.primary_tag,
-                 a.sentiment, a.newsworthiness, a.ai_summary
+                 a.sentiment, a.newsworthiness, a.ai_summary, a.fact_id
           FROM articles a JOIN article_entities ae ON ae.article_id = a.id
           WHERE ${where} AND (${sql.join(tags.map((t) => sql`${t}::text = ANY(a.all_tags)`), sql` OR `)})
           ORDER BY a.published_at DESC LIMIT ${limit}
@@ -74,7 +73,7 @@ async function main(): Promise<void> {
       } else {
         rows = await db.execute(sql`
           SELECT a.title, a.url, a.publisher_domain, a.published_at, a.primary_tag,
-                 a.sentiment, a.newsworthiness, a.ai_summary
+                 a.sentiment, a.newsworthiness, a.ai_summary, a.fact_id
           FROM articles a JOIN article_entities ae ON ae.article_id = a.id
           WHERE ${where}
           ORDER BY a.published_at DESC LIMIT ${limit}
@@ -184,6 +183,95 @@ async function main(): Promise<void> {
             2,
           ),
         }],
+      };
+    },
+  );
+
+  server.tool(
+    "list_facts",
+    "Structured facts (funding rounds, acquisitions, leadership, closures) with amount, stage, and related fields. News of those types points at a row here.",
+    {
+      type: z.string().optional().describe("comma-separated: funding_round,acquisition,…"),
+      stage: z.string().optional().describe("funding stage, e.g. series_a"),
+      country: z.string().optional().describe("ISO country code"),
+      limit: z.number().int().min(1).max(200).optional().default(10),
+    },
+    async ({ type, stage, country, limit }) => {
+      const conds = [sql`e.merged_into IS NULL`, sql`f.status IN ('accepted', 'proposed')`];
+      if (type) {
+        const types = type.split(",").map((t) => t.trim()).filter(Boolean);
+        if (types.length) {
+          conds.push(sql`(${sql.join(types.map((t) => sql`f.type = ${t}`), sql` OR `)})`);
+        }
+      }
+      if (stage) {
+        const stages = stage.split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+        if (stages.length) {
+          conds.push(
+            sql`(lower(COALESCE(f.payload->>'funding_stage', '')) IN (${sql.join(
+              stages.map((s) => sql`${s}`),
+              sql`, `,
+            )}))`,
+          );
+        }
+      }
+      if (country) conds.push(sql`upper(e.country) = ${country.toUpperCase()}`);
+      const whereSql = sql.join(conds, sql` AND `);
+      const rows = await db.execute(sql`
+        SELECT f.id, f.entity_id, f.type, f.status, f.payload,
+               e.canonical_name AS entity_name, e.country
+        FROM facts f
+        JOIN entities e ON e.id = f.entity_id
+        WHERE ${whereSql}
+        ORDER BY COALESCE(f.promoted_at, f.created_at) DESC
+        LIMIT ${limit ?? 10}
+      `);
+      return {
+        content: [{ type: "text" as const, text: JSON.stringify(rows, null, 2) }],
+      };
+    },
+  );
+
+  server.tool(
+    "list_waiting_room",
+    "Admin: how much is piled in the waiting room (articles that passed rules and await the editorial harness). Does not replace the HTTP claim loop.",
+    {
+      limit: z.number().int().min(1).max(100).optional().default(25),
+    },
+    async ({ limit }) => {
+      const depth = await db.execute(sql`
+        SELECT COUNT(*)::int AS n FROM articles WHERE noise_stage = 'waiting'
+      `);
+      const rows = await db.execute(sql`
+        SELECT id, title, publisher_domain, published_at, primary_tag
+        FROM articles
+        WHERE noise_stage = 'waiting'
+        ORDER BY published_at DESC
+        LIMIT ${limit ?? 25}
+      `);
+      return {
+        content: [{
+          type: "text" as const,
+          text: JSON.stringify({ waiting: Number((depth[0] as { n?: number })?.n ?? 0), items: rows }, null, 2),
+        }],
+      };
+    },
+  );
+
+  server.tool(
+    "run_waiting_room_harness",
+    "Admin: enqueue one harness batch over the waiting room (corrections → new companies → cards → publish). The LLM claim loop (GET /internal/llm/claim) still answers the batch. Keep that HTTP loop running.",
+    {
+      confirm: z.boolean().optional().describe("set true to enqueue; ignored, the call itself fires the run"),
+    },
+    async () => {
+      const cfg = getConfig();
+      const res = await fetch(`http://127.0.0.1:${cfg.APP_PORT}/v1/exoskeleton/harness/run`, {
+        method: "POST",
+      });
+      const body = await res.json().catch(() => ({ error: `HTTP ${res.status}` }));
+      return {
+        content: [{ type: "text" as const, text: JSON.stringify(body, null, 2) }],
       };
     },
   );

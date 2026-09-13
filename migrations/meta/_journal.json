@@ -57,6 +57,13 @@
       "when": 1787679000000,
       "tag": "0007_miscategorization_flags",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1789330000000,
+      "tag": "0008_article_fact_id",
+      "breakpoints": true
     }
   ]
 }

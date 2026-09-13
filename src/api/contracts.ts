@@ -75,6 +75,28 @@ export const ArticleDto = z.object({
   text_available: z.boolean(),
   /** true when this is the earliest kept coverage of its primary entity */
   first_coverage: z.boolean(),
+  /** structured fact this news points at; null when the story is not a material typed event */
+  fact_id: z.string().nullable(),
+  fact: z
+    .object({
+      id: z.string(),
+      type: z.string(),
+      status: z.enum(["proposed", "accepted", "rejected"]),
+      funding_stage: z.string().nullable(),
+      amount_usd_est: z.number().nullable(),
+      lead_investors: z.array(z.string()),
+      event_date: z.string().nullable(),
+    })
+    .nullable(),
+  /** other kept articles in the same story cluster (related source links) */
+  related_sources: z.array(
+    z.object({
+      id: z.string(),
+      url: z.string(),
+      publisher: z.string(),
+      published_date: z.string(),
+    }),
+  ),
 });
 
 export const NewsResponse = paginatedEnvelope(ArticleDto);
@@ -411,6 +433,8 @@ export const WebhookSubscriptionDto = z.object({
   entity_ids: z.array(z.string()),
   active: z.boolean(),
   created_at: z.string(),
+  /** HMAC secret — only present on create */
+  secret: z.string().optional(),
 });
 
 // ------------------------------------------------------------ admin: sources FR-1

@@ -288,7 +288,11 @@ export class EntityKb {
    */
   async search(opts: { q?: string; industry?: string; country?: string; limit?: number; offset?: number }) {
     // R06: flagged (baseline-incomplete) entities stay out of default search.
-    const conds = [sql`${entities.mergedInto} IS NULL`, sql`${entities.needsBackfill} = false`];
+    const conds = [
+      sql`${entities.mergedInto} IS NULL`,
+      sql`${entities.needsBackfill} = false`,
+      sql`${entities.type} NOT IN ('fund', 'person-org', 'public')`,
+    ];
     if (opts.q && opts.q.trim()) {
       conds.push(ilike(entities.canonicalName, `%${opts.q.trim()}%`));
     }

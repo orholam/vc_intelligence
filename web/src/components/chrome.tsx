@@ -100,8 +100,12 @@ export function Nav() {
   const overDarkHero = pathname === "/";
   const solid = scrolled || !overDarkHero;
   const links = [
-    ["Signals", "/#signals"],
-    ["Pipeline", "/#pipeline"],
+    ["Playground", "/playground"],
+  ] as const;
+  const adminLinks = [
+    ["Updates", "/updates"],
+    ["Analytics", "/analytics"],
+    ["Waiting room", "/exoskeleton"],
   ] as const;
   const linkCls = solid
     ? "text-sm text-paper-600 transition hover:text-paper-900"
@@ -120,19 +124,27 @@ export function Nav() {
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {links.map(([label, href]) => (
-            <a key={href} href={href} className={linkCls}>
+            <Link key={href} to={href} className={pathname === href ? activeLinkCls : linkCls}>
               {label}
-            </a>
+            </Link>
           ))}
-          <Link to="/latest" className={pathname === "/latest" ? activeLinkCls : linkCls}>
-            Latest
-          </Link>
-          <Link to="/playground" className={pathname === "/playground" ? activeLinkCls : linkCls}>
-            Playground
-          </Link>
-          <Link to="/exoskeleton" className={pathname === "/exoskeleton" ? activeLinkCls : linkCls}>
-            Exoskeleton
-          </Link>
+          <span className={`hidden h-4 w-px md:block ${solid ? "bg-paper-900/15" : "bg-white/20"}`} aria-hidden="true" />
+          <span className={`text-[10px] font-semibold uppercase tracking-[0.18em] ${solid ? "text-paper-400" : "text-paper-500"}`}>
+            Admin
+          </span>
+          {adminLinks.map(([label, href]) => (
+            <Link
+              key={href}
+              to={href}
+              className={
+                pathname === href || (label === "Updates" && pathname === "/latest")
+                  ? activeLinkCls
+                  : linkCls
+              }
+            >
+              {label}
+            </Link>
+          ))}
           <a href="/openapi.json" className={linkCls}>
             Docs
           </a>
@@ -160,9 +172,10 @@ export function Footer() {
     [
       "Developers",
       [
-        ["Latest index", "/latest"],
         ["API playground", "/playground"],
-        ["Pipeline ops", "/exoskeleton"],
+        ["Updates", "/updates"],
+        ["Analytics", "/analytics"],
+        ["Waiting room", "/exoskeleton"],
         ["OpenAPI spec", "/openapi.json"],
         ["API keys", "mailto:api@copyr.example"],
       ],
@@ -176,8 +189,8 @@ export function Footer() {
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-paper-500">
-              The market-intelligence layer of the Copyr platform — entity-resolved news,
-              signals and lists for venture deal flow.
+              A news-intelligence API for VCs — company-resolved records, structured facts,
+              and lists. Own product, own database.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-10 text-sm sm:grid-cols-3">
@@ -187,7 +200,7 @@ export function Footer() {
                 <ul className="space-y-2">
                   {links.map(([label, href]) => (
                     <li key={label}>
-                      {href === "/playground" || href === "/latest" || href === "/exoskeleton" ? (
+                      {href === "/playground" || href === "/updates" || href === "/analytics" || href === "/exoskeleton" ? (
                         <Link to={href} className="text-paper-600 transition hover:text-paper-900">{label}</Link>
                       ) : (
                         <a href={href} className="text-paper-600 transition hover:text-paper-900">{label}</a>
@@ -200,7 +213,7 @@ export function Footer() {
           </div>
         </div>
         <p className="mt-12 border-t border-paper-900/[0.08] pt-6 text-xs text-paper-400">
-          © 2026 Copyr. Part of the Copyr platform.
+          © 2026 Copyr Intelligence.
         </p>
       </div>
     </footer>

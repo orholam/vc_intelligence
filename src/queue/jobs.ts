@@ -614,11 +614,12 @@ export async function startSchedules(boss: Boss, deps: PipelineDeps, send: SendF
   if (cfg.GDELT_ENABLED) {
     await boss.schedule(QUEUE.gdeltPollTick, `*/${Math.max(15, cfg.GDELT_POLL_MINUTES)} * * * *`);
   }
-  // c-plan left-edge families (REQUIREMENTS §11): Form D lands T+1 on EDGAR,
-  // so one daily pass after 06:00 UTC suffices; launch surfaces re-check
-  // every 2h — adapters are idempotent and self-gated.
-  await boss.schedule(QUEUE.formdPollTick, "10 6 * * *");
-  await boss.schedule(QUEUE.launchPollTick, "23 */2 * * *");
+  if (cfg.FORMD_ENABLED) {
+    await boss.schedule(QUEUE.formdPollTick, "10 6 * * *");
+  }
+  if (cfg.LAUNCH_SURFACES_ENABLED) {
+    await boss.schedule(QUEUE.launchPollTick, "23 */2 * * *");
+  }
   await boss.schedule(QUEUE.webhookSweep, "*/1 * * * *");
   await boss.schedule(QUEUE.retentionSweep, "17 3 * * *"); // daily 03:17 UTC
   // Invariant machinery (R06/R10/R13): bounded, idempotent ticks. The harness

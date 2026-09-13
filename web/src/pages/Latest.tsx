@@ -1,4 +1,5 @@
 import { useEffect, useState, type PointerEvent as ReactPointerEvent, type ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { Eyebrow } from "../components/chrome";
 import { CompanyCardModal } from "../components/company-card";
 import { STAGE_LABELS, STAGE_ORDER, fmtUsd, type Company } from "../components/company-data";
@@ -23,6 +24,17 @@ type Article = {
   countries: string[];
   excerpt: string;
   text_available: boolean;
+  fact_id: string | null;
+  fact: {
+    id: string;
+    type: string;
+    status: string;
+    funding_stage: string | null;
+    amount_usd_est: number | null;
+    lead_investors: string[];
+    event_date: string | null;
+  } | null;
+  related_sources: Array<{ id: string; url: string; publisher: string; published_date: string }>;
 };
 
 type Feed = { total: number; count: number; offset: number; data: Article[] };
@@ -831,7 +843,7 @@ function TypeMix({ byType }: { byType: Array<{ type: string; count: number }> })
   );
 }
 
-export default function Latest() {
+export default function Latest({ view }: { view: "updates" | "analytics" }) {
   const [feed, setFeed] = useState<Feed | null>(null);
   const [sources, setSources] = useState<SourceBreakdown | null>(null);
   const [stats, setStats] = useState<Stats | null>(null);
@@ -1010,46 +1022,81 @@ export default function Latest() {
     <main className="pb-24">
       {/* ------------------------------------------------------------ header */}
       <section className="mx-auto max-w-6xl px-4 pt-10 sm:px-6">
-        <Eyebrow>Live index</Eyebrow>
+        <Eyebrow>Admin</Eyebrow>
         <div className="mt-2 flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
-          <h1 className="font-serif text-3xl leading-tight tracking-tight text-paper-900 md:text-4xl">
-            Everything the pipeline just <em className="italic text-brand-700">resolved.</em>
-          </h1>
-          <div className="flex items-center gap-2">
-            <Toggle checked={auto} onChange={() => setAuto((v) => !v)}>
-              auto-refresh
-            </Toggle>
-            <select
-              value={limit}
-              onChange={(e) => {
-                setLimit(Number(e.target.value));
-                setOffset(0);
-              }}
-              className={inputCls}
-            >
-              {LIMITS.map((n) => (
-                <option key={n} value={n}>
-                  {n} / page
-                </option>
-              ))}
-            </select>
-            <button
-              onClick={() => {
-                setBusy(true);
-                setNonce((n) => n + 1);
-              }}
-              disabled={busy}
-              className="inline-flex h-9 items-center gap-1.5 rounded-lg bg-paper-900 px-3.5 text-[13px] font-medium text-paper-50 transition hover:bg-paper-800 disabled:opacity-40"
-            >
-              <svg width={13} height={13} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className={busy ? "animate-spin" : ""}>
-                <path d="M21 12a9 9 0 1 1-2.64-6.36M21 3v6h-6" />
-              </svg>
-              Refresh
-            </button>
+          <div>
+            <h1 className="font-serif text-3xl leading-tight tracking-tight text-paper-900 md:text-4xl">
+              {view === "updates" ? (
+                <>
+                  What made it into the <em className="italic text-brand-700">index.</em>
+                </>
+              ) : (
+                <>
+                  Corpus health, not the <em className="italic text-brand-700">product.</em>
+                </>
+              )}
+            </h1>
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-paper-500">
+              {view === "updates"
+                ? "Published news records. Spot bad company names, missing facts, and types that should not have shipped."
+                : "Volume, coverage, sources, mix. For us — not a VC-facing page."}
+            </p>
+            <div className="mt-4 flex gap-1 rounded-lg border border-paper-900/10 bg-white/70 p-1">
+              <Link
+                to="/updates"
+                className={`rounded-md px-3 py-1.5 text-[13px] font-medium ${
+                  view === "updates" ? "bg-paper-900 text-paper-50" : "text-paper-600 hover:text-paper-900"
+                }`}
+              >
+                Updates
+              </Link>
+              <Link
+                to="/analytics"
+                className={`rounded-md px-3 py-1.5 text-[13px] font-medium ${
+                  view === "analytics" ? "bg-paper-900 text-paper-50" : "text-paper-600 hover:text-paper-900"
+                }`}
+              >
+                Analytics
+              </Link>
+            </div>
           </div>
+          {view === "updates" && (
+            <div className="flex items-center gap-2">
+              <Toggle checked={auto} onChange={() => setAuto((v) => !v)}>
+                auto-refresh
+              </Toggle>
+              <select
+                value={limit}
+                onChange={(e) => {
+                  setLimit(Number(e.target.value));
+                  setOffset(0);
+                }}
+                className={inputCls}
+              >
+                {LIMITS.map((n) => (
+                  <option key={n} value={n}>
+                    {n} / page
+                  </option>
+                ))}
+              </select>
+              <button
+                onClick={() => {
+                  setBusy(true);
+                  setNonce((n) => n + 1);
+                }}
+                disabled={busy}
+                className="inline-flex h-9 items-center gap-1.5 rounded-lg bg-paper-900 px-3.5 text-[13px] font-medium text-paper-50 transition hover:bg-paper-800 disabled:opacity-40"
+              >
+                <svg width={13} height={13} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className={busy ? "animate-spin" : ""}>
+                  <path d="M21 12a9 9 0 1 1-2.64-6.36M21 3v6h-6" />
+                </svg>
+                Refresh
+              </button>
+            </div>
+          )}
         </div>
 
-        {/* ---------------------------------------------------------- filters */}
+        {view === "updates" && (
         <div className="mt-5 rounded-xl border border-paper-900/10 bg-white/70 p-3">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
             <form
@@ -1124,8 +1171,9 @@ export default function Latest() {
             </p>
           )}
         </div>
+        )}
 
-        {/* --------------------------------------------------------- KPI strip */}
+        {view === "analytics" && (
         <div className="mt-4 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-paper-900/10 bg-paper-900/[0.08] sm:grid-cols-3 lg:grid-cols-5">
           {kpis.map(({ label, value, sub }) => (
             <div key={label} className="bg-white px-4 py-3">
@@ -1135,13 +1183,14 @@ export default function Latest() {
             </div>
           ))}
         </div>
+        )}
       </section>
 
-      {/* --------------------------------------------------- resolved articles */}
+      {view === "updates" && (
       <section className="mx-auto mt-6 max-w-6xl px-4 sm:px-6">
         <Panel>
           <PanelHead
-            title="Latest resolved articles"
+            title="Published news"
             right={
               <span className="num text-[11px] font-medium text-paper-500">
                 {feed !== null && feed.total > 0
@@ -1240,6 +1289,17 @@ export default function Latest() {
                             {a.sentiment_score !== null && ` ${(a.sentiment_score as number).toFixed(2)}`}
                           </span>
                         )}
+                        {a.fact && (
+                          <span className="rounded-full border border-paper-900/[0.16] bg-paper-50 px-1.5 py-px font-medium text-paper-700">
+                            fact · {a.fact.type.replace(/_/g, " ")}
+                            {a.fact.funding_stage ? ` ${a.fact.funding_stage}` : ""}
+                          </span>
+                        )}
+                        {(a.related_sources ?? []).length > 0 && (
+                          <span className="text-paper-400">
+                            also {(a.related_sources ?? []).map((s) => s.publisher).join(", ")}
+                          </span>
+                        )}
                         {a.countries.length > 0 && <span>{a.countries.join(", ")}</span>}
                       </div>
                     </div>
@@ -1261,8 +1321,10 @@ export default function Latest() {
           )}
         </Panel>
       </section>
+      )}
 
-      {/* ------------------------------------------------------ signal pulse */}
+      {view === "analytics" && (
+      <>
       <section className="mx-auto mt-8 max-w-6xl px-4 sm:px-6">
         <Panel>
           <PanelHead
@@ -1783,13 +1845,15 @@ export default function Latest() {
           </Panel>
         </section>
       )}
+      </>
+      )}
 
       {openCompanyId !== null && (
         <CompanyCardModal id={openCompanyId} onClose={() => setOpenCompanyId(null)} />
       )}
 
       <p className="mx-auto mt-10 max-w-6xl px-4 font-mono text-[10.5px] text-paper-400 sm:px-6">
-        Live index · refreshed automatically when auto-refresh is enabled
+        {view === "updates" ? "Published index · admin" : "Corpus analytics · admin"}
       </p>
     </main>
   );

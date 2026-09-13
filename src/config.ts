@@ -49,8 +49,11 @@ const EnvSchema = z.object({
   FETCH_DOMAIN_MIN_INTERVAL_MS: z.coerce.number().int().default(2000),
   RSS_MAX_BACKOFF_HOURS: z.coerce.number().default(24),
 
-  GDELT_ENABLED: zCoerceBool(true),
+  GDELT_ENABLED: zCoerceBool(false),
   GDELT_POLL_MINUTES: z.coerce.number().default(15),
+  /** Extra collectors behind the same funnel. Off by default; RSS is the backbone. */
+  FORMD_ENABLED: zCoerceBool(false),
+  LAUNCH_SURFACES_ENABLED: zCoerceBool(false),
 
   HOT_RETENTION_DAYS: z.coerce.number().int().default(180),
   TEXT_PASSTHROUGH: zCoerceBool(false),
