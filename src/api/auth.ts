@@ -30,7 +30,11 @@ export function generateApiKey(): { id: string; raw: string; hash: string; prefi
 export function makeAuthHook(db: Db) {
   return async function authenticate(request: FastifyRequest): Promise<AuthContext> {
     const header = request.headers["x-api-key"];
-    const raw = Array.isArray(header) ? header[0] : header;
+    const raw =
+      (Array.isArray(header) ? header[0] : header) ||
+      // Same-origin web has no header; Vite proxy / Vercel injects PLAYGROUND_KEY.
+      process.env.PLAYGROUND_KEY ||
+      "";
     if (!raw) throw Errors.unauthorized("Missing x-api-key header");
 
     const [row] = await db

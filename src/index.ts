@@ -25,12 +25,14 @@ async function main(): Promise<void> {
     process.env.LLM_PROVIDER = llmArg;
   }
   const cfg = getConfig();
-  const mode = (process.argv.find((a) => a.startsWith("--mode="))?.split("=")[1] ?? "all") as
-    | "all"
-    | "api"
-    | "worker";
+  const onVercel = Boolean(process.env.VERCEL);
+  const mode = (
+    onVercel
+      ? "api"
+      : (process.argv.find((a) => a.startsWith("--mode="))?.split("=")[1] ?? "all")
+  ) as "all" | "api" | "worker";
 
-  const db = createDb(cfg.DATABASE_URL);
+  const db = createDb(cfg.DATABASE_URL, { max: onVercel ? 1 : 10 });
   const router = new LlmRouter(db, makeProvider(cfg, db));
   const registry = new SourceRegistry(db);
   const kb = new EntityKb(db);
@@ -61,8 +63,9 @@ async function main(): Promise<void> {
 
   if (mode === "all" || mode === "api") {
     const app = buildApiApp(deps);
-    await app.listen({ port: cfg.APP_PORT, host: "0.0.0.0" });
-    logger.info({ port: cfg.APP_PORT }, "API listening");
+    const port = Number(process.env.PORT ?? cfg.APP_PORT);
+    await app.listen({ port, host: "0.0.0.0" });
+    logger.info({ port, mode }, "API listening");
   }
 
   // DB connectivity sanity for the API-only mode too.

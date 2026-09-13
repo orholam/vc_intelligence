@@ -1,0 +1,11 @@
+data
+.tmp
+.dbg
+.freebuff
+.snapshots
+mongo-church
+.cursor
+*.dump
+dist
+xmonitor/node_modules
+launchmonitor/node_modules
