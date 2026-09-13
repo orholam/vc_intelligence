@@ -10,7 +10,8 @@
       "root": ".",
       "framework": "fastify",
       "installCommand": "pnpm install --frozen-lockfile --filter @copyr/intelligence",
-      "buildCommand": "echo skip-tsc"
+      "buildCommand": "echo skip-tsc",
+      "entrypoint": "src/index.ts"
     }
   },
   "rewrites": [

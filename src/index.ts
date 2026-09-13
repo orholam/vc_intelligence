@@ -9,6 +9,9 @@ import { buildApiApp } from "./api/server.js";
 import type { AppDeps } from "./api/deps.js";
 import { ALL_QUEUES, registerWorkers, startSchedules, type PipelineDeps } from "./queue/jobs.js";
 import { createBoss, ensureQueues } from "./queue/boss.js";
+// Vercel's Fastify detector only looks at this file, not buildApiApp().
+import Fastify from "fastify";
+void Fastify;
 
 /**
  * Entrypoint. Modes:
