@@ -9,8 +9,7 @@
     "api": {
       "root": ".",
       "framework": "fastify",
-      "installCommand": "pnpm install --frozen-lockfile --filter @copyr/intelligence",
-      "includeFiles": "config/**"
+      "installCommand": "pnpm install --frozen-lockfile --filter @copyr/intelligence"
     }
   },
   "rewrites": [
