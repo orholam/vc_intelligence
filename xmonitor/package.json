@@ -1,0 +1,39 @@
+{
+  "name": "@copyr/xmonitor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "X (Twitter) launch watcher: polls authenticated search for 'introducing'-style product launches with native video, dedupes to SQLite, emits digests.",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "xmonitor": "./src/cli.ts"
+  },
+  "scripts": {
+    "watch": "tsx --env-file-if-exists=.env src/cli.ts watch",
+    "once": "tsx --env-file-if-exists=.env src/cli.ts once",
+    "digest": "tsx --env-file-if-exists=.env src/cli.ts digest",
+    "runs": "tsx --env-file-if-exists=.env src/cli.ts runs",
+    "list": "tsx --env-file-if-exists=.env src/cli.ts list",
+    "session:check": "tsx --env-file-if-exists=.env src/cli.ts session-check",
+    "auth": "tsx --env-file-if-exists=.env src/cli.ts auth",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src test",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@the-convocation/twitter-scraper": "^0.22.3",
+    "pino": "^9.6.0",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "eslint": "^9.20.0",
+    "playwright": "^1.62.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.24.0",
+    "vitest": "^3.1.0"
+  }
+}

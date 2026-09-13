@@ -1,0 +1,25 @@
+{
+  "$comment": "A5 declared thesis weights: intended shape of kept volume across sectors/geos. Default even spread with documented exceptions for mission focus.",
+  "version": "2026.08.1",
+  "sector_weights": {
+    "_default_even": true,
+    "exceptions": {
+      "ai_ml": 2.0,
+      "fintech": 1.5,
+      "govtech_defense": 1.5,
+      "energy_transition": 1.5,
+      "media_entertainment": 0.3,
+      "sports_fitness": 0.3,
+      "fashion_apparel": 0.4
+    }
+  },
+  "geo_weights": {
+    "_default_even": true,
+    "exceptions": {
+      "US": 1.2
+    }
+  },
+  "max_unintended_sector_share": 0.4,
+  "min_meaningful_sectors": 8,
+  "min_non_us_share": 0.25
+}

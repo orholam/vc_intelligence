@@ -1,0 +1,45 @@
+{
+  "gates": {
+    "G1": {
+      "dupDomains": 0,
+      "dupNameCountry": 0,
+      "pass": true
+    },
+    "G2": {
+      "total": 3311,
+      "bad": 0,
+      "tooLong": 0,
+      "pass": true
+    },
+    "G3": {
+      "exists": true,
+      "pass": true
+    },
+    "G4": {
+      "missingLedgerDays": 0,
+      "degradeEvents": 0,
+      "pass": true
+    },
+    "G5": {
+      "total": 5197,
+      "unexplained": 0,
+      "pass": true
+    },
+    "G6": {
+      "excerptOk": true,
+      "takedownRoute": true,
+      "pass": true
+    }
+  },
+  "points": {
+    "A": 11,
+    "B": 20,
+    "C": 11.5,
+    "D": 10.4,
+    "E": 10,
+    "F": 3,
+    "G": 2
+  },
+  "totalRaw": 67.9,
+  "capped": 67.9
+}

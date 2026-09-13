@@ -1,0 +1,519 @@
+{
+  "$comment": "A2 gold-event truth set for window 2026-07-22 .. 2026-08-22. Collected after month events from public announcements (techstartups.com roundups, TechCrunch, PR Newswire, tech.eu, ImpactAlpha) via free web search; dates are announcement dates, 'approx' marks borderline-window entries. Matching rule (rubric \u00a7A2): entity matched by domain or alias; event matched by primary_tag family or accepted fact.",
+  "version": "2026.08.1",
+  "window": {
+    "start": "2026-07-22",
+    "end": "2026-08-23"
+  },
+  "events": [
+    {
+      "id": "ge01",
+      "company": "Firmus Grid",
+      "domain": "firmusgrid.com",
+      "aliases": [
+        "firmus"
+      ],
+      "expected_category": "funding.late_stage",
+      "date": "2026-08-07",
+      "country": "AU",
+      "source": "thebusinessperspective.com"
+    },
+    {
+      "id": "ge02",
+      "company": "Hadrian",
+      "domain": "hadrian.io",
+      "aliases": [
+        "hadrian automation"
+      ],
+      "expected_category": "funding.late_stage",
+      "date": "2026-08-05",
+      "country": "US",
+      "source": "thebusinessperspective.com"
+    },
+    {
+      "id": "ge03",
+      "company": "Base Power",
+      "domain": "basepowercompany.com",
+      "aliases": [
+        "base power"
+      ],
+      "expected_category": "funding.late_stage",
+      "date": "2026-08-04",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge04",
+      "company": "Valar Atomics",
+      "domain": "valaratomics.com",
+      "aliases": [
+        "valar"
+      ],
+      "expected_category": "funding.series_b",
+      "date": "2026-08-04",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge05",
+      "company": "HappyRobot",
+      "domain": "happyrobot.ai",
+      "aliases": [
+        "happyrobot"
+      ],
+      "expected_category": "funding.series_c",
+      "date": "2026-08-04",
+      "country": "ES",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge06",
+      "company": "Function Health",
+      "domain": "functionhealth.com",
+      "aliases": [
+        "function health"
+      ],
+      "expected_category": "funding.unknown_round",
+      "date": "2026-08-06",
+      "country": "US",
+      "source": "thebusinessperspective.com"
+    },
+    {
+      "id": "ge07",
+      "company": "Moove",
+      "domain": "moove.io",
+      "aliases": [
+        "moove"
+      ],
+      "expected_category": "funding.unknown_round",
+      "date": "2026-08-05",
+      "country": "GB",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge08",
+      "company": "Eliyan",
+      "domain": "eliyan.com",
+      "aliases": [
+        "eliyan"
+      ],
+      "expected_category": "funding.series_c",
+      "date": "2026-08-06",
+      "country": "US",
+      "source": "thebusinessperspective.com"
+    },
+    {
+      "id": "ge09",
+      "company": "Vaderis Therapeutics",
+      "domain": "vaderis.com",
+      "aliases": [
+        "vaderis"
+      ],
+      "expected_category": "funding.series_b",
+      "date": "2026-08-11",
+      "country": "CH",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge10",
+      "company": "inKind",
+      "domain": "inkind.com",
+      "aliases": [
+        "inkind"
+      ],
+      "expected_category": "funding.debt_financing",
+      "date": "2026-08-11",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge11",
+      "company": "Aureka Biotechnologies",
+      "domain": "aurekabio.com",
+      "aliases": [
+        "aureka"
+      ],
+      "expected_category": "funding.series_b",
+      "date": "2026-08-10",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge12",
+      "company": "Vertical Aerospace",
+      "domain": "vertical-aerospace.com",
+      "aliases": [
+        "vertical aerospace"
+      ],
+      "expected_category": "funding.debt_financing",
+      "date": "2026-08-11",
+      "country": "GB",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge13",
+      "company": "Flagler Health",
+      "domain": "flaglerhealth.co",
+      "aliases": [
+        "flagler health"
+      ],
+      "expected_category": "funding.series_b",
+      "date": "2026-08-11",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge14",
+      "company": "ApartmentIQ",
+      "domain": "apartmentiq.com",
+      "aliases": [
+        "apartmentiq"
+      ],
+      "expected_category": "expansion.capacity_investment",
+      "date": "2026-08-11",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge15",
+      "company": "Axle",
+      "domain": "useaxle.com",
+      "aliases": [
+        "axle insurance",
+        "axle"
+      ],
+      "expected_category": "funding.series_a",
+      "date": "2026-08-11",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge16",
+      "company": "Quartr",
+      "domain": "quartr.com",
+      "aliases": [
+        "quartr"
+      ],
+      "expected_category": "funding.series_a",
+      "date": "2026-08-11",
+      "country": "SE",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge17",
+      "company": "Versa Vascular",
+      "domain": "versavascular.com",
+      "aliases": [
+        "versa vascular"
+      ],
+      "expected_category": "funding.series_c",
+      "date": "2026-08-11",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge18",
+      "company": "Zenity",
+      "domain": "zenity.io",
+      "aliases": [
+        "zenity"
+      ],
+      "expected_category": "funding.series_c",
+      "date": "2026-08-04",
+      "country": "IL",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge19",
+      "company": "QuantHealth",
+      "domain": "quanthealth.ai",
+      "aliases": [
+        "quanthealth"
+      ],
+      "expected_category": "funding.series_b",
+      "date": "2026-08-04",
+      "country": "IL",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge20",
+      "company": "Ore Energy",
+      "domain": "ore.energy",
+      "aliases": [
+        "ore energy"
+      ],
+      "expected_category": "funding.series_a",
+      "date": "2026-08-05",
+      "country": "NL",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge21",
+      "company": "Castelion",
+      "domain": "castelion.com",
+      "aliases": [
+        "castelion"
+      ],
+      "expected_category": "funding.series_c",
+      "date": "2026-08-19",
+      "country": "US",
+      "source": "prnewswire.com"
+    },
+    {
+      "id": "ge22",
+      "company": "Blueprint Finance",
+      "domain": "blueprint.finance",
+      "aliases": [
+        "concrete defi",
+        "blueprint finance"
+      ],
+      "expected_category": "funding.unknown_round",
+      "date": "2026-08-19",
+      "country": "US",
+      "source": "prnewswire.com"
+    },
+    {
+      "id": "ge23",
+      "company": "Hopscotch Primary Care",
+      "domain": "hopscotchhealth.org",
+      "aliases": [
+        "hopscotch primary care"
+      ],
+      "expected_category": "funding.series_b",
+      "date": "2026-08-19",
+      "country": "US",
+      "source": "prnewswire.com"
+    },
+    {
+      "id": "ge24",
+      "company": "Vessev",
+      "domain": "vessev.com",
+      "aliases": [
+        "vessev"
+      ],
+      "expected_category": "funding.series_a",
+      "date": "2026-08-20",
+      "country": "NZ",
+      "source": "prnewswire.com"
+    },
+    {
+      "id": "ge25",
+      "company": "Math Magic",
+      "domain": "mathmagic.ai",
+      "aliases": [
+        "math magic"
+      ],
+      "expected_category": "funding.series_a",
+      "date": "2026-08-20",
+      "country": "US",
+      "source": "prnewswire.com"
+    },
+    {
+      "id": "ge26",
+      "company": "Wispr",
+      "domain": "wisprflow.ai",
+      "aliases": [
+        "wispr",
+        "wispr flow"
+      ],
+      "expected_category": "funding.unknown_round",
+      "date": "2026-08-17",
+      "country": "US",
+      "source": "techcrunch.com"
+    },
+    {
+      "id": "ge27",
+      "company": "Rillet",
+      "domain": "rillet.com",
+      "aliases": [
+        "rillet"
+      ],
+      "expected_category": "funding.series_c",
+      "date": "2026-08-21",
+      "country": "US",
+      "source": "techcrunch.com"
+    },
+    {
+      "id": "ge28",
+      "company": "Starcloud",
+      "domain": "starcloud.com",
+      "aliases": [
+        "starcloud inc"
+      ],
+      "expected_category": "funding.series_a",
+      "date": "2026-08-21",
+      "country": "US",
+      "source": "techcrunch.com"
+    },
+    {
+      "id": "ge29",
+      "company": "River",
+      "domain": "riverindia.in",
+      "aliases": [
+        "river electric",
+        "river mobility"
+      ],
+      "expected_category": "funding.series_c",
+      "date": "2026-08-05",
+      "country": "IN",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge30",
+      "company": "Convex",
+      "domain": "convex.dev",
+      "aliases": [
+        "convex backend"
+      ],
+      "expected_category": "funding.series_b",
+      "date": "2026-08-05",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge31",
+      "company": "Aurelius Systems",
+      "domain": "aureliussystems.com",
+      "aliases": [
+        "aurelius systems"
+      ],
+      "expected_category": "funding.series_a",
+      "date": "2026-08-05",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge32",
+      "company": "Yellow Card",
+      "domain": "yellowcard.io",
+      "aliases": [
+        "yellow card financial"
+      ],
+      "expected_category": "funding.unknown_round",
+      "date": "2026-08-05",
+      "country": "NG",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge33",
+      "company": "InRisk Labs",
+      "domain": "inrisklabs.com",
+      "aliases": [
+        "inrisk labs"
+      ],
+      "expected_category": "funding.series_a",
+      "date": "2026-08-10",
+      "country": "IN",
+      "source": "impactalpha.com"
+    },
+    {
+      "id": "ge34",
+      "company": "Meta Platforms",
+      "domain": "meta.com",
+      "aliases": [
+        "meta",
+        "muse code"
+      ],
+      "expected_category": "product.ai_model_release",
+      "date": "2026-08-06",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge35",
+      "company": "Neo",
+      "domain": "neo.inc",
+      "aliases": [
+        "neo security"
+      ],
+      "expected_category": "funding.seed",
+      "date": "2026-07-21",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge36",
+      "company": "Natural",
+      "domain": "natural.io",
+      "aliases": [
+        "natural payments"
+      ],
+      "expected_category": "funding.series_a",
+      "date": "2026-07-21",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge37",
+      "company": "Empirical Security",
+      "domain": "empiricalsecurity.com",
+      "aliases": [
+        "empirical security"
+      ],
+      "expected_category": "funding.series_a",
+      "date": "2026-07-21",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge38",
+      "company": "Infinity",
+      "domain": "infinity.ai",
+      "aliases": [
+        "infinity inference"
+      ],
+      "expected_category": "funding.seed",
+      "date": "2026-07-20",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge39",
+      "company": "Plazza",
+      "domain": "plazza.in",
+      "aliases": [
+        "plazza pharmacy"
+      ],
+      "expected_category": "funding.series_a",
+      "date": "2026-07-20",
+      "country": "IN",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge40",
+      "company": "Brenus Pharma",
+      "domain": "brenus-pharma.com",
+      "aliases": [
+        "brenus pharma"
+      ],
+      "expected_category": "funding.series_a",
+      "date": "2026-07-20",
+      "country": "FR",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge41",
+      "company": "Adjuvia Therapeutics",
+      "domain": "adjuvia.com",
+      "aliases": [
+        "adjuvia therapeutics"
+      ],
+      "expected_category": "funding.seed",
+      "date": "2026-07-29",
+      "country": "US",
+      "source": "techstartups.com"
+    },
+    {
+      "id": "ge42",
+      "company": "Sabertooth Capital",
+      "domain": "sabertooth.capital",
+      "aliases": [
+        "sabertooth capital"
+      ],
+      "expected_category": "funding.fund_close",
+      "date": "2026-07-30",
+      "country": "US",
+      "source": "techcrunch.com"
+    }
+  ]
+}

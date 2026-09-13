@@ -1,0 +1,1334 @@
+{
+  "companies": [
+    {
+      "id": "aesc",
+      "name": "AESC",
+      "website": "aesc-group.com",
+      "founded_year": 2007,
+      "hq_city": "Yokohama",
+      "hq_country_iso3": "JPN",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "affirm",
+      "name": "Affirm",
+      "website": "affirm.com",
+      "founded_year": 2012,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": false,
+      "is_non_us": false
+    },
+    {
+      "id": "anchorage_digital",
+      "name": "Anchorage Digital",
+      "website": "anchorage.com",
+      "founded_year": 2017,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "apollo_tyres",
+      "name": "Apollo Tyres",
+      "website": "apollotyres.com",
+      "founded_year": 1972,
+      "hq_city": "Gurgaon",
+      "hq_country_iso3": "IND",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "astrazeneca",
+      "name": "AstraZeneca",
+      "website": "astrazeneca.com",
+      "founded_year": 1999,
+      "hq_city": "Cambridge",
+      "hq_country_iso3": "GBR",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "bausch_health",
+      "name": "Bausch Health",
+      "website": "bauschhealth.com",
+      "founded_year": 2011,
+      "hq_city": "Laval",
+      "hq_country_iso3": "CAN",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "be_forward",
+      "name": "BE FORWARD",
+      "website": "beforward.jp",
+      "founded_year": 2004,
+      "hq_city": "Tokyo",
+      "hq_country_iso3": "JPN",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "bigbasket",
+      "name": "BigBasket",
+      "website": "bigbasket.com",
+      "founded_year": 2011,
+      "hq_city": "Bangalore",
+      "hq_country_iso3": "IND",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "binghatti",
+      "name": "Binghatti",
+      "website": "binghatti.com",
+      "founded_year": 2008,
+      "hq_city": "Dubai",
+      "hq_country_iso3": "ARE",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "block",
+      "name": "Block",
+      "website": "block.xyz",
+      "founded_year": 2009,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": false,
+      "is_non_us": false
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "website": "canva.com",
+      "founded_year": 2013,
+      "hq_city": "Sydney",
+      "hq_country_iso3": "AUS",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "cbi_health",
+      "name": "CBI Health",
+      "website": "cbihealth.ca",
+      "founded_year": 1974,
+      "hq_city": "Toronto",
+      "hq_country_iso3": "CAN",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "circle",
+      "name": "Circle",
+      "website": "circle.com",
+      "founded_year": 2013,
+      "hq_city": "New York",
+      "hq_country_iso3": "USA",
+      "is_private": false,
+      "is_non_us": false
+    },
+    {
+      "id": "cred",
+      "name": "CRED",
+      "website": "cred.club",
+      "founded_year": 2018,
+      "hq_city": "Bangalore",
+      "hq_country_iso3": "IND",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "dp_world",
+      "name": "DP World",
+      "website": "dpworld.com",
+      "founded_year": 1979,
+      "hq_city": "Dubai",
+      "hq_country_iso3": "ARE",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "ducab",
+      "name": "Ducab",
+      "website": "ducab.com",
+      "founded_year": 1979,
+      "hq_city": "Dubai",
+      "hq_country_iso3": "ARE",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "emirates_nuclear_energy_corporation",
+      "name": "Emirates Nuclear Energy Corporation",
+      "website": "enec.gov.ae",
+      "founded_year": 2009,
+      "hq_city": "Abu Dhabi",
+      "hq_country_iso3": "ARE",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "ensemble_health_partners",
+      "name": "Ensemble Health Partners",
+      "website": "ensemblehp.com",
+      "founded_year": 2014,
+      "hq_city": "Cincinnati",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "etihad_rail",
+      "name": "Etihad Rail",
+      "website": "etihadrail.ae",
+      "founded_year": 2009,
+      "hq_city": "Abu Dhabi",
+      "hq_country_iso3": "ARE",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "ev_motors_japan",
+      "name": "EV Motors Japan",
+      "website": "evm-j.com",
+      "founded_year": 2019,
+      "hq_city": "Kitakyushu",
+      "hq_country_iso3": "JPN",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "figure",
+      "name": "Figure AI",
+      "website": "figure.ai",
+      "founded_year": 2022,
+      "hq_city": "San Jose",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "form3",
+      "name": "Form3",
+      "website": "form3.tech",
+      "founded_year": 2016,
+      "hq_city": "London",
+      "hq_country_iso3": "GBR",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "funding_circle",
+      "name": "Funding Circle",
+      "website": "fundingcircle.com",
+      "founded_year": 2010,
+      "hq_city": "London",
+      "hq_country_iso3": "GBR",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "stake",
+      "name": "Stake",
+      "website": "getstake.com",
+      "founded_year": 2020,
+      "hq_city": "Dubai",
+      "hq_country_iso3": "ARE",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "glean",
+      "name": "Glean",
+      "website": "glean.com",
+      "founded_year": 2019,
+      "hq_city": "Palo Alto",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "knight_therapeutics",
+      "name": "Knight Therapeutics",
+      "website": "gud-knight.com",
+      "founded_year": 1995,
+      "hq_city": "Westmount",
+      "hq_country_iso3": "CAN",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "harvey",
+      "name": "Harvey",
+      "website": "harvey.ai",
+      "founded_year": 2022,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "healthkart",
+      "name": "Healthkart",
+      "website": "healthkart.com",
+      "founded_year": 2011,
+      "hq_city": "Gurgaon",
+      "hq_country_iso3": "IND",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "himalaya_wellness",
+      "name": "Himalaya Wellness",
+      "website": "himalayawellness.in",
+      "founded_year": 1930,
+      "hq_city": "Bangalore",
+      "hq_country_iso3": "IND",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "hindustan_unilever",
+      "name": "Hindustan Unilever",
+      "website": "hul.co.in",
+      "founded_year": 1933,
+      "hq_city": "Mumbai",
+      "hq_country_iso3": "IND",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "ironclad",
+      "name": "Ironclad",
+      "website": "ironcladapp.com",
+      "founded_year": 2014,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "itc",
+      "name": "ITC",
+      "website": "itcportal.com",
+      "founded_year": 1910,
+      "hq_city": "Kolkata",
+      "hq_country_iso3": "IND",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "khazna_data_centers",
+      "name": "Khazna Data Centers",
+      "website": "khaznadatacenters.com",
+      "founded_year": 2012,
+      "hq_city": "Dubai",
+      "hq_country_iso3": "ARE",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "lemonade",
+      "name": "Lemonade",
+      "website": "lemonade.com",
+      "founded_year": 2015,
+      "hq_city": "New York",
+      "hq_country_iso3": "USA",
+      "is_private": false,
+      "is_non_us": false
+    },
+    {
+      "id": "lendinvest",
+      "name": "LendInvest",
+      "website": "lendinvest.com",
+      "founded_year": 2008,
+      "hq_city": "London",
+      "hq_country_iso3": "GBR",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "llamaindex",
+      "name": "LlamaIndex",
+      "website": "llamaindex.cloud",
+      "founded_year": 2023,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "marelli",
+      "name": "MARELLI",
+      "website": "marelli.com",
+      "founded_year": 1919,
+      "hq_city": "Saitama",
+      "hq_country_iso3": "JPN",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "marico",
+      "name": "Marico",
+      "website": "marico.com",
+      "founded_year": 1988,
+      "hq_city": "Mumbai",
+      "hq_country_iso3": "IND",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "masdar",
+      "name": "Masdar",
+      "website": "masdar.ae",
+      "founded_year": 2006,
+      "hq_city": "Abu Dhabi",
+      "hq_country_iso3": "ARE",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "johnson_matthey",
+      "name": "Johnson Matthey",
+      "website": "matthey.com",
+      "founded_year": 1813,
+      "hq_city": "London",
+      "hq_country_iso3": "GBR",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "website": "mercury.com",
+      "founded_year": 2017,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "monzo",
+      "name": "Monzo",
+      "website": "monzo.com",
+      "founded_year": 2017,
+      "hq_city": "London",
+      "hq_country_iso3": "GBR",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "website": "n8n.io",
+      "founded_year": 2019,
+      "hq_city": "Berlin",
+      "hq_country_iso3": "DEU",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "nestl_india",
+      "name": "Nestlé India",
+      "website": "nestle.in",
+      "founded_year": 1959,
+      "hq_city": "Gurgaon",
+      "hq_country_iso3": "IND",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "nextera_energy",
+      "name": "NextEra Energy",
+      "website": "nexteraenergy.com",
+      "founded_year": 1925,
+      "hq_city": "Palm Beach",
+      "hq_country_iso3": "USA",
+      "is_private": false,
+      "is_non_us": false
+    },
+    {
+      "id": "opensignal",
+      "name": "Opensignal",
+      "website": "opensignal.com",
+      "founded_year": 2010,
+      "hq_city": "London",
+      "hq_country_iso3": "GBR",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "palantir_technologies",
+      "name": "Palantir Technologies",
+      "website": "palantir.com",
+      "founded_year": 2003,
+      "hq_city": "Denver",
+      "hq_country_iso3": "USA",
+      "is_private": false,
+      "is_non_us": false
+    },
+    {
+      "id": "palo_alto_networks",
+      "name": "Palo Alto Networks",
+      "website": "paloaltonetworks.com",
+      "founded_year": 2005,
+      "hq_city": "Santa Clara",
+      "hq_country_iso3": "USA",
+      "is_private": false,
+      "is_non_us": false
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "website": "perplexity.ai",
+      "founded_year": 2022,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "physicsx",
+      "name": "PhysicsX",
+      "website": "physicsx.ai",
+      "founded_year": 2022,
+      "hq_city": "London",
+      "hq_country_iso3": "GBR",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "poolside",
+      "name": "Poolside",
+      "website": "poolside.ai",
+      "founded_year": 2023,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "qodo",
+      "name": "Qodo",
+      "website": "qodo.ai",
+      "founded_year": 2022,
+      "hq_city": "Tel Aviv",
+      "hq_country_iso3": "ISR",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "ramp",
+      "name": "Ramp",
+      "website": "ramp.com",
+      "founded_year": 2019,
+      "hq_city": "New York",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "rapyd",
+      "name": "Rapyd",
+      "website": "rapyd.net",
+      "founded_year": 2016,
+      "hq_city": "London",
+      "hq_country_iso3": "GBR",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "website": "replit.com",
+      "founded_year": 2016,
+      "hq_city": "Foster City",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "revolut",
+      "name": "Revolut",
+      "website": "revolut.com",
+      "founded_year": 2015,
+      "hq_city": "London",
+      "hq_country_iso3": "GBR",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "rocket_software",
+      "name": "Rocket Software",
+      "website": "rocketsoftware.com",
+      "founded_year": 1990,
+      "hq_city": "Waltham",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "saronic",
+      "name": "Saronic",
+      "website": "saronic.com",
+      "founded_year": 2022,
+      "hq_city": "Austin",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "scale",
+      "name": "Scale",
+      "website": "scale.com",
+      "founded_year": 2016,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "segment",
+      "name": "Segment",
+      "website": "segment.com",
+      "founded_year": 2020,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "website": "shopify.com",
+      "founded_year": 2004,
+      "hq_city": "Ottawa",
+      "hq_country_iso3": "CAN",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "snowflake",
+      "name": "Snowflake",
+      "website": "snowflake.com",
+      "founded_year": 2012,
+      "hq_city": "San Mateo",
+      "hq_country_iso3": "USA",
+      "is_private": false,
+      "is_non_us": false
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "website": "stripe.com",
+      "founded_year": 2010,
+      "hq_city": "South San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "subaru_corporation",
+      "name": "Subaru Corporation",
+      "website": "subaru.co.jp",
+      "founded_year": 1953,
+      "hq_city": "Tokyo",
+      "hq_country_iso3": "JPN",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "taqa",
+      "name": "TAQA",
+      "website": "taqa.com",
+      "founded_year": 2005,
+      "hq_city": "Abu Dhabi",
+      "hq_country_iso3": "ARE",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "tata_communications",
+      "name": "Tata Communications",
+      "website": "tatacommunications.com",
+      "founded_year": 1986,
+      "hq_city": "Mumbai",
+      "hq_country_iso3": "IND",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "tier_iv",
+      "name": "Tier IV",
+      "website": "tier4.jp",
+      "founded_year": 2015,
+      "hq_city": "Tokyo",
+      "hq_country_iso3": "JPN",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "virgin_money",
+      "name": "Virgin Money",
+      "website": "virginmoneyukplc.com",
+      "founded_year": 1995,
+      "hq_city": "Glasgow",
+      "hq_country_iso3": "GBR",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "wakecap",
+      "name": "WakeCap",
+      "website": "wakecap.com",
+      "founded_year": 2017,
+      "hq_city": "Dubai",
+      "hq_country_iso3": "ARE",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "warburg_pincus",
+      "name": "Warburg Pincus",
+      "website": "warburgpincus.com",
+      "founded_year": 1966,
+      "hq_city": "New York",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "waste_management",
+      "name": "Waste Management",
+      "website": "wm.com",
+      "founded_year": 1968,
+      "hq_city": "Houston",
+      "hq_country_iso3": "USA",
+      "is_private": false,
+      "is_non_us": false
+    },
+    {
+      "id": "yogabars",
+      "name": "Yogabars",
+      "website": "yogabars.in",
+      "founded_year": 2014,
+      "hq_city": "Bangalore",
+      "hq_country_iso3": "IND",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "zego",
+      "name": "Zego",
+      "website": "zego.com",
+      "founded_year": 2016,
+      "hq_city": "London",
+      "hq_country_iso3": "GBR",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "zymeworks",
+      "name": "Zymeworks",
+      "website": "zymeworks.com",
+      "founded_year": 1999,
+      "hq_city": "Vancouver",
+      "hq_country_iso3": "CAN",
+      "is_private": false,
+      "is_non_us": true
+    },
+    {
+      "id": "aaru",
+      "name": "Aaru",
+      "website": "aaru.com",
+      "founded_year": 2024,
+      "hq_city": "New York City",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "anam",
+      "name": "Anam",
+      "website": "anam.ai",
+      "founded_year": 2024,
+      "hq_city": "London",
+      "hq_country_iso3": "GBR",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "arcads",
+      "name": "Arcads",
+      "website": "arcads.ai",
+      "founded_year": 2024,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "aurora",
+      "name": "Aurora",
+      "website": "aurora.tech",
+      "founded_year": 2017,
+      "hq_city": "Pittsburgh",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "bee",
+      "name": "Bee",
+      "website": "bee.computer",
+      "founded_year": 2024,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "brex",
+      "name": "Brex",
+      "website": "brex.com",
+      "founded_year": 2017,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "civitai",
+      "name": "Civitai",
+      "website": "civitai.com",
+      "founded_year": 2022,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "column",
+      "name": "Column",
+      "website": "column.com",
+      "founded_year": 2019,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "core42",
+      "name": "Core42",
+      "website": "core42.ai",
+      "founded_year": 2023,
+      "hq_city": "Abu Dhabi",
+      "hq_country_iso3": "ARE",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "corsha",
+      "name": "Corsha",
+      "website": "corsha.com",
+      "founded_year": 2018,
+      "hq_city": "Vienna",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "creative_planning",
+      "name": "Creative Planning",
+      "website": "creativeplanning.com",
+      "founded_year": 1982,
+      "hq_city": "Leawood",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "doctronic",
+      "name": "Doctronic",
+      "website": "doctronic.ai",
+      "founded_year": 2023,
+      "hq_city": "New York",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "factorial_energy",
+      "name": "Factorial Energy",
+      "website": "factorialenergy.com",
+      "founded_year": 2019,
+      "hq_city": "Woburn",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "first_street",
+      "name": "First Street",
+      "website": "firststreet.org",
+      "founded_year": 2016,
+      "hq_city": "Brooklyn",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "formlabs",
+      "name": "Formlabs",
+      "website": "formlabs.com",
+      "founded_year": 2011,
+      "hq_city": "Somerville",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "frazier_life_sciences",
+      "name": "Frazier Life Sciences",
+      "website": "frazierhealthcare.com",
+      "founded_year": 1991,
+      "hq_city": "Menlo Park",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "general_intuition",
+      "name": "General Intuition",
+      "website": "generalintuition.com",
+      "founded_year": 2025,
+      "hq_city": "New York",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "greenberg_traurig",
+      "name": "Greenberg Traurig",
+      "website": "gtlaw.com",
+      "founded_year": 1967,
+      "hq_city": "Albany",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "halo_braid",
+      "name": "Halo Braid",
+      "website": "halobraid.com",
+      "founded_year": 2024,
+      "hq_city": "Los Angeles",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "hawkeye_360",
+      "name": "HawkEye 360",
+      "website": "he360.com",
+      "founded_year": 2015,
+      "hq_city": "Herndon",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "hiddenlayer",
+      "name": "HiddenLayer",
+      "website": "hiddenlayer.com",
+      "founded_year": 2022,
+      "hq_city": "Austin",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "hill_house_home",
+      "name": "Hill House Home",
+      "website": "hillhousehome.com",
+      "founded_year": 2016,
+      "hq_city": "New York",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "hily_dating_app",
+      "name": "Hily Dating App",
+      "website": "hily.com",
+      "founded_year": 2017,
+      "hq_city": "Las Vegas",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "kling_ai",
+      "name": "Kling AI",
+      "website": "klingai.com",
+      "founded_year": 2024,
+      "hq_city": "Beijing",
+      "hq_country_iso3": "CHN",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "krea",
+      "name": "Krea",
+      "website": "krea.ai",
+      "founded_year": 2022,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "lovable",
+      "name": "Lovable",
+      "website": "lovable.dev",
+      "founded_year": 2023,
+      "hq_city": "Stockholm",
+      "hq_country_iso3": "SWE",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "malbon_golf",
+      "name": "Malbon Golf",
+      "website": "malbongolf.com",
+      "founded_year": 2017,
+      "hq_city": "Los Angeles",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "meshy_ai",
+      "name": "Meshy AI",
+      "website": "meshy.ai",
+      "founded_year": 2024,
+      "hq_city": "Sunnyvale",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "newlimit",
+      "name": "NewLimit",
+      "website": "newlimit.com",
+      "founded_year": 2022,
+      "hq_city": "South San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "nowatch",
+      "name": "NOWATCH",
+      "website": "nowatch.com",
+      "founded_year": 2019,
+      "hq_city": "Amsterdam",
+      "hq_country_iso3": "NLD",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "octus",
+      "name": "Octus",
+      "website": "octus.com",
+      "founded_year": 2013,
+      "hq_city": "New York",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "website": "openai.com",
+      "founded_year": 2015,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "openai_foundation",
+      "name": "OpenAI Foundation",
+      "website": "openai.com",
+      "founded_year": 2015,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "paradromics",
+      "name": "Paradromics",
+      "website": "paradromics.com",
+      "founded_year": 2015,
+      "hq_city": "Austin",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "pump_fun",
+      "name": "Pump.fun",
+      "website": "pump.fun",
+      "founded_year": 2024,
+      "hq_city": "Solana Beach",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "website": "runwayml.com",
+      "founded_year": 2018,
+      "hq_city": "New York",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "seattle_seahawks",
+      "name": "Seattle Seahawks",
+      "website": "seahawks.com",
+      "founded_year": 1976,
+      "hq_city": "Renton",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "seel",
+      "name": "Seel",
+      "website": "seel.com",
+      "founded_year": 2018,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "siete_family_foods",
+      "name": "Siete Family Foods",
+      "website": "sietefoods.com",
+      "founded_year": 2014,
+      "hq_city": "Austin",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "skild_ai",
+      "name": "Skild AI",
+      "website": "skild.ai",
+      "founded_year": 2023,
+      "hq_city": "Pittsburgh",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "slash",
+      "name": "Slash",
+      "website": "slash.com",
+      "founded_year": 2021,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "solius",
+      "name": "Solius",
+      "website": "solius.com",
+      "founded_year": 2011,
+      "hq_city": "Bainbridge Island",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "switchyards",
+      "name": "Switchyards",
+      "website": "switchyards.com",
+      "founded_year": 2016,
+      "hq_city": "Atlanta",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "tavus",
+      "name": "Tavus",
+      "website": "tavus.io",
+      "founded_year": 2020,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "teamshares",
+      "name": "Teamshares",
+      "website": "teamshares.com",
+      "founded_year": 2019,
+      "hq_city": "Brooklyn",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "the_interaction_company_of_california",
+      "name": "The Interaction Company of California",
+      "website": "interaction.co",
+      "founded_year": 2024,
+      "hq_city": "Palo Alto",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "tombot",
+      "name": "Tombot",
+      "website": "tombot.com",
+      "founded_year": 2017,
+      "hq_city": "Santa Clarita",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "trainwell",
+      "name": "Trainwell",
+      "website": "trainwell.net",
+      "founded_year": 2019,
+      "hq_city": "Pittsburgh",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "venice",
+      "name": "Venice",
+      "website": "venice.ai",
+      "founded_year": 2024,
+      "hq_city": "Sheridan",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "voxel",
+      "name": "Voxel",
+      "website": "voxelai.com",
+      "founded_year": 2020,
+      "hq_city": "San Francisco",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "west_star_aviation",
+      "name": "West Star Aviation",
+      "website": "weststaraviation.com",
+      "founded_year": 1947,
+      "hq_city": "Grand Junction",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "zigazoo",
+      "name": "Zigazoo",
+      "website": "zigazoo.com",
+      "founded_year": 2020,
+      "hq_city": "Miami",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "amiri",
+      "name": "AMIRI",
+      "website": "amiri.com",
+      "founded_year": 2014,
+      "hq_city": "Los Angeles",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "basecamp_research",
+      "name": "Basecamp Research",
+      "website": "basecamp-research.com",
+      "founded_year": 2019,
+      "hq_city": "London",
+      "hq_country_iso3": "GBR",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "bloomberg",
+      "name": "Bloomberg",
+      "website": "bloomberg.com",
+      "founded_year": 1981,
+      "hq_city": "New York City",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "boxabl",
+      "name": "Boxabl",
+      "website": "boxabl.com",
+      "founded_year": 2017,
+      "hq_city": "North Las Vegas",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "rhoback",
+      "name": "Rhoback",
+      "website": "rhoback.com",
+      "founded_year": 2016,
+      "hq_city": "Charlottesville",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    },
+    {
+      "id": "superawesome",
+      "name": "SuperAwesome",
+      "website": "superawesome.com",
+      "founded_year": 2013,
+      "hq_city": "London",
+      "hq_country_iso3": "GBR",
+      "is_private": true,
+      "is_non_us": true
+    },
+    {
+      "id": "tcgplayer",
+      "name": "TCGplayer",
+      "website": "tcgplayer.com",
+      "founded_year": 1999,
+      "hq_city": "San Jose",
+      "hq_country_iso3": "USA",
+      "is_private": true,
+      "is_non_us": false
+    }
+  ]
+}

@@ -1,0 +1,3724 @@
+{
+  "$comment": "FR-1 seed registry: curated business/tech/general-news feeds. Cadence since 08-25 realignment: tier 1 = poll every 15 min, 2 = 30 min, 3 = 2 h. gn-* rows are Google News aggregator queries whose /rss/articles redirectors are robots.txt-blocked at fetch (zero yield possible) — kept for provenance with active:false; sync-source-tiers only ever deactivates, never re-activates. Growth path to 800+ by M4 via OPML/CSV admin import (ongoing curation ops).",
+  "version": "2026.08.25",
+  "feeds": [
+    {
+      "name": "techcrunch",
+      "publisher": "TechCrunch",
+      "feed_url": "https://techcrunch.com/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "funding",
+        "tech"
+      ]
+    },
+    {
+      "name": "techcrunch-startups",
+      "publisher": "TechCrunch",
+      "feed_url": "https://techcrunch.com/category/startups/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "startups"
+      ]
+    },
+    {
+      "name": "techcrunch-funding",
+      "publisher": "TechCrunch",
+      "feed_url": "https://techcrunch.com/category/funding/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "funding"
+      ]
+    },
+    {
+      "name": "techcrunch-enterprise",
+      "publisher": "TechCrunch",
+      "feed_url": "https://techcrunch.com/category/enterprise/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "enterprise"
+      ]
+    },
+    {
+      "name": "techcrunch-transportation",
+      "publisher": "TechCrunch",
+      "feed_url": "https://techcrunch.com/category/transportation/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "mobility"
+      ]
+    },
+    {
+      "name": "techcrunch-fintech",
+      "publisher": "TechCrunch",
+      "feed_url": "https://techcrunch.com/category/fintech/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "fintech"
+      ]
+    },
+    {
+      "name": "techcrunch-crypto",
+      "publisher": "TechCrunch",
+      "feed_url": "https://techcrunch.com/category/crypto/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "techcrunch-ai",
+      "publisher": "TechCrunch",
+      "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ai"
+      ]
+    },
+    {
+      "name": "techcrunch-security",
+      "publisher": "TechCrunch",
+      "feed_url": "https://techcrunch.com/category/security/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "security"
+      ]
+    },
+    {
+      "name": "techcrunch-climate",
+      "publisher": "TechCrunch",
+      "feed_url": "https://techcrunch.com/category/climate/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "climate"
+      ]
+    },
+    {
+      "name": "venturebeat",
+      "publisher": "VentureBeat",
+      "feed_url": "https://venturebeat.com/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech",
+        "funding"
+      ]
+    },
+    {
+      "name": "venturebeat-ai",
+      "publisher": "VentureBeat",
+      "feed_url": "https://venturebeat.com/category/ai/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ai"
+      ]
+    },
+    {
+      "name": "venturebeat-security",
+      "publisher": "VentureBeat",
+      "feed_url": "https://venturebeat.com/category/security/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "security"
+      ]
+    },
+    {
+      "name": "venturebeat-games",
+      "publisher": "VentureBeat GamesBeat",
+      "feed_url": "https://venturebeat.com/category/games/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "gaming"
+      ]
+    },
+    {
+      "name": "theverge",
+      "publisher": "The Verge",
+      "feed_url": "https://www.theverge.com/rss/index.xml",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech"
+      ]
+    },
+    {
+      "name": "engadget",
+      "publisher": "Engadget",
+      "feed_url": "https://www.engadget.com/rss.xml",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech"
+      ]
+    },
+    {
+      "name": "arstechnica",
+      "publisher": "Ars Technica",
+      "feed_url": "https://feeds.arstechnica.com/arstechnica/index",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech"
+      ]
+    },
+    {
+      "name": "arstechnica-policy",
+      "publisher": "Ars Technica",
+      "feed_url": "https://feeds.arstechnica.com/arstechnica/technology-laws-and-policy",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "policy"
+      ]
+    },
+    {
+      "name": "wired",
+      "publisher": "Wired",
+      "feed_url": "https://www.wired.com/feed/rss",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech"
+      ]
+    },
+    {
+      "name": "wired-business",
+      "publisher": "Wired",
+      "feed_url": "https://www.wired.com/category/business/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "business"
+      ]
+    },
+    {
+      "name": "business-insider",
+      "publisher": "Business Insider",
+      "feed_url": "https://www.businessinsider.com/rss",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "business",
+        "tech"
+      ]
+    },
+    {
+      "name": "cnbc-business",
+      "publisher": "CNBC",
+      "feed_url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "business"
+      ]
+    },
+    {
+      "name": "cnbc-technology",
+      "publisher": "CNBC",
+      "feed_url": "https://www.cnbc.com/id/19854910/device/rss/rss.html",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech"
+      ]
+    },
+    {
+      "name": "cnbc-economy",
+      "publisher": "CNBC",
+      "feed_url": "https://www.cnbc.com/id/20910258/device/rss/rss.html",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "economy"
+      ]
+    },
+    {
+      "name": "marketwatch-top",
+      "publisher": "MarketWatch",
+      "feed_url": "http://feeds.marketwatch.com/marketwatch/topstories/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "markets"
+      ]
+    },
+    {
+      "name": "bbc-business",
+      "publisher": "BBC News",
+      "feed_url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+      "tier": 1,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "business"
+      ]
+    },
+    {
+      "name": "bbc-technology",
+      "publisher": "BBC News",
+      "feed_url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+      "tier": 1,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "tech"
+      ]
+    },
+    {
+      "name": "bbc-companies",
+      "publisher": "BBC News",
+      "feed_url": "https://feeds.bbci.co.uk/news/companies/rss.xml",
+      "tier": 1,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "companies"
+      ]
+    },
+    {
+      "name": "guardian-business",
+      "publisher": "The Guardian",
+      "feed_url": "https://www.theguardian.com/uk/business/rss.xml",
+      "tier": 1,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "business"
+      ]
+    },
+    {
+      "name": "guardian-technology",
+      "publisher": "The Guardian",
+      "feed_url": "https://www.theguardian.com/uk/technology/rss.xml",
+      "tier": 1,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "tech"
+      ]
+    },
+    {
+      "name": "nyt-business",
+      "publisher": "The New York Times",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "business"
+      ]
+    },
+    {
+      "name": "nyt-technology",
+      "publisher": "The New York Times",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech"
+      ]
+    },
+    {
+      "name": "nyt-yourmoney",
+      "publisher": "The New York Times",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/YourMoney.xml",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "finance"
+      ]
+    },
+    {
+      "name": "zdnet",
+      "publisher": "ZDNet",
+      "feed_url": "https://www.zdnet.com/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech",
+        "enterprise"
+      ]
+    },
+    {
+      "name": "cnet",
+      "publisher": "CNET",
+      "feed_url": "https://www.cnet.com/rss/news/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "consumer tech"
+      ]
+    },
+    {
+      "name": "gizmodo",
+      "publisher": "Gizmodo",
+      "feed_url": "https://gizmodo.com/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "consumer tech"
+      ]
+    },
+    {
+      "name": "mashable",
+      "publisher": "Mashable",
+      "feed_url": "https://mashable.com/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "consumer tech"
+      ]
+    },
+    {
+      "name": "vox-technology",
+      "publisher": "Vox",
+      "feed_url": "https://www.vox.com/rss/technology/index.xml",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech policy"
+      ]
+    },
+    {
+      "name": "siliconangle",
+      "publisher": "SiliconANGLE",
+      "feed_url": "https://siliconangle.com/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "enterprise"
+      ]
+    },
+    {
+      "name": "thenextweb",
+      "publisher": "The Next Web",
+      "feed_url": "https://thenextweb.com/feed",
+      "tier": 1,
+      "country": "nl",
+      "default_language": "en",
+      "topics": [
+        "startups"
+      ]
+    },
+    {
+      "name": "gigaom",
+      "publisher": "GigaOM",
+      "feed_url": "https://gigaom.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech analysis"
+      ]
+    },
+    {
+      "name": "mit-tech-review",
+      "publisher": "MIT Technology Review",
+      "feed_url": "https://www.technologyreview.com/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "deep tech"
+      ]
+    },
+    {
+      "name": "infoworld",
+      "publisher": "InfoWorld",
+      "feed_url": "https://www.infoworld.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "enterprise"
+      ]
+    },
+    {
+      "name": "computerworld",
+      "publisher": "Computerworld",
+      "feed_url": "https://www.computerworld.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "enterprise IT"
+      ]
+    },
+    {
+      "name": "devclass",
+      "publisher": "DevClass",
+      "feed_url": "https://devclass.com/feed/",
+      "tier": 2,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "devtools"
+      ]
+    },
+    {
+      "name": "theregister",
+      "publisher": "The Register",
+      "feed_url": "https://www.theregister.com/feeds/headlines.atom",
+      "tier": 1,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "enterprise",
+        "tech"
+      ]
+    },
+    {
+      "name": "slashdot",
+      "publisher": "Slashdot",
+      "feed_url": "http://rss.slashdot.org/Slashdot/slashdotMain",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech"
+      ]
+    },
+    {
+      "name": "finextra",
+      "publisher": "Finextra Research",
+      "feed_url": "https://www.finextra.com/latest-news/rss",
+      "tier": 1,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "fintech",
+        "banking"
+      ]
+    },
+    {
+      "name": "american-banker",
+      "publisher": "American Banker",
+      "feed_url": "https://www.americanbanker.com/feed",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "banking"
+      ]
+    },
+    {
+      "name": "pymnts",
+      "publisher": "PYMNTS",
+      "feed_url": "https://www.pymnts.com/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "payments"
+      ]
+    },
+    {
+      "name": "tech-eu",
+      "publisher": "Tech.eu",
+      "feed_url": "https://tech.eu/feed/",
+      "tier": 1,
+      "country": "be",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "funding"
+      ]
+    },
+    {
+      "name": "eu-startups",
+      "publisher": "EU-Startups",
+      "feed_url": "https://www.eu-startups.com/feed/",
+      "tier": 1,
+      "country": "de",
+      "default_language": "en",
+      "topics": [
+        "startups"
+      ]
+    },
+    {
+      "name": "silicon-canals",
+      "publisher": "Silicon Canals",
+      "feed_url": "https://siliconcanals.com/feed/",
+      "tier": 1,
+      "country": "nl",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "funding"
+      ]
+    },
+    {
+      "name": "sifted",
+      "publisher": "Sifted",
+      "feed_url": "https://sifted.eu/feed/",
+      "tier": 1,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "vc"
+      ]
+    },
+    {
+      "name": "variety",
+      "publisher": "Variety",
+      "feed_url": "https://variety.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "media"
+      ]
+    },
+    {
+      "name": "polygon",
+      "publisher": "Polygon",
+      "feed_url": "https://www.polygon.com/rss/index.xml",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "gaming"
+      ]
+    },
+    {
+      "name": "coindesk",
+      "publisher": "CoinDesk",
+      "feed_url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "cointelegraph",
+      "publisher": "Cointelegraph",
+      "feed_url": "https://cointelegraph.com/rss",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "blockworks",
+      "publisher": "Blockworks",
+      "feed_url": "https://blockworks.co/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "the-defiant",
+      "publisher": "The Defiant",
+      "feed_url": "https://thedefiant.io/feed",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "defi"
+      ]
+    },
+    {
+      "name": "securityweek",
+      "publisher": "SecurityWeek",
+      "feed_url": "https://www.securityweek.com/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "security"
+      ]
+    },
+    {
+      "name": "bleepingcomputer",
+      "publisher": "BleepingComputer",
+      "feed_url": "https://www.bleepingcomputer.com/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "security"
+      ]
+    },
+    {
+      "name": "krebsonsecurity",
+      "publisher": "Krebs on Security",
+      "feed_url": "https://krebsonsecurity.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "security"
+      ]
+    },
+    {
+      "name": "thehackernews",
+      "publisher": "The Hacker News",
+      "feed_url": "https://feeds.feedburner.com/TheHackersNews",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "security"
+      ]
+    },
+    {
+      "name": "electrek",
+      "publisher": "Electrek",
+      "feed_url": "https://electrek.co/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ev",
+        "energy"
+      ]
+    },
+    {
+      "name": "spacenews",
+      "publisher": "SpaceNews",
+      "feed_url": "https://spacenews.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "space"
+      ]
+    },
+    {
+      "name": "statnews",
+      "publisher": "STAT News",
+      "feed_url": "https://www.statnews.com/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "biotech",
+        "health"
+      ]
+    },
+    {
+      "name": "technode",
+      "publisher": "TechNode",
+      "feed_url": "https://technode.com/feed/",
+      "tier": 2,
+      "country": "cn",
+      "default_language": "en",
+      "topics": [
+        "china tech"
+      ]
+    },
+    {
+      "name": "cio-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.ciodive.com/feeds/news/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "enterprise IT"
+      ]
+    },
+    {
+      "name": "healthcare-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.healthcaredive.com/feeds/news/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "retail-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.retaildive.com/feeds/news/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "retail"
+      ]
+    },
+    {
+      "name": "supply-chain-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.supplychaindive.com/feeds/news/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "logistics"
+      ]
+    },
+    {
+      "name": "hr-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.hrdive.com/feeds/news/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "hr"
+      ]
+    },
+    {
+      "name": "biopharma-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.biopharmadive.com/feeds/news/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "biotech",
+        "pharma"
+      ]
+    },
+    {
+      "name": "medtech-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.medtechdive.com/feeds/news/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "medical devices"
+      ]
+    },
+    {
+      "name": "manufacturing-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.manufacturingdive.com/feeds/news/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "manufacturing"
+      ]
+    },
+    {
+      "name": "construction-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.constructiondive.com/feeds/news/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "construction"
+      ]
+    },
+    {
+      "name": "utility-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.utilitydive.com/feeds/news/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "utilities"
+      ]
+    },
+    {
+      "name": "banking-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.bankingdive.com/feeds/news/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "banking"
+      ]
+    },
+    {
+      "name": "payments-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.paymentsdive.com/feeds/news/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "payments"
+      ]
+    },
+    {
+      "name": "grocery-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.grocerydive.com/feeds/news/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "grocery retail"
+      ]
+    },
+    {
+      "name": "marketing-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.marketingdive.com/feeds/news/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "marketing"
+      ]
+    },
+    {
+      "name": "food-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.fooddive.com/feeds/news/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "food"
+      ]
+    },
+    {
+      "name": "higher-ed-dive",
+      "publisher": "Industry Dive",
+      "feed_url": "https://www.highereddive.com/feeds/news/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "education"
+      ]
+    },
+    {
+      "name": "fiercebiotech",
+      "publisher": "Fierce Biotech",
+      "feed_url": "https://www.fiercebiotech.com/rss/xml",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "biotech"
+      ]
+    },
+    {
+      "name": "labiotech",
+      "publisher": "Labiotech.eu",
+      "feed_url": "https://www.labiotech.eu/feed/",
+      "tier": 3,
+      "country": "de",
+      "default_language": "en",
+      "topics": [
+        "biotech"
+      ]
+    },
+    {
+      "name": "endpoints-news",
+      "publisher": "Endpoints News",
+      "feed_url": "https://endpts.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "pharma"
+      ]
+    },
+    {
+      "name": "prnewswire-tech",
+      "publisher": "PR Newswire",
+      "feed_url": "https://www.prnewswire.com/rss/news-releases-list.rss",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "press releases"
+      ]
+    },
+    {
+      "name": "infoq",
+      "publisher": "InfoQ",
+      "feed_url": "https://feed.infoq.com/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "software engineering"
+      ]
+    },
+    {
+      "name": "hackernews-frontpage",
+      "publisher": "Hacker News",
+      "feed_url": "https://hnrss.org/frontpage",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech community"
+      ]
+    },
+    {
+      "name": "huggingface-blog",
+      "publisher": "Hugging Face",
+      "feed_url": "https://huggingface.co/blog/feed.xml",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ai"
+      ]
+    },
+    {
+      "name": "openai-news",
+      "publisher": "OpenAI",
+      "feed_url": "https://openai.com/news/rss.xml",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ai"
+      ]
+    },
+    {
+      "name": "import-ai",
+      "publisher": "Import AI (Substack)",
+      "feed_url": "https://importai.substack.com/feed",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "ai research"
+      ]
+    },
+    {
+      "name": "aws-news",
+      "publisher": "AWS",
+      "feed_url": "https://aws.amazon.com/blogs/aws/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "cloud"
+      ]
+    },
+    {
+      "name": "github-blog",
+      "publisher": "GitHub",
+      "feed_url": "https://github.blog/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "devtools"
+      ]
+    },
+    {
+      "name": "netflix-techblog",
+      "publisher": "Netflix Tech Blog",
+      "feed_url": "https://netflixtechblog.com/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "engineering"
+      ]
+    },
+    {
+      "name": "meta-engineering",
+      "publisher": "Meta Engineering",
+      "feed_url": "https://engineering.fb.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "engineering"
+      ]
+    },
+    {
+      "name": "stripe-blog",
+      "publisher": "Stripe",
+      "feed_url": "https://stripe.com/blog/feed.rss",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "fintech"
+      ]
+    },
+    {
+      "name": "dealstreetasia",
+      "publisher": "DealStreetAsia",
+      "feed_url": "https://www.dealstreetasia.com/feed/",
+      "tier": 1,
+      "country": "sg",
+      "default_language": "en",
+      "topics": [
+        "sea deals"
+      ]
+    },
+    {
+      "name": "e27",
+      "publisher": "e27",
+      "feed_url": "https://e27.co/feed/",
+      "tier": 1,
+      "country": "sg",
+      "default_language": "en",
+      "topics": [
+        "sea startups"
+      ]
+    },
+    {
+      "name": "tech-in-asia",
+      "publisher": "Tech in Asia",
+      "feed_url": "https://www.techinasia.com/feed",
+      "tier": 1,
+      "country": "sg",
+      "default_language": "en",
+      "topics": [
+        "asia startups"
+      ]
+    },
+    {
+      "name": "inc42",
+      "publisher": "Inc42",
+      "feed_url": "https://inc42.com/feed/",
+      "tier": 1,
+      "country": "in",
+      "default_language": "en",
+      "topics": [
+        "india startups"
+      ]
+    },
+    {
+      "name": "yourstory",
+      "publisher": "YourStory",
+      "feed_url": "https://yourstory.com/feed",
+      "tier": 1,
+      "country": "in",
+      "default_language": "en",
+      "topics": [
+        "india startups"
+      ]
+    },
+    {
+      "name": "vulcanpost",
+      "publisher": "Vulcan Post",
+      "feed_url": "https://vulcanpost.com/feed/",
+      "tier": 1,
+      "country": "sg",
+      "default_language": "en",
+      "topics": [
+        "sea startups"
+      ]
+    },
+    {
+      "name": "techcabal",
+      "publisher": "TechCabal",
+      "feed_url": "https://techcabal.com/feed/",
+      "tier": 1,
+      "country": "ng",
+      "default_language": "en",
+      "topics": [
+        "africa tech"
+      ]
+    },
+    {
+      "name": "betakit",
+      "publisher": "BetaKit",
+      "feed_url": "https://betakit.com/feed/",
+      "tier": 1,
+      "country": "ca",
+      "default_language": "en",
+      "topics": [
+        "canada startups"
+      ]
+    },
+    {
+      "name": "startupdaily-au",
+      "publisher": "Startup Daily",
+      "feed_url": "https://startupdaily.com/feed/",
+      "tier": 1,
+      "country": "au",
+      "default_language": "en",
+      "topics": [
+        "australia startups"
+      ]
+    },
+    {
+      "name": "smartcompany",
+      "publisher": "SmartCompany",
+      "feed_url": "https://www.smartcompany.com.au/feed/",
+      "tier": 1,
+      "country": "au",
+      "default_language": "en",
+      "topics": [
+        "australia business"
+      ]
+    },
+    {
+      "name": "techcentral-za",
+      "publisher": "TechCentral",
+      "feed_url": "https://techcentral.co.za/feed/",
+      "tier": 1,
+      "country": "za",
+      "default_language": "en",
+      "topics": [
+        "south africa tech"
+      ]
+    },
+    {
+      "name": "cleantechnica",
+      "publisher": "CleanTechnica",
+      "feed_url": "https://cleantechnica.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "clean energy"
+      ]
+    },
+    {
+      "name": "pv-magazine",
+      "publisher": "pv magazine",
+      "feed_url": "https://www.pv-magazine.com/feed/",
+      "tier": 2,
+      "country": "de",
+      "default_language": "en",
+      "topics": [
+        "solar"
+      ]
+    },
+    {
+      "name": "agfundernews",
+      "publisher": "AgFunderNews",
+      "feed_url": "https://agfundernews.com/feed",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "agtech"
+      ]
+    },
+    {
+      "name": "skift",
+      "publisher": "Skift",
+      "feed_url": "https://skift.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "travel"
+      ]
+    },
+    {
+      "name": "theloadstar",
+      "publisher": "The Loadstar",
+      "feed_url": "https://theloadstar.com/feed/",
+      "tier": 3,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "freight"
+      ]
+    },
+    {
+      "name": "freightwaves",
+      "publisher": "FreightWaves",
+      "feed_url": "https://www.freightwaves.com/feed",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "freight"
+      ]
+    },
+    {
+      "name": "gamesindustry-biz",
+      "publisher": "GamesIndustry.biz",
+      "feed_url": "https://www.gamesindustry.biz/feed",
+      "tier": 2,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "gaming industry"
+      ]
+    },
+    {
+      "name": "hollywoodreporter",
+      "publisher": "The Hollywood Reporter",
+      "feed_url": "https://www.hollywoodreporter.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "media"
+      ]
+    },
+    {
+      "name": "musicbizworldwide",
+      "publisher": "Music Business Worldwide",
+      "feed_url": "https://www.musicbusinessworldwide.com/feed/",
+      "tier": 3,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "music industry"
+      ]
+    },
+    {
+      "name": "defensenews",
+      "publisher": "Defense News",
+      "feed_url": "https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=amp",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "defense"
+      ]
+    },
+    {
+      "name": "breakingdefense",
+      "publisher": "Breaking Defense",
+      "feed_url": "https://breakingdefense.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "defense"
+      ]
+    },
+    {
+      "name": "thenewstack",
+      "publisher": "The New Stack",
+      "feed_url": "https://thenewstack.io/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "cloud native"
+      ]
+    },
+    {
+      "name": "decrypt",
+      "publisher": "Decrypt",
+      "feed_url": "https://decrypt.co/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "modernretail",
+      "publisher": "Modern Retail",
+      "feed_url": "https://www.modernretail.co/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "retail"
+      ]
+    },
+    {
+      "name": "morningbrew",
+      "publisher": "Morning Brew",
+      "feed_url": "https://www.morningbrew.com/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "business daily"
+      ]
+    },
+    {
+      "name": "stratechery",
+      "publisher": "Stratechery",
+      "feed_url": "https://stratechery.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "analysis"
+      ]
+    },
+    {
+      "name": "notboring",
+      "publisher": "Not Boring",
+      "feed_url": "https://www.notboring.co/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "analysis"
+      ]
+    },
+    {
+      "name": "a16z-blog",
+      "publisher": "a16z",
+      "feed_url": "https://a16z.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "vc"
+      ]
+    },
+    {
+      "name": "saastr",
+      "publisher": "SaaStr",
+      "feed_url": "https://www.saastr.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "saas"
+      ]
+    },
+    {
+      "name": "crunchbase-news",
+      "publisher": "Crunchbase News",
+      "feed_url": "https://news.crunchbase.com/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "funding data"
+      ]
+    },
+    {
+      "name": "insideevs",
+      "publisher": "InsideEVs",
+      "feed_url": "https://insideevs.com/rss/articles/all/recent/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ev"
+      ]
+    },
+    {
+      "name": "teslarati",
+      "publisher": "Teslarati",
+      "feed_url": "https://www.teslarati.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tesla",
+        "space"
+      ]
+    },
+    {
+      "name": "darkreading",
+      "publisher": "Dark Reading",
+      "feed_url": "https://www.darkreading.com/rss.xml",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "security"
+      ]
+    },
+    {
+      "name": "datanami",
+      "publisher": "Datanami",
+      "feed_url": "https://www.datanami.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "data"
+      ]
+    },
+    {
+      "name": "bank-automation-news",
+      "publisher": "Bank Automation News",
+      "feed_url": "https://bankautomationnews.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "banking tech"
+      ]
+    },
+    {
+      "name": "fortune",
+      "publisher": "Fortune",
+      "feed_url": "https://fortune.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "business"
+      ]
+    },
+    {
+      "name": "fastcompany",
+      "publisher": "Fast Company",
+      "feed_url": "https://www.fastcompany.com/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "business innovation"
+      ]
+    },
+    {
+      "name": "quartz",
+      "publisher": "Quartz",
+      "feed_url": "https://qz.com/rss",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "business"
+      ]
+    },
+    {
+      "name": "the-block",
+      "publisher": "The Block",
+      "feed_url": "https://www.theblock.co/rss.xml",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "gn-startup-funding",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=startup+funding+round&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "funding"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-series-a",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22series+A%22+OR+%22series+B%22+funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "funding"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-ma",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22mergers+and+acquisitions%22&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "m&a"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-ipo",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=IPO+initial+public+offering&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ipo"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-layoffs",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=layoffs+workforce+reduction+company&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "risk"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-bankruptcy",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22chapter+11%22+OR+%22files+for+bankruptcy%22&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "risk"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-partnerships",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22strategic+partnership%22+announcement&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "partnership"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-ceo",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22named+CEO%22+OR+%22appoints+new+CEO%22&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "leadership"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-data-breach",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22data+breach%22&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "security"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-uk-tech",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=UK+tech+company+funding&hl=en-GB&gl=GB&ceid=GB:en",
+      "tier": 3,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "uk funding"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-india-funding",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=India+startup+funding&hl=en-IN&gl=IN&ceid=IN:en",
+      "tier": 3,
+      "country": "in",
+      "default_language": "en",
+      "topics": [
+        "india funding"
+      ],
+      "active": false
+    },
+    {
+      "name": "macrumors",
+      "publisher": "MacRumors",
+      "feed_url": "https://feeds.macrumors.com/MacRumors-All",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "apple"
+      ]
+    },
+    {
+      "name": "9to5mac",
+      "publisher": "9to5Mac",
+      "feed_url": "https://9to5mac.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "apple"
+      ]
+    },
+    {
+      "name": "9to5google",
+      "publisher": "9to5Google",
+      "feed_url": "https://9to5google.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "google"
+      ]
+    },
+    {
+      "name": "cbinsights-research",
+      "publisher": "CB Insights",
+      "feed_url": "https://www.cbinsights.com/research/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "market research"
+      ]
+    },
+    {
+      "name": "strictlyvc",
+      "publisher": "StrictlyVC",
+      "feed_url": "https://strictlyvc.com/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "vc"
+      ]
+    },
+    {
+      "name": "semianalysis",
+      "publisher": "SemiAnalysis",
+      "feed_url": "https://www.semianalysis.com/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "semiconductors"
+      ]
+    },
+    {
+      "name": "uktn",
+      "publisher": "UKTN",
+      "feed_url": "https://www.uktech.news/feed",
+      "tier": 1,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "uk startups"
+      ]
+    },
+    {
+      "name": "readwrite",
+      "publisher": "ReadWrite",
+      "feed_url": "https://readwrite.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech"
+      ]
+    },
+    {
+      "name": "arstechnica-space",
+      "publisher": "Ars Technica",
+      "feed_url": "https://feeds.arstechnica.com/arstechnica/space",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "space"
+      ]
+    },
+    {
+      "name": "techcrunch-hardware",
+      "publisher": "TechCrunch",
+      "feed_url": "https://techcrunch.com/category/hardware/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "hardware"
+      ]
+    },
+    {
+      "name": "euronews-business",
+      "publisher": "Euronews",
+      "feed_url": "https://www.euronews.com/rss?level=theme&name=business",
+      "tier": 2,
+      "country": "fr",
+      "default_language": "en",
+      "topics": [
+        "business"
+      ]
+    },
+    {
+      "name": "japantimes-business",
+      "publisher": "The Japan Times",
+      "feed_url": "https://www.japantimes.co.jp/business/feed/",
+      "tier": 3,
+      "country": "jp",
+      "default_language": "en",
+      "topics": [
+        "japan business"
+      ]
+    },
+    {
+      "name": "economictimes-top",
+      "publisher": "Economic Times",
+      "feed_url": "https://economictimes.indiatimes.com/rssfeedstopstories.cms",
+      "tier": 3,
+      "country": "in",
+      "default_language": "en",
+      "topics": [
+        "india business"
+      ]
+    },
+    {
+      "name": "scmp-tech",
+      "publisher": "South China Morning Post",
+      "feed_url": "https://www.scmp.com/rss/91/feed",
+      "tier": 3,
+      "country": "hk",
+      "default_language": "en",
+      "topics": [
+        "asia tech"
+      ]
+    },
+    {
+      "name": "kr-asia",
+      "publisher": "KrASIA",
+      "feed_url": "https://kr-asia.com/feed",
+      "tier": 1,
+      "country": "cn",
+      "default_language": "en",
+      "topics": [
+        "asia startups"
+      ]
+    },
+    {
+      "name": "arstechnica-apple",
+      "publisher": "Ars Technica",
+      "feed_url": "https://feeds.arstechnica.com/arstechnica/apple",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "apple"
+      ]
+    },
+    {
+      "name": "arstechnica-gaming",
+      "publisher": "Ars Technica",
+      "feed_url": "https://feeds.arstechnica.com/arstechnica/gaming",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "gaming"
+      ]
+    },
+    {
+      "name": "techcrunch-apps",
+      "publisher": "TechCrunch",
+      "feed_url": "https://techcrunch.com/category/apps/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "apps"
+      ]
+    },
+    {
+      "name": "yahoo-finance-mostpopular",
+      "publisher": "Yahoo Finance",
+      "feed_url": "https://finance.yahoo.com/news/rssmost",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "markets",
+        "business"
+      ]
+    },
+    {
+      "name": "siliconrepublic",
+      "publisher": "Silicon Republic",
+      "feed_url": "https://www.siliconrepublic.com/feed",
+      "tier": 1,
+      "country": "ie",
+      "default_language": "en",
+      "topics": [
+        "ireland tech"
+      ]
+    },
+    {
+      "name": "technically",
+      "publisher": "Technical.ly",
+      "feed_url": "https://technical.ly/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "regional startups"
+      ]
+    },
+    {
+      "name": "wamda",
+      "publisher": "Wamda",
+      "feed_url": "https://www.wamda.com/feed",
+      "tier": 1,
+      "country": "ae",
+      "default_language": "en",
+      "topics": [
+        "mena startups"
+      ]
+    },
+    {
+      "name": "entrackr",
+      "publisher": "Entrackr",
+      "feed_url": "https://entrackr.com/feed",
+      "tier": 1,
+      "country": "in",
+      "default_language": "en",
+      "topics": [
+        "india startups"
+      ]
+    },
+    {
+      "name": "disrupt-africa",
+      "publisher": "Disrupt Africa",
+      "feed_url": "https://disrupt-africa.com/feed/",
+      "tier": 1,
+      "country": "ng",
+      "default_language": "en",
+      "topics": [
+        "africa startups"
+      ]
+    },
+    {
+      "name": "labsnews-en",
+      "publisher": "LABS",
+      "feed_url": "https://labsnews.com/en/feed",
+      "tier": 1,
+      "country": "br",
+      "default_language": "en",
+      "topics": [
+        "latam business"
+      ]
+    },
+    {
+      "name": "techspark-uk",
+      "publisher": "TechSPARK",
+      "feed_url": "https://www.techspark.co/feed",
+      "tier": 1,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "uk regional startups"
+      ]
+    },
+    {
+      "name": "deepmind-blog",
+      "publisher": "Google DeepMind",
+      "feed_url": "https://deepmind.google/blog/rss.xml",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ai research"
+      ]
+    },
+    {
+      "name": "amazon-science",
+      "publisher": "Amazon Science",
+      "feed_url": "https://www.amazon.science/blog/rss",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "research"
+      ]
+    },
+    {
+      "name": "lastweekin-ai",
+      "publisher": "Last Week in AI",
+      "feed_url": "https://lastweekin.ai/feed",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "ai"
+      ]
+    },
+    {
+      "name": "the-diff",
+      "publisher": "The Diff",
+      "feed_url": "https://thediff.substack.com/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "analysis"
+      ]
+    },
+    {
+      "name": "gn-fintech-eu-funding",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=fintech+funding+round+europe&hl=en-GB&gl=GB&ceid=GB:en",
+      "tier": 2,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "fintech funding"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-biotech-funding",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=biotech+funding+series&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "biotech funding"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-climate-raise",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22climate+tech%22+OR+cleantech+funding+raise&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "climate funding"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-space-startups",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=space+startup+funding+satellite&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "space"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-semis-investment",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=semiconductor+company+investment+fab&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "semiconductors"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-ev-expansion",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=EV+company+expansion+battery+plant&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ev"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-ransomware",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=ransomware+attack+company+discloses&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "security"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-mna-completed",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=technology+company+%22completed+acquisition%22&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "m&a"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-tech-ipo",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=technology+company+IPO+debut+shares&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ipo"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-layoffs-eu",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=tech+layoffs+europe+job+cuts&hl=en-GB&gl=GB&ceid=GB:en",
+      "tier": 3,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "risk"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-wire-funding",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22announces%22+%22funding+round%22+press+release&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "wire proxy"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-japan-startups",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=japan+startup+funding+raises&hl=en-US&gl=JP&ceid=JP:en",
+      "tier": 3,
+      "country": "jp",
+      "default_language": "en",
+      "topics": [
+        "japan funding"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-germany-startups",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=germany+startup+funding+Berlin+Munich&hl=en-GB&gl=DE&ceid=GB:en",
+      "tier": 3,
+      "country": "de",
+      "default_language": "en",
+      "topics": [
+        "germany funding"
+      ],
+      "active": false
+    },
+    {
+      "name": "geekwire",
+      "publisher": "GeekWire",
+      "feed_url": "https://geekwire.com/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "technology",
+        "seattle"
+      ]
+    },
+    {
+      "name": "medcitynews",
+      "publisher": "MedCity News",
+      "feed_url": "https://medcitynews.com/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "health",
+        "bio",
+        "startups"
+      ]
+    },
+    {
+      "name": "newcomer",
+      "publisher": "Newcomer",
+      "feed_url": "https://newcomer.co/feed",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "vc",
+        "startups",
+        "funding"
+      ]
+    },
+    {
+      "name": "dallasinnovates",
+      "publisher": "Dallas Innovates",
+      "feed_url": "https://dallasinnovates.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "texas"
+      ]
+    },
+    {
+      "name": "siliconhillsnews",
+      "publisher": "Silicon Hills News",
+      "feed_url": "https://siliconhillsnews.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "austin"
+      ]
+    },
+    {
+      "name": "grepbeat",
+      "publisher": "GrepBeat",
+      "feed_url": "https://www.grepbeat.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "north-carolina"
+      ]
+    },
+    {
+      "name": "refreshmiami",
+      "publisher": "Refresh Miami",
+      "feed_url": "https://refreshmiami.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "miami"
+      ]
+    },
+    {
+      "name": "fedscoop",
+      "publisher": "FedScoop",
+      "feed_url": "https://fedscoop.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "govtech",
+        "cloud"
+      ]
+    },
+    {
+      "name": "statescoop",
+      "publisher": "StateScoop",
+      "feed_url": "https://statescoop.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "govtech"
+      ]
+    },
+    {
+      "name": "defensescoop",
+      "publisher": "DefenseScoop",
+      "feed_url": "https://defensescoop.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "defense",
+        "startups"
+      ]
+    },
+    {
+      "name": "latitudemedia",
+      "publisher": "Latitude Media",
+      "feed_url": "https://www.latitudemedia.com/feed",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "climate",
+        "energy-startups"
+      ]
+    },
+    {
+      "name": "canarymedia",
+      "publisher": "Canary Media",
+      "feed_url": "https://www.canarymedia.com/feed",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "climate",
+        "clean-energy"
+      ]
+    },
+    {
+      "name": "therobotreport",
+      "publisher": "The Robot Report",
+      "feed_url": "https://www.therobotreport.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "robotics",
+        "startups"
+      ]
+    },
+    {
+      "name": "payloadspace",
+      "publisher": "Payload",
+      "feed_url": "https://payloadspace.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "space",
+        "startups"
+      ]
+    },
+    {
+      "name": "fiercehealthcare",
+      "publisher": "Fierce Healthcare",
+      "feed_url": "https://www.fiercehealthcare.com/rss/xml",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "healthcare"
+      ]
+    },
+    {
+      "name": "tearsheet",
+      "publisher": "Tearsheet",
+      "feed_url": "https://tearsheet.co/feed",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "fintech",
+        "banking"
+      ]
+    },
+    {
+      "name": "nocamels",
+      "publisher": "NoCamels",
+      "feed_url": "https://www.nocamels.com/feed/",
+      "tier": 2,
+      "country": "il",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "israel"
+      ]
+    },
+    {
+      "name": "menabytes",
+      "publisher": "MENAbytes",
+      "feed_url": "https://www.menabytes.com/feed",
+      "tier": 2,
+      "country": "ae",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "mena"
+      ]
+    },
+    {
+      "name": "fintechnews-sg",
+      "publisher": "Fintech News Singapore",
+      "feed_url": "https://fintechnews.sg/feed/",
+      "tier": 2,
+      "country": "sg",
+      "default_language": "en",
+      "topics": [
+        "fintech",
+        "sea"
+      ]
+    },
+    {
+      "name": "yc-blog",
+      "publisher": "Y Combinator",
+      "feed_url": "https://www.ycombinator.com/blog/rss.xml",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "accelerator",
+        "startups"
+      ]
+    },
+    {
+      "name": "inc-latest",
+      "publisher": "Inc.",
+      "feed_url": "https://www.inc.com/rss",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "small-business",
+        "startups"
+      ]
+    },
+    {
+      "name": "forbes-startups",
+      "publisher": "Forbes",
+      "feed_url": "https://www.forbes.com/startups/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "startups"
+      ]
+    },
+    {
+      "name": "digiday",
+      "publisher": "Digiday",
+      "feed_url": "https://digiday.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "adtech",
+        "media"
+      ]
+    },
+    {
+      "name": "ai-news",
+      "publisher": "AI News",
+      "feed_url": "https://www.artificialintelligence-news.com/feed/",
+      "tier": 3,
+      "country": "uk",
+      "default_language": "en",
+      "topics": [
+        "ai"
+      ]
+    },
+    {
+      "name": "ventureburn",
+      "publisher": "Ventureburn",
+      "feed_url": "https://ventureburn.com/feed/",
+      "tier": 3,
+      "country": "za",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "africa"
+      ]
+    },
+    {
+      "name": "weetracker",
+      "publisher": "WeeTracker",
+      "feed_url": "https://weetracker.com/feed/",
+      "tier": 3,
+      "country": "ng",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "africa"
+      ]
+    },
+    {
+      "name": "benjamindada",
+      "publisher": "Benjamin Dada",
+      "feed_url": "https://benjamindada.com/feed/",
+      "tier": 3,
+      "country": "ng",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "africa"
+      ]
+    },
+    {
+      "name": "techjuice",
+      "publisher": "TechJuice",
+      "feed_url": "https://www.techjuice.pk/feed/",
+      "tier": 3,
+      "country": "pk",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "pakistan"
+      ]
+    },
+    {
+      "name": "pandaily",
+      "publisher": "Pandaily",
+      "feed_url": "https://pandaily.com/feed/",
+      "tier": 3,
+      "country": "cn",
+      "default_language": "en",
+      "topics": [
+        "tech",
+        "china"
+      ]
+    },
+    {
+      "name": "thespoon",
+      "publisher": "The Spoon",
+      "feed_url": "https://thespoon.tech/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "foodtech"
+      ]
+    },
+    {
+      "name": "trellis",
+      "publisher": "Trellis",
+      "feed_url": "https://trellis.net/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "climate",
+        "sustainability"
+      ]
+    },
+    {
+      "name": "hackernoon",
+      "publisher": "HackerNoon",
+      "feed_url": "https://hackernoon.com/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "technology",
+        "startups"
+      ]
+    },
+    {
+      "name": "latent-space",
+      "publisher": "Latent Space",
+      "feed_url": "https://www.latent.space/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ai",
+        "startups"
+      ]
+    },
+    {
+      "name": "interconnects",
+      "publisher": "Interconnects",
+      "feed_url": "https://www.interconnects.ai/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ai"
+      ]
+    },
+    {
+      "name": "platformer",
+      "publisher": "Platformer",
+      "feed_url": "https://www.platformer.news/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "tech-industry",
+        "platforms"
+      ]
+    },
+    {
+      "name": "simonwillison",
+      "publisher": "Simon Willison",
+      "feed_url": "https://simonwillison.net/atom/everything/",
+      "tier": 3,
+      "country": "uk",
+      "default_language": "en",
+      "topics": [
+        "ai",
+        "tools"
+      ]
+    },
+    {
+      "name": "exponentialview",
+      "publisher": "Exponential View",
+      "feed_url": "https://www.exponentialview.co/feed",
+      "tier": 3,
+      "country": "uk",
+      "default_language": "en",
+      "topics": [
+        "ai",
+        "analysis"
+      ]
+    },
+    {
+      "name": "gn-seed-funding",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22seed%20round%22%20OR%20%22seed%20funding%22&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "funding"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-preseed-funding",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22pre-seed%22%20startup%20funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "funding"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-series-a-europe",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22series%20A%22%20startup%20europe&hl=en-GB&gl=GB&ceid=GB:en",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "funding"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-demo-day",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=startup%20%22demo%20day%22&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-canada-startups",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=Canada%20startup%20funding%20OR%20raise&hl=en-CA&gl=CA&ceid=CA:en",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-australia-startups",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=Australia%20startup%20funding%20raise&hl=en-AU&gl=AU&ceid=AU:en",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-latam-startups",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22Latin%20America%22%20startup%20funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-africa-startups",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=Africa%20startup%20funding%20Nigeria%20Kenya%20Egypt&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-sea-startups",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22Southeast%20Asia%22%20startup%20funding&hl=en-SG&gl=SG&ceid=SG:en",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-mena-startups",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=UAE%20OR%20Saudi%20startup%20funding&hl=en-US&gl=AE&ceid=AE:en",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-nordics-startups",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=Sweden%20OR%20Denmark%20OR%20Finland%20OR%20Norway%20startup%20funding&hl=en-GB&gl=GB&ceid=GB:en",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-korea-startups",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=Korea%20startup%20funding%20Seoul&hl=en-US&gl=US&ceid=US:en",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-defense-startup",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=defense%20tech%20startup%20funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "vertical"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-robotics-startup",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=robotics%20startup%20funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "vertical"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-quantum-startup",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=quantum%20computing%20startup%20funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "vertical"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-nuclear-fusion-startup",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=fusion%20OR%20nuclear%20startup%20funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "vertical"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-devtools-startup",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=developer%20tools%20startup%20funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "vertical"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-cybersecurity-startup",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=cybersecurity%20startup%20funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "vertical"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-healthtech-startup",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=healthtech%20OR%20%22digital%20health%22%20startup%20funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "vertical"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-edtech-startup",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=edtech%20startup%20funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "vertical"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-agritech-startup",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=agtech%20OR%20agritech%20startup%20funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "vertical"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-proptech-startup",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=proptech%20OR%20contech%20startup%20funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "vertical"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-gaming-startup",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=game%20studio%20startup%20funding&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "vertical"
+      ],
+      "active": false
+    },
+    {
+      "name": "gn-open-source-startup",
+      "publisher": "Google News",
+      "feed_url": "https://news.google.com/rss/search?q=%22open%20source%22%20startup%20funding%20round&hl=en-US&gl=US&ceid=US:en",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "vertical"
+      ],
+      "active": false
+    },
+    {
+      "name": "spectrum-robotics",
+      "publisher": "IEEE Spectrum",
+      "feed_url": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "robotics",
+        "hardware",
+        "vertical"
+      ]
+    },
+    {
+      "name": "spectrum-semiconductors",
+      "publisher": "IEEE Spectrum",
+      "feed_url": "https://spectrum.ieee.org/feeds/topic/semiconductors.rss",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "semiconductors",
+        "ai"
+      ]
+    },
+    {
+      "name": "spectrum-energy",
+      "publisher": "IEEE Spectrum",
+      "feed_url": "https://spectrum.ieee.org/feeds/topic/energy.rss",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "energy",
+        "climate"
+      ]
+    },
+    {
+      "name": "spectrum-aerospace",
+      "publisher": "IEEE Spectrum",
+      "feed_url": "https://spectrum.ieee.org/feeds/topic/aerospace.rss",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "space",
+        "aerospace",
+        "defense"
+      ]
+    },
+    {
+      "name": "eetimes",
+      "publisher": "EE Times",
+      "feed_url": "https://www.eetimes.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "semiconductors",
+        "electronics"
+      ]
+    },
+    {
+      "name": "semiengineering",
+      "publisher": "Semiconductor Engineering",
+      "feed_url": "https://semiengineering.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "semiconductors"
+      ]
+    },
+    {
+      "name": "semiconductor-digest",
+      "publisher": "Semiconductor Digest",
+      "feed_url": "https://www.semiconductor-digest.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "semiconductors"
+      ]
+    },
+    {
+      "name": "more-than-moore",
+      "publisher": "More Than Moore",
+      "feed_url": "https://morethanmoore.substack.com/feed",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "semiconductors",
+        "analysis"
+      ]
+    },
+    {
+      "name": "nextplatform",
+      "publisher": "The Next Platform",
+      "feed_url": "https://www.nextplatform.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "compute",
+        "infrastructure"
+      ]
+    },
+    {
+      "name": "hpcwire",
+      "publisher": "HPCwire",
+      "feed_url": "https://www.hpcwire.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "compute",
+        "hpc"
+      ]
+    },
+    {
+      "name": "robohub",
+      "publisher": "Robohub",
+      "feed_url": "https://robohub.org/feed/",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "robotics"
+      ]
+    },
+    {
+      "name": "dronelife",
+      "publisher": "DroneLife",
+      "feed_url": "https://dronelife.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "drones",
+        "robotics"
+      ]
+    },
+    {
+      "name": "verticalmag",
+      "publisher": "Vertical Magazine",
+      "feed_url": "https://verticalmag.com/feed/",
+      "tier": 2,
+      "country": "ca",
+      "default_language": "en",
+      "topics": [
+        "evtol",
+        "drones",
+        "aerospace"
+      ]
+    },
+    {
+      "name": "nasaspaceflight",
+      "publisher": "NASASpaceflight.com",
+      "feed_url": "https://www.nasaspaceflight.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "space"
+      ]
+    },
+    {
+      "name": "world-nuclear-news",
+      "publisher": "World Nuclear News",
+      "feed_url": "https://world-nuclear-news.org/RSS",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "nuclear",
+        "energy"
+      ]
+    },
+    {
+      "name": "neutron-bytes",
+      "publisher": "Neutron Bytes",
+      "feed_url": "https://neutronbytes.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "nuclear",
+        "fusion",
+        "space"
+      ]
+    },
+    {
+      "name": "ans-newswire",
+      "publisher": "Nuclear Newswire",
+      "feed_url": "https://ans.org/news/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "nuclear",
+        "energy"
+      ]
+    },
+    {
+      "name": "energy-storage-news",
+      "publisher": "Energy-Storage.News",
+      "feed_url": "https://www.energy-storage.news/feed/",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "energy",
+        "batteries",
+        "climate"
+      ]
+    },
+    {
+      "name": "quantum-insider",
+      "publisher": "The Quantum Insider",
+      "feed_url": "https://thequantuminsider.com/feed/",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "quantum",
+        "deeptech"
+      ]
+    },
+    {
+      "name": "quantum-zeitgeist",
+      "publisher": "Quantum Zeitgeist",
+      "feed_url": "https://quantumzeitgeist.com/feed/",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "quantum",
+        "deeptech"
+      ]
+    },
+    {
+      "name": "defense-gov-contracts",
+      "publisher": "U.S. DoD Contract Announcements",
+      "feed_url": "https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=400&Site=945",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "defense",
+        "contracts",
+        "traction"
+      ]
+    },
+    {
+      "name": "defenseone",
+      "publisher": "Defense One",
+      "feed_url": "https://www.defenseone.com/rss/all/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "defense",
+        "govtech"
+      ]
+    },
+    {
+      "name": "twz",
+      "publisher": "The War Zone",
+      "feed_url": "https://www.twz.com/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "defense",
+        "aerospace"
+      ]
+    },
+    {
+      "name": "medical-design-outsourcing",
+      "publisher": "Medical Design & Outsourcing",
+      "feed_url": "https://www.medicaldesignandoutsourcing.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "medtech",
+        "manufacturing"
+      ]
+    },
+    {
+      "name": "3dprint",
+      "publisher": "3DPrint.com",
+      "feed_url": "https://3dprint.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "manufacturing",
+        "additive",
+        "vertical"
+      ]
+    },
+    {
+      "name": "insidedeeptech",
+      "publisher": "Inside Deep Tech",
+      "feed_url": "https://www.insidedeeptech.com/feed",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "deeptech",
+        "analysis"
+      ]
+    },
+    {
+      "name": "nextbigfuture",
+      "publisher": "NextBigFuture",
+      "feed_url": "https://www.nextbigfuture.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "frontier",
+        "science"
+      ]
+    },
+    {
+      "name": "physorg",
+      "publisher": "Phys.org",
+      "feed_url": "https://phys.org/rss-feed/",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "science",
+        "research"
+      ]
+    },
+    {
+      "name": "sosv",
+      "publisher": "SOSV",
+      "feed_url": "https://sosv.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "deeptech",
+        "vc",
+        "startups"
+      ]
+    },
+    {
+      "name": "alleywatch",
+      "publisher": "AlleyWatch",
+      "feed_url": "https://www.alleywatch.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "funding",
+        "nyc"
+      ]
+    },
+    {
+      "name": "techstartups",
+      "publisher": "TechStartups",
+      "feed_url": "https://techstartups.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "funding"
+      ]
+    },
+    {
+      "name": "startuphub-ai",
+      "publisher": "StartupHub.ai",
+      "feed_url": "https://www.startuphub.ai/rss",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ai",
+        "funding"
+      ]
+    },
+    {
+      "name": "thesaasnews",
+      "publisher": "The SaaS News",
+      "feed_url": "https://thesaasnews.com/feed/",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "saas",
+        "startups",
+        "funding"
+      ]
+    },
+    {
+      "name": "gruenderszene",
+      "publisher": "Gruenderszene",
+      "feed_url": "https://www.gruenderszene.de/feed",
+      "tier": 2,
+      "country": "de",
+      "default_language": "de",
+      "topics": [
+        "startups",
+        "funding",
+        "germany"
+      ]
+    },
+    {
+      "name": "maddyness",
+      "publisher": "Maddyness",
+      "feed_url": "https://maddyness.com/feed/",
+      "tier": 2,
+      "country": "fr",
+      "default_language": "fr",
+      "topics": [
+        "startups",
+        "funding",
+        "france"
+      ]
+    },
+    {
+      "name": "arcticstartup",
+      "publisher": "ArcticStartup",
+      "feed_url": "https://arcticstartup.com/feed/",
+      "tier": 2,
+      "country": "fi",
+      "default_language": "en",
+      "topics": [
+        "nordics",
+        "startups",
+        "funding"
+      ]
+    },
+    {
+      "name": "contxto",
+      "publisher": "Contxto",
+      "feed_url": "https://contxto.com/en/feed/",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "latam",
+        "startups",
+        "funding"
+      ]
+    },
+    {
+      "name": "geektime-il",
+      "publisher": "Geektime",
+      "feed_url": "https://www.geektime.co.il/feed/",
+      "tier": 2,
+      "country": "il",
+      "default_language": "he",
+      "topics": [
+        "israel",
+        "startups",
+        "funding"
+      ]
+    },
+    {
+      "name": "silicon-prairie-news",
+      "publisher": "Silicon Prairie News",
+      "feed_url": "https://siliconprairienews.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "startups",
+        "midwest"
+      ]
+    },
+    {
+      "name": "startups-co-uk",
+      "publisher": "Startups.co.uk",
+      "feed_url": "https://startups.co.uk/feed/",
+      "tier": 3,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "uk",
+        "startups"
+      ]
+    },
+    {
+      "name": "businesscloud-uk",
+      "publisher": "BusinessCloud",
+      "feed_url": "https://businesscloud.co.uk/feed/",
+      "tier": 2,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "uk",
+        "startups",
+        "tech"
+      ]
+    },
+    {
+      "name": "producthunt",
+      "publisher": "Product Hunt",
+      "feed_url": "https://www.producthunt.com/feed",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "launches",
+        "traction",
+        "startups"
+      ]
+    },
+    {
+      "name": "hn-show-hn",
+      "publisher": "Hacker News Show HN",
+      "feed_url": "https://hnrss.org/show",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "launches",
+        "traction",
+        "devtools"
+      ]
+    },
+    {
+      "name": "globenewswire-tech",
+      "publisher": "GlobeNewswire Technology",
+      "feed_url": "https://www.globenewswire.com/RssFeed/subjectcode/15-Technology/feedTitle/GlobeNewswire%20-%20Technology",
+      "tier": 3,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "press-releases",
+        "funding",
+        "m&a"
+      ]
+    },
+    {
+      "name": "risk-insurance",
+      "publisher": "Risk & Insurance",
+      "feed_url": "https://riskandinsurance.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "insurance",
+        "risk"
+      ]
+    },
+    {
+      "name": "reinsurance-news",
+      "publisher": "Reinsurance News",
+      "feed_url": "https://www.reinsurancene.ws/feed/",
+      "tier": 2,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "reinsurance",
+        "insurance"
+      ]
+    },
+    {
+      "name": "carrier-management",
+      "publisher": "Carrier Management",
+      "feed_url": "https://www.carriermanagement.com/feed",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "insurance",
+        "vertical"
+      ]
+    },
+    {
+      "name": "insurtech-insights",
+      "publisher": "Insurtech Insights",
+      "feed_url": "https://www.insurtechinsights.com/feed",
+      "tier": 2,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "insurtech",
+        "startups",
+        "funding"
+      ]
+    },
+    {
+      "name": "lawsites",
+      "publisher": "LawSites",
+      "feed_url": "https://www.lawsitesblog.com/feed",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "legaltech",
+        "legal"
+      ]
+    },
+    {
+      "name": "above-the-law",
+      "publisher": "Above the Law",
+      "feed_url": "https://abovethelaw.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "legal industry"
+      ]
+    },
+    {
+      "name": "mobileworldlive",
+      "publisher": "Mobile World Live",
+      "feed_url": "https://www.mobileworldlive.com/feed/",
+      "tier": 2,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "telecom",
+        "5g"
+      ]
+    },
+    {
+      "name": "oilprice",
+      "publisher": "OilPrice.com",
+      "feed_url": "https://oilprice.com/rss/main",
+      "tier": 2,
+      "country": null,
+      "default_language": "en",
+      "topics": [
+        "oil gas",
+        "energy",
+        "commodities"
+      ]
+    },
+    {
+      "name": "front-office-sports",
+      "publisher": "Front Office Sports",
+      "feed_url": "https://frontofficesports.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "sports business"
+      ]
+    },
+    {
+      "name": "sportico",
+      "publisher": "Sportico",
+      "feed_url": "https://sportico.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "sports business",
+        "media"
+      ]
+    },
+    {
+      "name": "glossy",
+      "publisher": "Glossy",
+      "feed_url": "https://www.glossy.co/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "fashion",
+        "ecommerce"
+      ]
+    },
+    {
+      "name": "restaurant-business",
+      "publisher": "Restaurant Business",
+      "feed_url": "https://www.restaurantbusinessonline.com/feed",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "restaurants",
+        "food delivery"
+      ]
+    },
+    {
+      "name": "nrn",
+      "publisher": "Nation's Restaurant News",
+      "feed_url": "https://www.nrn.com/rss.xml",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "restaurants"
+      ]
+    },
+    {
+      "name": "qsr-magazine",
+      "publisher": "QSR Magazine",
+      "feed_url": "https://www.qsrmagazine.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "restaurants"
+      ]
+    },
+    {
+      "name": "propmodo",
+      "publisher": "Propmodo",
+      "feed_url": "https://www.propmodo.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "proptech",
+        "realestate"
+      ]
+    },
+    {
+      "name": "adexchanger",
+      "publisher": "AdExchanger",
+      "feed_url": "https://www.adexchanger.com/feed/",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "adtech"
+      ]
+    },
+    {
+      "name": "martech-today",
+      "publisher": "MarTech",
+      "feed_url": "https://martech.org/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "martech"
+      ]
+    },
+    {
+      "name": "hr-executive",
+      "publisher": "HR Executive",
+      "feed_url": "https://hrexecutive.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "hr",
+        "workforce"
+      ]
+    },
+    {
+      "name": "marktechpost",
+      "publisher": "MarkTechPost",
+      "feed_url": "https://www.marktechpost.com/feed/",
+      "tier": 3,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "ai"
+      ]
+    },
+    {
+      "name": "european-spaceflight",
+      "publisher": "European Spaceflight",
+      "feed_url": "https://europeanspaceflight.com/feed/",
+      "tier": 3,
+      "country": "gb",
+      "default_language": "en",
+      "topics": [
+        "space"
+      ]
+    },
+    {
+      "name": "dj-markets-main",
+      "publisher": "Dow Jones Markets",
+      "feed_url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "markets",
+        "capital markets"
+      ]
+    },
+    {
+      "name": "benzinga",
+      "publisher": "Benzinga",
+      "feed_url": "https://www.benzinga.com/feed",
+      "tier": 2,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "markets",
+        "funding wire"
+      ]
+    },
+    {
+      "name": "techcrunch-venture",
+      "publisher": "TechCrunch",
+      "feed_url": "https://techcrunch.com/category/venture/feed/",
+      "tier": 1,
+      "country": "us",
+      "default_language": "en",
+      "topics": [
+        "vc",
+        "funding",
+        "startups"
+      ]
+    },
+    {
+      "name": "techcrunch-japan",
+      "publisher": "TechCrunch Japan",
+      "feed_url": "https://jp.techcrunch.com/feed/",
+      "tier": 2,
+      "country": "jp",
+      "default_language": "ja",
+      "topics": [
+        "japan startups"
+      ]
+    }
+  ]
+}

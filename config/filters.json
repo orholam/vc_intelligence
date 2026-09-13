@@ -1,0 +1,209 @@
+{
+  "$comment": "Tunable thresholds (NFR-9: config not code). Edit + bump version; no deploy needed.",
+  "version": "2026.08.24",
+  "prefilter": {
+    "min_body_chars": 500,
+    "min_title_chars": 12,
+    "dedup_window_hours": 48,
+    "max_article_age_days": 45,
+    "max_article_age_days_discovered": 3,
+    "keep_if_event_title_patterns": [
+      "(?i)\\b(layoffs?|settlement|departs?|departure|steps down|resign\\w*|lawsuit|sues|launches|unveils|acquires?|shuts down|recalls?|divest\\w*|sells?)\\b",
+      "(?i)\\binvest(s|ed|ing)?\\b",
+      "(?i)\\$\\d"
+    ],
+    "blocked_url_patterns": [
+      "/tag/",
+      "/tags/",
+      "/category/",
+      "/categories/",
+      "/author/",
+      "/authors/",
+      "/press-release-directory/",
+      "/newsroom/page/",
+      "?page=",
+      "/page/",
+      "/search?",
+      "/wp-json/",
+      "/feed/",
+      "/comments/",
+      "/login",
+      "/signup",
+      "/changelog",
+      "/updates/",
+      "/release-notes",
+      "/what-s-new",
+      "/whats-new",
+      "/business/technology-of-business",
+      "/technology-of-business"
+    ],
+    "non_news_domains_hint": [
+      "prnewswire.com",
+      "globenewswire.com",
+      "businesswire.com"
+    ],
+    "non_news_title_patterns": [
+      "(?i)weekly roundup",
+      "(?i)this week in",
+      "(?i)top \\d+ (apps|tools|books)",
+      "(?i)sponsored:",
+      "(?i)webinar:",
+      "(?i)podcast episode",
+      "(?i)newsletter:",
+      "(?i)job alert",
+      "(?i)events calendar",
+      "(?i)^sponsored post",
+      "(?i)\\binterview\\s*:",
+      "(?i)\\b(is hiring|we'?re hiring|job opening|apply now|now hiring|careers?)\\b",
+      "(?i)(injured list|box score|game recap|series finale|vs\\. .{3,25} series|power rankings)",
+      "(?i)(moon phase|horoscope|daily horoscope|what the moon will)",
+      "(?i)(mutual fund sip|sip amount|epf\\b|fcnr\\b|nri talk|etmarkets|sensex|nifty\\b|share price target|stocks that saw|retirement corpus|stock market:\\s)",
+      "(?i)(streaming gem|binge\\b|tv review|film review|movie review|rotten tomatoes|episode\\s+\\d)",
+      "(?i)(full-time (mum|mom)|life beyond the spotlight|kapuso star|reality star|soap opera)",
+      "(?i)(shareholder alert|claimsfiler|lead plaintiff|class action lawsuit against)"
+    ],
+    "keep_if_funding_signals": true,
+    "job_board_domains": [
+      "builtinsf.com",
+      "builtin.com",
+      "indeed.com",
+      "glassdoor.com",
+      "ziprecruiter.com"
+    ]
+  },
+  "llm_filter": {
+    "keep_threshold": 0.6,
+    "prompt_max_chars": 6000
+  },
+  "resolver": {
+    "primary_min_confidence": 0.55,
+    "drop_below_confidence": 0.35,
+    "secondary_min_confidence": 0.6,
+    "adjudicate_margin": 0.15,
+    "adjudicate_top_n": 3,
+    "domain_overlap_bonus": 0.45,
+    "$comment_resolver": "exact_alias_bonus applies ONLY when the alias appears in the TITLE (subject evidence); mentions found only in body text get mention_alias_bonus.",
+    "exact_alias_bonus": 0.3,
+    "mention_alias_bonus": 0.06,
+    "repeat_alias_bonus_cap": 0.05,
+    "partial_alias_bonus": 0.12,
+    "ticker_match_bonus": 0.05,
+    "country_mismatch_penalty": 0.08,
+    "industry_coherence_bonus": 0.06,
+    "prominence_prior_cap": 0.06,
+    "adjudicate_weight_det": 0.4,
+    "adjudicate_weight_llm": 0.6,
+    "require_title_or_domain_for_primary": true,
+    "discovery_mints": true,
+    "discovery_name_only_min_confidence": 0.85,
+    "counterparty_links": true
+  },
+  "clustering": {
+    "cosine_threshold": 0.76,
+    "window_hours": 36,
+    "same_entity_gate": true,
+    "cross_entity_cosine": 0.95
+  },
+  "newsworthiness": {
+    "$comment": "c-plan: score = family_weight*0.5 + source_tier_score*0.2 + entity_prominence*0.2 + exclusivity*0.1; prominence = 1/(1+count30d/scale); public+unwatchlisted caps family weight | E3 recalibration: high reserved for tier-1/2 materiality on first coverage (\u226425% of kept per OUTPUT-RUBRIC \u00a7E3). | Corroboration term: multi-publisher event coverage adds up to +0.15 (A3 intent \u2014 corroborated events are materially stronger).",
+    "high_threshold": 0.78,
+    "medium_threshold": 0.4,
+    "source_tier_scores": {
+      "1": 1.0,
+      "2": 0.6,
+      "3": 0.35
+    },
+    "prominence_article_count_30d_for_high": 5,
+    "family_weights": {
+      "funding": 0.95,
+      "mna": 0.9,
+      "leadership": 0.8,
+      "product": 0.75,
+      "partnership": 0.7,
+      "expansion": 0.7,
+      "financials": 0.65,
+      "risk": 0.6,
+      "legal": 0.55,
+      "regulatory": 0.55,
+      "research": 0.4,
+      "awards": 0.35
+    },
+    "default_family_weight": 0.5,
+    "public_entity_family_cap": 0.6,
+    "prominence_count_scale": 4,
+    "corroboration_weight": 0.15
+  },
+  "summary": {
+    "mandatory_tiers": [
+      "high"
+    ],
+    "medium_coverage_target": 0.7
+  },
+  "facts": {
+    "require_two_publishers_or_tier1": true,
+    "min_event_confidence": 0.7
+  },
+  "enrichment": {
+    "$comment": "R05 tier-mandated enrichment fields. primary_tag null never occurs (status.no_event is the explicit no-event verdict). countries defaults OUT of the mandate: E2 fill-rate scoring excludes it and forcing ISO codes on geography-free articles fabricates evidence (FR-13 prefer-null-over-wrong).",
+    "mandated_fields": [
+      "primary_tag",
+      "sentiment",
+      "sentiment_score",
+      "newsworthiness",
+      "industry_primary"
+    ]
+  },
+  "harness": {
+    "$comment": "Waiting-room batch job. Part 1 audits the pile as a set (audit_chunk_size headlines per call); parts 2–3 hone in per surviving company.",
+    "max_batch": 120,
+    "deep_search_entities": 8,
+    "audit_chunk_size": 100
+  },
+  "source_lifecycle": {
+    "$comment": "R10: automated onboard/demote/prune hooks; every transition audited in source_events.",
+    "prune_failure_streak": 10,
+    "onboard_max_age_hours": 24,
+    "throttle_min_kept_30d": 30,
+    "throttle_max_discard_rate_pct": 85
+  },
+  "budget": {
+    "soft_limit_pct": 90,
+    "$comment": "at soft limit the router degrades to classify-only (skips big-tier calls)"
+  },
+  "listgen": {
+    "max_companies_default": 50,
+    "signal_recency_half_life_days": 30,
+    "launch_entity_min_signal": 2
+  },
+  "launch_surfaces": {
+    "hn": {
+      "enabled": true,
+      "min_points": 50,
+      "max_age_hours": 72
+    },
+    "producthunt": {
+      "enabled": true,
+      "min_votes": 100,
+      "token_env": "PH_TOKEN"
+    },
+    "github_trending": {
+      "$comment_github_trending": "Star velocity on repos created within window_days = crowd-computed traction. Optional GITHUB_TOKEN env lifts API rate limits.",
+      "enabled": true,
+      "min_stars": 150,
+      "window_days": 7,
+      "token_env": "GITHUB_TOKEN"
+    },
+    "yc_directory": {
+      "enabled": false
+    }
+  },
+  "gdelt": {
+    "poll_minutes": 15,
+    "max_records_per_query": 75,
+    "entity_batch_size": 8,
+    "abort_after_consecutive_429": 3,
+    "fetch_only_allowlisted_or_known_publishers": true,
+    "max_entities_per_poll": 400,
+    "min_query_interval_ms": 5500
+  }
+}

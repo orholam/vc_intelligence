@@ -1,0 +1,62 @@
+name,publisher,feed_url,tier,country,default_language,topics
+geekwire,GeekWire,https://geekwire.com/feed/,1,us,en,startups;technology;seattle
+medcitynews,MedCity News,https://medcitynews.com/feed/,1,us,en,health;bio;startups
+newcomer,Newcomer,https://newcomer.co/feed,1,us,en,vc;startups;funding
+dallasinnovates,Dallas Innovates,https://dallasinnovates.com/feed/,2,us,en,startups;texas
+siliconhillsnews,Silicon Hills News,https://siliconhillsnews.com/feed/,2,us,en,startups;austin
+grepbeat,GrepBeat,https://www.grepbeat.com/feed/,2,us,en,startups;north-carolina
+refreshmiami,Refresh Miami,https://refreshmiami.com/feed/,2,us,en,startups;miami
+fedscoop,FedScoop,https://fedscoop.com/feed/,2,us,en,govtech;cloud
+statescoop,StateScoop,https://statescoop.com/feed/,2,us,en,govtech
+defensescoop,DefenseScoop,https://defensescoop.com/feed/,2,us,en,defense;startups
+latitudemedia,Latitude Media,https://www.latitudemedia.com/feed,2,us,en,climate;energy-startups
+canarymedia,Canary Media,https://www.canarymedia.com/feed,2,us,en,climate;clean-energy
+therobotreport,The Robot Report,https://www.therobotreport.com/feed/,2,us,en,robotics;startups
+payloadspace,Payload,https://payloadspace.com/feed/,2,us,en,space;startups
+fiercehealthcare,Fierce Healthcare,https://www.fiercehealthcare.com/rss/xml,2,us,en,healthcare
+tearsheet,Tearsheet,https://tearsheet.co/feed,2,us,en,fintech;banking
+nocamels,NoCamels,https://www.nocamels.com/feed/,2,il,en,startups;israel
+menabytes,MENAbytes,https://www.menabytes.com/feed,2,ae,en,startups;mena
+fintechnews-sg,Fintech News Singapore,https://fintechnews.sg/feed/,2,sg,en,fintech;sea
+yc-blog,Y Combinator,https://www.ycombinator.com/blog/rss.xml,2,us,en,accelerator;startups
+inc-latest,Inc.,https://www.inc.com/rss,3,us,en,small-business;startups
+forbes-startups,Forbes,https://www.forbes.com/startups/feed/,3,us,en,startups
+digiday,Digiday,https://digiday.com/feed/,3,us,en,adtech;media
+ai-news,AI News,https://www.artificialintelligence-news.com/feed/,3,uk,en,ai
+ventureburn,Ventureburn,https://ventureburn.com/feed/,3,za,en,startups;africa
+weetracker,WeeTracker,https://weetracker.com/feed/,3,ng,en,startups;africa
+benjamindada,Benjamin Dada,https://benjamindada.com/feed/,3,ng,en,startups;africa
+techjuice,TechJuice,https://www.techjuice.pk/feed/,3,pk,en,startups;pakistan
+pandaily,Pandaily,https://pandaily.com/feed/,3,cn,en,tech;china
+thespoon,The Spoon,https://thespoon.tech/feed/,3,us,en,foodtech
+trellis,Trellis,https://trellis.net/feed/,3,us,en,climate;sustainability
+hackernoon,HackerNoon,https://hackernoon.com/feed,3,us,en,technology;startups
+latent-space,Latent Space,https://www.latent.space/feed,3,us,en,ai;startups
+interconnects,Interconnects,https://www.interconnects.ai/feed,3,us,en,ai
+platformer,Platformer,https://www.platformer.news/feed,3,us,en,tech-industry;platforms
+simonwillison,Simon Willison,https://simonwillison.net/atom/everything/,3,uk,en,ai;tools
+exponentialview,Exponential View,https://www.exponentialview.co/feed,3,uk,en,ai;analysis
+gn-seed-funding,Google News,https://news.google.com/rss/search?q=%22seed%20round%22%20OR%20%22seed%20funding%22&hl=en-US&gl=US&ceid=US:en,2,,en,funding
+gn-preseed-funding,Google News,https://news.google.com/rss/search?q=%22pre-seed%22%20startup%20funding&hl=en-US&gl=US&ceid=US:en,2,,en,funding
+gn-series-a-europe,Google News,https://news.google.com/rss/search?q=%22series%20A%22%20startup%20europe&hl=en-GB&gl=GB&ceid=GB:en,2,,en,funding
+gn-demo-day,Google News,https://news.google.com/rss/search?q=startup%20%22demo%20day%22&hl=en-US&gl=US&ceid=US:en,2,,en,startups
+gn-canada-startups,Google News,https://news.google.com/rss/search?q=Canada%20startup%20funding%20OR%20raise&hl=en-CA&gl=CA&ceid=CA:en,2,,en,startups
+gn-australia-startups,Google News,https://news.google.com/rss/search?q=Australia%20startup%20funding%20raise&hl=en-AU&gl=AU&ceid=AU:en,2,,en,startups
+gn-latam-startups,Google News,https://news.google.com/rss/search?q=%22Latin%20America%22%20startup%20funding&hl=en-US&gl=US&ceid=US:en,2,,en,startups
+gn-africa-startups,Google News,https://news.google.com/rss/search?q=Africa%20startup%20funding%20Nigeria%20Kenya%20Egypt&hl=en-US&gl=US&ceid=US:en,2,,en,startups
+gn-sea-startups,Google News,https://news.google.com/rss/search?q=%22Southeast%20Asia%22%20startup%20funding&hl=en-SG&gl=SG&ceid=SG:en,2,,en,startups
+gn-mena-startups,Google News,https://news.google.com/rss/search?q=UAE%20OR%20Saudi%20startup%20funding&hl=en-US&gl=AE&ceid=AE:en,2,,en,startups
+gn-nordics-startups,Google News,https://news.google.com/rss/search?q=Sweden%20OR%20Denmark%20OR%20Finland%20OR%20Norway%20startup%20funding&hl=en-GB&gl=GB&ceid=GB:en,2,,en,startups
+gn-korea-startups,Google News,https://news.google.com/rss/search?q=Korea%20startup%20funding%20Seoul&hl=en-US&gl=US&ceid=US:en,2,,en,startups
+gn-defense-startup,Google News,https://news.google.com/rss/search?q=defense%20tech%20startup%20funding&hl=en-US&gl=US&ceid=US:en,3,,en,startups;vertical
+gn-robotics-startup,Google News,https://news.google.com/rss/search?q=robotics%20startup%20funding&hl=en-US&gl=US&ceid=US:en,3,,en,startups;vertical
+gn-quantum-startup,Google News,https://news.google.com/rss/search?q=quantum%20computing%20startup%20funding&hl=en-US&gl=US&ceid=US:en,3,,en,startups;vertical
+gn-nuclear-fusion-startup,Google News,https://news.google.com/rss/search?q=fusion%20OR%20nuclear%20startup%20funding&hl=en-US&gl=US&ceid=US:en,3,,en,startups;vertical
+gn-devtools-startup,Google News,https://news.google.com/rss/search?q=developer%20tools%20startup%20funding&hl=en-US&gl=US&ceid=US:en,3,,en,startups;vertical
+gn-cybersecurity-startup,Google News,https://news.google.com/rss/search?q=cybersecurity%20startup%20funding&hl=en-US&gl=US&ceid=US:en,3,,en,startups;vertical
+gn-healthtech-startup,Google News,https://news.google.com/rss/search?q=healthtech%20OR%20%22digital%20health%22%20startup%20funding&hl=en-US&gl=US&ceid=US:en,3,,en,startups;vertical
+gn-edtech-startup,Google News,https://news.google.com/rss/search?q=edtech%20startup%20funding&hl=en-US&gl=US&ceid=US:en,3,,en,startups;vertical
+gn-agritech-startup,Google News,https://news.google.com/rss/search?q=agtech%20OR%20agritech%20startup%20funding&hl=en-US&gl=US&ceid=US:en,3,,en,startups;vertical
+gn-proptech-startup,Google News,https://news.google.com/rss/search?q=proptech%20OR%20contech%20startup%20funding&hl=en-US&gl=US&ceid=US:en,3,,en,startups;vertical
+gn-gaming-startup,Google News,https://news.google.com/rss/search?q=game%20studio%20startup%20funding&hl=en-US&gl=US&ceid=US:en,3,,en,startups;vertical
+gn-open-source-startup,Google News,https://news.google.com/rss/search?q=%22open%20source%22%20startup%20funding%20round&hl=en-US&gl=US&ceid=US:en,3,,en,startups;vertical

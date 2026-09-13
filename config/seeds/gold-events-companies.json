@@ -1,0 +1,491 @@
+{
+  "$comment": "Gold-event cohort for the Aug-2026 window (A2 truth-set companies). Curated seeds so resolution has exact domain/alias targets; monitored via discover/GDELT watchlist.",
+  "records": [
+    {
+      "name": "Firmus Grid",
+      "website": "firmusgrid.com",
+      "country": "AU",
+      "industry_tags": [
+        "cloud_infra",
+        "ai_ml"
+      ],
+      "aliases": [
+        "firmus"
+      ]
+    },
+    {
+      "name": "Hadrian",
+      "website": "hadrian.io",
+      "country": "US",
+      "industry_tags": [
+        "govtech_defense",
+        "robotics_hardware"
+      ],
+      "aliases": [
+        "hadrian automation"
+      ]
+    },
+    {
+      "name": "Base Power",
+      "website": "basepowercompany.com",
+      "country": "US",
+      "industry_tags": [
+        "energy_transition",
+        "solar_storage"
+      ],
+      "aliases": [
+        "base power"
+      ]
+    },
+    {
+      "name": "Valar Atomics",
+      "website": "valaratomics.com",
+      "country": "US",
+      "industry_tags": [
+        "energy_transition"
+      ],
+      "aliases": [
+        "valar"
+      ]
+    },
+    {
+      "name": "HappyRobot",
+      "website": "happyrobot.ai",
+      "country": "ES",
+      "industry_tags": [
+        "ai_ml",
+        "logistics_supply_chain"
+      ],
+      "aliases": [
+        "happyrobot"
+      ]
+    },
+    {
+      "name": "Function Health",
+      "website": "functionhealth.com",
+      "country": "US",
+      "industry_tags": [
+        "healthtech"
+      ],
+      "aliases": [
+        "function health"
+      ]
+    },
+    {
+      "name": "Moove",
+      "website": "moove.io",
+      "country": "GB",
+      "industry_tags": [
+        "autonomous_vehicles",
+        "fintech"
+      ],
+      "aliases": [
+        "moove"
+      ]
+    },
+    {
+      "name": "Eliyan",
+      "website": "eliyan.com",
+      "country": "US",
+      "industry_tags": [
+        "semiconductors"
+      ],
+      "aliases": [
+        "eliyan"
+      ]
+    },
+    {
+      "name": "Vaderis Therapeutics",
+      "website": "vaderis.com",
+      "country": "CH",
+      "industry_tags": [
+        "biotech_pharma"
+      ],
+      "aliases": [
+        "vaderis"
+      ]
+    },
+    {
+      "name": "inKind",
+      "website": "inkind.com",
+      "country": "US",
+      "industry_tags": [
+        "fintech",
+        "restaurants_delivery"
+      ],
+      "aliases": [
+        "inkind"
+      ]
+    },
+    {
+      "name": "Aureka Biotechnologies",
+      "website": "aurekabio.com",
+      "country": "US",
+      "industry_tags": [
+        "biotech_pharma",
+        "ai_ml"
+      ],
+      "aliases": [
+        "aureka"
+      ]
+    },
+    {
+      "name": "Vertical Aerospace",
+      "website": "vertical-aerospace.com",
+      "country": "GB",
+      "industry_tags": [
+        "automotive_aerospace"
+      ],
+      "aliases": [
+        "vertical aerospace"
+      ]
+    },
+    {
+      "name": "Flagler Health",
+      "website": "flaglerhealth.co",
+      "country": "US",
+      "industry_tags": [
+        "healthtech"
+      ],
+      "aliases": [
+        "flagler health"
+      ]
+    },
+    {
+      "name": "ApartmentIQ",
+      "website": "apartmentiq.com",
+      "country": "US",
+      "industry_tags": [
+        "proptech_realestate",
+        "data_analytics"
+      ],
+      "aliases": [
+        "apartmentiq"
+      ]
+    },
+    {
+      "name": "Axle",
+      "website": "useaxle.com",
+      "country": "US",
+      "industry_tags": [
+        "insurance_insurtech"
+      ],
+      "aliases": [
+        "axle insurance",
+        "axle"
+      ]
+    },
+    {
+      "name": "Quartr",
+      "website": "quartr.com",
+      "country": "SE",
+      "industry_tags": [
+        "capital_markets",
+        "data_analytics"
+      ],
+      "aliases": [
+        "quartr"
+      ]
+    },
+    {
+      "name": "Versa Vascular",
+      "website": "versavascular.com",
+      "country": "US",
+      "industry_tags": [
+        "medtech_devices"
+      ],
+      "aliases": [
+        "versa vascular"
+      ]
+    },
+    {
+      "name": "Zenity",
+      "website": "zenity.io",
+      "country": "IL",
+      "industry_tags": [
+        "cybersecurity"
+      ],
+      "aliases": [
+        "zenity"
+      ]
+    },
+    {
+      "name": "QuantHealth",
+      "website": "quanthealth.ai",
+      "country": "IL",
+      "industry_tags": [
+        "healthtech",
+        "ai_ml"
+      ],
+      "aliases": [
+        "quanthealth"
+      ]
+    },
+    {
+      "name": "Ore Energy",
+      "website": "ore.energy",
+      "country": "NL",
+      "industry_tags": [
+        "energy_transition"
+      ],
+      "aliases": [
+        "ore energy"
+      ]
+    },
+    {
+      "name": "Castelion",
+      "website": "castelion.com",
+      "country": "US",
+      "industry_tags": [
+        "govtech_defense"
+      ],
+      "aliases": [
+        "castelion"
+      ]
+    },
+    {
+      "name": "Blueprint Finance",
+      "website": "blueprint.finance",
+      "country": "US",
+      "industry_tags": [
+        "crypto_web3",
+        "fintech"
+      ],
+      "aliases": [
+        "concrete defi",
+        "blueprint finance"
+      ]
+    },
+    {
+      "name": "Hopscotch Primary Care",
+      "website": "hopscotchhealth.org",
+      "country": "US",
+      "industry_tags": [
+        "healthtech"
+      ],
+      "aliases": [
+        "hopscotch primary care"
+      ]
+    },
+    {
+      "name": "Vessev",
+      "website": "vessev.com",
+      "country": "NZ",
+      "industry_tags": [
+        "transportation_infra"
+      ],
+      "aliases": [
+        "vessev"
+      ]
+    },
+    {
+      "name": "Math Magic",
+      "website": "mathmagic.ai",
+      "country": "US",
+      "industry_tags": [
+        "ai_ml",
+        "consumer_internet"
+      ],
+      "aliases": [
+        "math magic"
+      ]
+    },
+    {
+      "name": "Wispr",
+      "website": "wisprflow.ai",
+      "country": "US",
+      "industry_tags": [
+        "ai_ml",
+        "consumer_internet"
+      ],
+      "aliases": [
+        "wispr",
+        "wispr flow"
+      ]
+    },
+    {
+      "name": "Rillet",
+      "website": "rillet.com",
+      "country": "US",
+      "industry_tags": [
+        "saas_enterprise",
+        "ai_ml"
+      ],
+      "aliases": [
+        "rillet"
+      ]
+    },
+    {
+      "name": "Starcloud",
+      "website": "starcloud.com",
+      "country": "US",
+      "industry_tags": [
+        "cloud_infra",
+        "automotive_aerospace"
+      ],
+      "aliases": [
+        "starcloud inc"
+      ]
+    },
+    {
+      "name": "River",
+      "website": "riverindia.in",
+      "country": "IN",
+      "industry_tags": [
+        "mobility_ev"
+      ],
+      "aliases": [
+        "river electric",
+        "river mobility"
+      ]
+    },
+    {
+      "name": "Convex",
+      "website": "convex.dev",
+      "country": "US",
+      "industry_tags": [
+        "devtools",
+        "cloud_infra"
+      ],
+      "aliases": [
+        "convex backend"
+      ]
+    },
+    {
+      "name": "Aurelius Systems",
+      "website": "aureliussystems.com",
+      "country": "US",
+      "industry_tags": [
+        "govtech_defense"
+      ],
+      "aliases": [
+        "aurelius systems"
+      ]
+    },
+    {
+      "name": "Yellow Card",
+      "website": "yellowcard.io",
+      "country": "NG",
+      "industry_tags": [
+        "crypto_web3",
+        "payments"
+      ],
+      "aliases": [
+        "yellow card financial"
+      ]
+    },
+    {
+      "name": "InRisk Labs",
+      "website": "inrisklabs.com",
+      "country": "IN",
+      "industry_tags": [
+        "insurance_insurtech",
+        "data_analytics"
+      ],
+      "aliases": [
+        "inrisk labs"
+      ]
+    },
+    {
+      "name": "Meta Platforms",
+      "website": "meta.com",
+      "country": "US",
+      "industry_tags": [],
+      "aliases": [
+        "meta",
+        "muse code"
+      ]
+    },
+    {
+      "name": "Neo",
+      "website": "neo.inc",
+      "country": "US",
+      "industry_tags": [
+        "cybersecurity"
+      ],
+      "aliases": [
+        "neo security"
+      ]
+    },
+    {
+      "name": "Natural",
+      "website": "natural.io",
+      "country": "US",
+      "industry_tags": [
+        "payments",
+        "ai_ml"
+      ],
+      "aliases": [
+        "natural payments"
+      ]
+    },
+    {
+      "name": "Empirical Security",
+      "website": "empiricalsecurity.com",
+      "country": "US",
+      "industry_tags": [
+        "cybersecurity"
+      ],
+      "aliases": [
+        "empirical security"
+      ]
+    },
+    {
+      "name": "Infinity",
+      "website": "infinity.ai",
+      "country": "US",
+      "industry_tags": [
+        "ai_ml",
+        "quantum_advanced_compute"
+      ],
+      "aliases": [
+        "infinity inference"
+      ]
+    },
+    {
+      "name": "Plazza",
+      "website": "plazza.in",
+      "country": "IN",
+      "industry_tags": [
+        "healthtech",
+        "logistics_supply_chain"
+      ],
+      "aliases": [
+        "plazza pharmacy"
+      ]
+    },
+    {
+      "name": "Brenus Pharma",
+      "website": "brenus-pharma.com",
+      "country": "FR",
+      "industry_tags": [
+        "biotech_pharma"
+      ],
+      "aliases": [
+        "brenus pharma"
+      ]
+    },
+    {
+      "name": "Adjuvia Therapeutics",
+      "website": "adjuvia.com",
+      "country": "US",
+      "industry_tags": [
+        "biotech_pharma"
+      ],
+      "aliases": [
+        "adjuvia therapeutics"
+      ]
+    },
+    {
+      "name": "Sabertooth Capital",
+      "website": "sabertooth.capital",
+      "country": "US",
+      "industry_tags": [
+        "banking_lending"
+      ],
+      "aliases": [
+        "sabertooth capital"
+      ]
+    }
+  ]
+}

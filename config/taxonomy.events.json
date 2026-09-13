@@ -1,0 +1,1046 @@
+{
+  "$comment": "Event taxonomy v1 (FR-13). ~80 event types in 11 families. Editable without deploy; bump `version` on change. `weight` feeds newsworthiness materiality (0-1). `fact_type` enables FR-9 structured fact extraction.",
+  "version": "2026.08.2",
+  "families": [
+    {
+      "name": "funding",
+      "weight": 0.95,
+      "types": [
+        {
+          "id": "funding.pre_seed",
+          "label": "Pre-seed round",
+          "fact_type": "funding_round",
+          "keywords": [
+            "pre-seed",
+            "pre seed round",
+            "preseed funding"
+          ]
+        },
+        {
+          "id": "funding.seed",
+          "label": "Seed round",
+          "fact_type": "funding_round",
+          "keywords": [
+            "seed round",
+            "seed funding",
+            "raised seed",
+            "closed a seed"
+          ]
+        },
+        {
+          "id": "funding.series_a",
+          "label": "Series A",
+          "fact_type": "funding_round",
+          "keywords": [
+            "series a",
+            "series-a"
+          ]
+        },
+        {
+          "id": "funding.series_b",
+          "label": "Series B",
+          "fact_type": "funding_round",
+          "keywords": [
+            "series b",
+            "series-b"
+          ]
+        },
+        {
+          "id": "funding.series_c",
+          "label": "Series C",
+          "fact_type": "funding_round",
+          "keywords": [
+            "series c",
+            "series-c"
+          ]
+        },
+        {
+          "id": "funding.late_stage",
+          "label": "Late-stage round (Series D+)",
+          "fact_type": "funding_round",
+          "keywords": [
+            "series d",
+            "series e",
+            "series f",
+            "late-stage round",
+            "growth round",
+            "growth equity"
+          ]
+        },
+        {
+          "id": "funding.unknown_round",
+          "label": "Funding round (unspecified)",
+          "fact_type": "funding_round",
+          "keywords": [
+            "raised",
+            "funding round",
+            "new funding",
+            "investment round",
+            "secured funding",
+            "vc investment",
+            "venture capital"
+          ]
+        },
+        {
+          "id": "funding.secondary_sale",
+          "label": "Secondary sale",
+          "fact_type": "funding_round",
+          "keywords": [
+            "secondary sale",
+            "secondary offering",
+            "employee share sale",
+            "tender offer shares"
+          ]
+        },
+        {
+          "id": "funding.debt_financing",
+          "label": "Debt financing",
+          "fact_type": "funding_round",
+          "keywords": [
+            "debt financing",
+            "credit facility",
+            "term loan",
+            "venture debt",
+            "revolving credit"
+          ]
+        },
+        {
+          "id": "funding.convertible_note",
+          "label": "Convertible note / SAFE",
+          "fact_type": "funding_round",
+          "keywords": [
+            "convertible note",
+            "convertible bond",
+            "safe agreement",
+            "convertible loan"
+          ]
+        },
+        {
+          "id": "funding.grant",
+          "label": "Grant received",
+          "fact_type": "funding_round",
+          "keywords": [
+            "awarded grant",
+            "government grant",
+            "sbir",
+            "innovation grant",
+            "research grant funding"
+          ]
+        },
+        {
+          "id": "funding.crowdfunding",
+          "label": "Crowdfunding",
+          "fact_type": "funding_round",
+          "keywords": [
+            "crowdfunding campaign",
+            "crowdfunded",
+            "equity crowdfunding"
+          ]
+        },
+        {
+          "id": "funding.token_sale",
+          "label": "Token sale / ICO",
+          "fact_type": null,
+          "keywords": [
+            "token sale",
+            "ico",
+            "token generation event",
+            "ido launch"
+          ]
+        },
+        {
+          "id": "funding.fund_close",
+          "label": "Investor fund close",
+          "fact_type": null,
+          "keywords": [
+            "closed its fund",
+            "fund closes at",
+            "announced close of fund",
+            "debut fund"
+          ]
+        },
+        {
+          "id": "funding.ipo",
+          "label": "IPO / direct listing",
+          "fact_type": null,
+          "keywords": [
+            "ipo",
+            "goes public",
+            "initial public offering",
+            "direct listing",
+            "stock market debut"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mna",
+      "weight": 0.9,
+      "types": [
+        {
+          "id": "mna.acquisition_announced",
+          "label": "Acquisition announced",
+          "fact_type": "acquisition",
+          "keywords": [
+            "to acquire",
+            "agreement to acquire",
+            "announced acquisition",
+            "signs definitive agreement to buy",
+            "acquiring"
+          ]
+        },
+        {
+          "id": "mna.acquisition_completed",
+          "label": "Acquisition completed",
+          "fact_type": "acquisition",
+          "keywords": [
+            "completed acquisition",
+            "closes acquisition",
+            "has acquired",
+            "finalizes purchase of",
+            "deal closed"
+          ]
+        },
+        {
+          "id": "mna.merger",
+          "label": "Merger",
+          "fact_type": "acquisition",
+          "keywords": [
+            "merger of",
+            "merge with",
+            "all-stock merger",
+            "merger agreement"
+          ]
+        },
+        {
+          "id": "mna.divestiture",
+          "label": "Divestiture / asset sale",
+          "fact_type": null,
+          "keywords": [
+            "divest",
+            "sell off unit",
+            "spinning off business",
+            "asset sale to",
+            "carve-out"
+          ]
+        },
+        {
+          "id": "mna.stake_acquisition",
+          "label": "Minority stake acquisition",
+          "fact_type": "acquisition",
+          "keywords": [
+            "acquires stake",
+            "minority stake in",
+            "takes stake in",
+            "strategic investment in exchange"
+          ]
+        },
+        {
+          "id": "mna.rumor",
+          "label": "M&A rumor / exploratory talks",
+          "fact_type": null,
+          "keywords": [
+            "reportedly exploring sale",
+            "in talks to acquire",
+            "considering merger",
+            "weighing sale",
+            "sources say acquisition"
+          ]
+        },
+        {
+          "id": "mna.reverse_merger",
+          "label": "SPAC / reverse merger",
+          "fact_type": null,
+          "keywords": [
+            "spac merger",
+            "reverse merger",
+            "de-spac",
+            "business combination"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "leadership",
+      "weight": 0.7,
+      "types": [
+        {
+          "id": "leadership.new_ceo",
+          "label": "New CEO appointed",
+          "fact_type": "leadership_change",
+          "keywords": [
+            "named ceo",
+            "appoints ceo",
+            "new chief executive",
+            "ceo appointment",
+            "takes over as ceo"
+          ]
+        },
+        {
+          "id": "leadership.executive_appointment",
+          "label": "Executive hire (C-level)",
+          "fact_type": "leadership_change",
+          "keywords": [
+            "appoints cfo",
+            "appoints cto",
+            "names coo",
+            "chief officer",
+            "joins as vice president",
+            "elevates to president"
+          ]
+        },
+        {
+          "id": "leadership.departure",
+          "label": "Executive departure",
+          "fact_type": "leadership_change",
+          "keywords": [
+            "steps down",
+            "resigns as",
+            "exits role",
+            "departs as ceo",
+            "stepping away"
+          ]
+        },
+        {
+          "id": "leadership.board_change",
+          "label": "Board change",
+          "fact_type": "leadership_change",
+          "keywords": [
+            "joins board of directors",
+            "board member appointed",
+            "chairman of the board",
+            "board of directors changes"
+          ]
+        },
+        {
+          "id": "leadership.founder_transition",
+          "label": "Founder transition",
+          "fact_type": null,
+          "keywords": [
+            "founder returns",
+            "founder steps back",
+            "hands over to successor",
+            "transitions to executive chairman"
+          ]
+        },
+        {
+          "id": "leadership.interim_appointment",
+          "label": "Interim appointment",
+          "fact_type": null,
+          "keywords": [
+            "interim ceo",
+            "interim chief",
+            "acting ceo"
+          ]
+        },
+        {
+          "id": "leadership.misconduct_exit",
+          "label": "Exit over misconduct",
+          "fact_type": null,
+          "keywords": [
+            "steps down amid",
+            "fired following investigation",
+            "terminates ceo",
+            "ousted"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "partnership",
+      "weight": 0.55,
+      "types": [
+        {
+          "id": "partnership.strategic_partnership",
+          "label": "Strategic partnership",
+          "fact_type": null,
+          "keywords": [
+            "strategic partnership",
+            "partnership with",
+            "teams up with",
+            "collaboration agreement",
+            "signs mou"
+          ]
+        },
+        {
+          "id": "partnership.reseller_distribution",
+          "label": "Distribution / reseller deal",
+          "fact_type": null,
+          "keywords": [
+            "distribution agreement",
+            "reseller agreement",
+            "channel partner",
+            "go-to-market partner"
+          ]
+        },
+        {
+          "id": "partnership.joint_venture",
+          "label": "Joint venture",
+          "fact_type": null,
+          "keywords": [
+            "joint venture",
+            "forms jv with",
+            "creates joint venture"
+          ]
+        },
+        {
+          "id": "partnership.contract_win",
+          "label": "Major contract win",
+          "fact_type": null,
+          "keywords": [
+            "wins contract",
+            "awarded contract",
+            "signs multi-year deal with",
+            "landed a contract",
+            "framework agreement worth"
+          ]
+        },
+        {
+          "id": "partnership.cloud_marketplace",
+          "label": "Cloud marketplace listing",
+          "fact_type": null,
+          "keywords": [
+            "available on aws marketplace",
+            "azure marketplace",
+            "google cloud marketplace",
+            "marketplace listing"
+          ]
+        },
+        {
+          "id": "partnership.technology_integration",
+          "label": "Technology integration alliance",
+          "fact_type": null,
+          "keywords": [
+            "integration partner",
+            "certified integration",
+            "api partnership"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "product",
+      "weight": 0.6,
+      "types": [
+        {
+          "id": "product.launch",
+          "label": "Product launch",
+          "fact_type": null,
+          "keywords": [
+            "launches new product",
+            "unveils",
+            "introduces",
+            "debuts new",
+            "announces availability of",
+            "launches flagship"
+          ]
+        },
+        {
+          "id": "product.update_release",
+          "label": "Product update / new release",
+          "fact_type": null,
+          "keywords": [
+            "releases version",
+            "rolls out update",
+            "new features",
+            "software update brings",
+            "ships new version"
+          ]
+        },
+        {
+          "id": "product.beta_program",
+          "label": "Beta program / early access",
+          "fact_type": null,
+          "keywords": [
+            "opens beta",
+            "beta program",
+            "early access program",
+            "private preview"
+          ]
+        },
+        {
+          "id": "product.discontinuation",
+          "label": "Product discontinuation",
+          "fact_type": null,
+          "keywords": [
+            "discontinues",
+            "sunsets product",
+            "ends support for",
+            "kills off product"
+          ]
+        },
+        {
+          "id": "product.patent",
+          "label": "Patent granted / filed",
+          "fact_type": null,
+          "keywords": [
+            "patent granted",
+            "files patent",
+            "patent application",
+            "uspto grants"
+          ]
+        },
+        {
+          "id": "product.pricing_change",
+          "label": "Pricing change",
+          "fact_type": null,
+          "keywords": [
+            "price increase",
+            "raises prices",
+            "cuts prices",
+            "new pricing plans",
+            "pricing update"
+          ]
+        },
+        {
+          "id": "product.certification",
+          "label": "Certification achieved",
+          "fact_type": null,
+          "keywords": [
+            "soc 2 certification",
+            "iso 27001",
+            "fedramp authorization",
+            "hipaa compliant certification",
+            "achieves certification"
+          ]
+        },
+        {
+          "id": "product.ai_model_release",
+          "label": "AI model release",
+          "fact_type": null,
+          "keywords": [
+            "releases new model",
+            "unveils model",
+            "open-sources its model",
+            "foundation model launch",
+            "frontier model"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "legal_regulatory",
+      "weight": 0.75,
+      "types": [
+        {
+          "id": "legal.lawsuit_filed",
+          "label": "Lawsuit filed",
+          "fact_type": null,
+          "keywords": [
+            "files lawsuit",
+            "sues",
+            "filed a complaint against",
+            "legal action against",
+            "class action filed"
+          ]
+        },
+        {
+          "id": "legal.lawsuit_ruling",
+          "label": "Court ruling / verdict",
+          "fact_type": null,
+          "keywords": [
+            "court rules",
+            "jury finds",
+            "verdict in favor",
+            "judge orders",
+            "appeals court ruling"
+          ]
+        },
+        {
+          "id": "legal.settlement",
+          "label": "Settlement reached",
+          "fact_type": null,
+          "keywords": [
+            "settles lawsuit",
+            "settlement agreement",
+            "agrees to pay settlement",
+            "reaches settlement"
+          ]
+        },
+        {
+          "id": "legal.regulatory_approval",
+          "label": "Regulatory approval received",
+          "fact_type": null,
+          "keywords": [
+            "fda approves",
+            "receives approval from",
+            "granted clearance",
+            "ce mark approval",
+            "regulatory green light"
+          ]
+        },
+        {
+          "id": "legal.regulatory_action",
+          "label": "Regulatory action against company",
+          "fact_type": null,
+          "keywords": [
+            "sec charges",
+            "ftc sues",
+            "regulator orders",
+            "cma investigates",
+            "antitrust case",
+            "doj investigation"
+          ]
+        },
+        {
+          "id": "legal.fine_penalty",
+          "label": "Fine / penalty imposed",
+          "fact_type": null,
+          "keywords": [
+            "fined",
+            "penalty of",
+            "imposes fine",
+            "gdpr fine",
+            "ordered to pay penalty"
+          ]
+        },
+        {
+          "id": "legal.investigation",
+          "label": "Under investigation",
+          "fact_type": null,
+          "keywords": [
+            "under investigation",
+            "probes",
+            "probing company practices",
+            "subpoena"
+          ]
+        },
+        {
+          "id": "legal.ip_dispute",
+          "label": "IP dispute",
+          "fact_type": null,
+          "keywords": [
+            "patent infringement suit",
+            "trade secret theft claim",
+            "copyright infringement lawsuit"
+          ]
+        },
+        {
+          "id": "legal.export_sanctions",
+          "label": "Export controls / sanctions",
+          "fact_type": null,
+          "keywords": [
+            "export restrictions",
+            "sanctioned by",
+            "entity list",
+            "export ban"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "risk_distress",
+      "weight": 0.85,
+      "types": [
+        {
+          "id": "risk.layoffs",
+          "label": "Layoffs",
+          "fact_type": null,
+          "keywords": [
+            "layoffs",
+            "job cuts",
+            "cuts jobs",
+            "workforce reduction",
+            "letting go of employees",
+            "reduction in force"
+          ]
+        },
+        {
+          "id": "risk.bankruptcy",
+          "label": "Bankruptcy / insolvency",
+          "fact_type": "closure",
+          "keywords": [
+            "files for bankruptcy",
+            "chapter 11",
+            "administration filing",
+            "insolvency proceedings",
+            "creditor protection"
+          ]
+        },
+        {
+          "id": "risk.shutdown",
+          "label": "Shutdown / wind-down",
+          "fact_type": "closure",
+          "keywords": [
+            "shuts down",
+            "winds down operations",
+            "ceases operations",
+            "closing down",
+            "going out of business"
+          ]
+        },
+        {
+          "id": "risk.data_breach",
+          "label": "Data breach",
+          "fact_type": null,
+          "keywords": [
+            "data breach",
+            "cyberattack exposed",
+            "ransomware attack",
+            "customer data leaked",
+            "security incident disclosed"
+          ]
+        },
+        {
+          "id": "risk.security_vulnerability",
+          "label": "Critical vulnerability disclosed",
+          "fact_type": null,
+          "keywords": [
+            "critical vulnerability in",
+            "zero-day in",
+            "security flaw affecting",
+            "cve published"
+          ]
+        },
+        {
+          "id": "risk.product_recall",
+          "label": "Product recall",
+          "fact_type": null,
+          "keywords": [
+            "recalls",
+            "product recall",
+            "recall notice issued"
+          ]
+        },
+        {
+          "id": "risk.service_outage",
+          "label": "Major service outage",
+          "fact_type": null,
+          "keywords": [
+            "outage took down",
+            "suffers downtime",
+            "service disruption affected",
+            "global outage"
+          ]
+        },
+        {
+          "id": "risk.financial_distress",
+          "label": "Financial distress warning",
+          "fact_type": null,
+          "keywords": [
+            "going concern doubt",
+            "cash crunch",
+            "misses debt payment",
+            "default notice",
+            "liquidity crisis"
+          ]
+        },
+        {
+          "id": "risk.fraud_allegations",
+          "label": "Fraud allegations",
+          "fact_type": null,
+          "keywords": [
+            "accused of fraud",
+            "accounting irregularities",
+            "short seller report",
+            "allegations of misconduct"
+          ]
+        },
+        {
+          "id": "risk.supply_chain_disruption",
+          "label": "Supply chain disruption",
+          "fact_type": null,
+          "keywords": [
+            "supply chain disruption",
+            "chip shortage hits",
+            "halts production due to"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "financial_results",
+      "weight": 0.65,
+      "types": [
+        {
+          "id": "financial.earnings_beat",
+          "label": "Earnings beat",
+          "fact_type": null,
+          "keywords": [
+            "beats earnings expectations",
+            "tops estimates",
+            "reports strong quarter",
+            "profit rises"
+          ]
+        },
+        {
+          "id": "financial.earnings_miss",
+          "label": "Earnings miss",
+          "fact_type": null,
+          "keywords": [
+            "misses estimates",
+            "reports loss",
+            "worse than expected quarter"
+          ]
+        },
+        {
+          "id": "financial.guidance_raised",
+          "label": "Guidance raised",
+          "fact_type": null,
+          "keywords": [
+            "raises guidance",
+            "lifts outlook",
+            "increases forecast"
+          ]
+        },
+        {
+          "id": "financial.guidance_lowered",
+          "label": "Guidance lowered / profit warning",
+          "fact_type": null,
+          "keywords": [
+            "cuts guidance",
+            "lowers outlook",
+            "profit warning",
+            "warns on revenue"
+          ]
+        },
+        {
+          "id": "financial.dividend",
+          "label": "Dividend announcement",
+          "fact_type": null,
+          "keywords": [
+            "declares dividend",
+            "raises dividend",
+            "initiates dividend"
+          ]
+        },
+        {
+          "id": "financial.share_buyback",
+          "label": "Share buyback",
+          "fact_type": null,
+          "keywords": [
+            "share repurchase",
+            "buyback program",
+            "repurchase shares"
+          ]
+        },
+        {
+          "id": "financial.capital_raise_public",
+          "label": "Public capital raise / follow-on",
+          "fact_type": null,
+          "keywords": [
+            "public offering of shares",
+            "follow-on offering",
+            "at-the-market offering",
+            "convertible senior notes offering"
+          ]
+        },
+        {
+          "id": "financial.audit_restatement",
+          "label": "Restatement / audit issue",
+          "fact_type": null,
+          "keywords": [
+            "restates financials",
+            "restatement of results",
+            "auditor resigns"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "expansion_restructuring",
+      "weight": 0.5,
+      "types": [
+        {
+          "id": "expansion.new_market",
+          "label": "New market entry",
+          "fact_type": null,
+          "keywords": [
+            "expands into",
+            "enters market",
+            "launches in country",
+            "international expansion"
+          ]
+        },
+        {
+          "id": "expansion.new_office",
+          "label": "New office / facility",
+          "fact_type": null,
+          "keywords": [
+            "opens new office",
+            "new headquarters",
+            "manufacturing plant",
+            "breaks ground on facility"
+          ]
+        },
+        {
+          "id": "expansion.hiring_growth",
+          "label": "Hiring / headcount growth",
+          "fact_type": null,
+          "keywords": [
+            "plans to hire",
+            "creating jobs",
+            "headcount growth",
+            "expands team"
+          ]
+        },
+        {
+          "id": "expansion.capacity_investment",
+          "label": "Capacity / capex investment",
+          "fact_type": null,
+          "keywords": [
+            "invests in new factory",
+            "capacity expansion",
+            "billion investment plan",
+            "builds data center"
+          ]
+        },
+        {
+          "id": "restructuring.reorg",
+          "label": "Reorganization",
+          "fact_type": null,
+          "keywords": [
+            "restructures",
+            "reorganizes business",
+            "flattens org",
+            "consolidates teams"
+          ]
+        },
+        {
+          "id": "restructuring.spinoff",
+          "label": "Spin-off",
+          "fact_type": null,
+          "keywords": [
+            "spins off",
+            "spin-off of",
+            "separates into independent company"
+          ]
+        },
+        {
+          "id": "restructuring.exit_business_line",
+          "label": "Exit business line",
+          "fact_type": null,
+          "keywords": [
+            "exits business",
+            "shutters division",
+            "abandons project",
+            "pulls out of segment"
+          ]
+        },
+        {
+          "id": "restructuring.rebrand",
+          "label": "Rebrand / rename",
+          "fact_type": null,
+          "keywords": [
+            "rebrands",
+            "changes name to",
+            "renames itself"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "awards_recognition",
+      "weight": 0.35,
+      "types": [
+        {
+          "id": "award.industry_award",
+          "label": "Industry award won",
+          "fact_type": null,
+          "keywords": [
+            "wins award",
+            "awarded best",
+            "honored with",
+            "receives accolade"
+          ]
+        },
+        {
+          "id": "award.recognition_ranking",
+          "label": "Ranking / list recognition",
+          "fact_type": null,
+          "keywords": [
+            "named to list",
+            "ranks number",
+            "forbes 30 under 30",
+            "recognized as leader",
+            "magic quadrant"
+          ]
+        },
+        {
+          "id": "award.milestone",
+          "label": "Company milestone",
+          "fact_type": null,
+          "keywords": [
+            "celebrates milestone",
+            "surpasses customers",
+            "hits valuation of",
+            "crosses users milestone",
+            "unicorn status"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "research_publication",
+      "weight": 0.45,
+      "types": [
+        {
+          "id": "research.paper",
+          "label": "Research paper published",
+          "fact_type": null,
+          "keywords": [
+            "publishes research",
+            "paper in nature",
+            "study published",
+            "peer-reviewed study"
+          ]
+        },
+        {
+          "id": "research.report_release",
+          "label": "Report / whitepaper released",
+          "fact_type": null,
+          "keywords": [
+            "releases report",
+            "whitepaper",
+            "state of the industry report",
+            "publishes findings"
+          ]
+        },
+        {
+          "id": "research.conference_talk",
+          "label": "Conference presentation",
+          "fact_type": null,
+          "keywords": [
+            "presents at conference",
+            "keynote at",
+            "showcased at"
+          ]
+        },
+        {
+          "id": "research.clinical_trial",
+          "label": "Clinical trial result",
+          "fact_type": null,
+          "keywords": [
+            "clinical trial results",
+            "phase iii trial",
+            "phase 2 data shows",
+            "trial meets endpoint"
+          ]
+        },
+        {
+          "id": "research.opensource_release",
+          "label": "Open-source release",
+          "fact_type": null,
+          "keywords": [
+            "open-sources",
+            "open source release",
+            "available on github under license"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "status",
+      "weight": 0.05,
+      "types": [
+        {
+          "id": "status.no_event",
+          "label": "No discrete company event",
+          "fact_type": null,
+          "keywords": [],
+          "$comment": "Explicit no-event verdict: enrichment completed and found no reportable company event. Keeps R05 field-completeness satisfiable without fabricating event tags (FR-13 prefer-null-over-wrong policy)."
+        }
+      ]
+    }
+  ]
+}

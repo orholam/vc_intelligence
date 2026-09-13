@@ -1,0 +1,33 @@
+{
+  "name": "@copyr/launchmonitor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Okara Launch Library monitor: ingests product launches (company, tagline, engagement) into a local SQLite store and syncs them into the parent intelligence Postgres as companies + news.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "import": "tsx --env-file-if-exists=.env src/cli.ts import",
+    "fetch": "tsx --env-file-if-exists=.env src/cli.ts fetch",
+    "sync": "tsx --env-file-if-exists=.env src/cli.ts sync",
+    "digest": "tsx --env-file-if-exists=.env src/cli.ts digest",
+    "stats": "tsx --env-file-if-exists=.env src/cli.ts stats",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src test",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "pino": "^9.6.0",
+    "postgres": "^3.4.5",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "eslint": "^9.20.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.24.0",
+    "vitest": "^3.1.0"
+  }
+}

@@ -1,0 +1,530 @@
+{
+  "$comment": "Sector taxonomy v1 (FR-15). GICS-inspired + startup vocabulary. Flat list; ids are stable slugs aligned to entity industry_tags.",
+  "version": "2026.08.2",
+  "sectors": [
+    {
+      "id": "ai_ml",
+      "label": "AI & Machine Learning",
+      "keywords": [
+        "artificial intelligence",
+        "machine learning",
+        "llm",
+        "generative ai",
+        "deep learning",
+        "ai model",
+        "neural"
+      ]
+    },
+    {
+      "id": "data_analytics",
+      "label": "Data & Analytics",
+      "keywords": [
+        "analytics platform",
+        "business intelligence",
+        "data warehouse",
+        "big data"
+      ]
+    },
+    {
+      "id": "saas_enterprise",
+      "label": "Enterprise SaaS",
+      "keywords": [
+        "saas",
+        "software-as-a-service",
+        "enterprise software",
+        "b2b software"
+      ]
+    },
+    {
+      "id": "devtools",
+      "label": "Developer Tools",
+      "keywords": [
+        "developer tools",
+        "api platform",
+        "ci/cd",
+        "infrastructure as code",
+        "open source developer"
+      ]
+    },
+    {
+      "id": "cloud_infra",
+      "label": "Cloud Infrastructure",
+      "keywords": [
+        "cloud infrastructure",
+        "hosting",
+        "kubernetes",
+        "serverless",
+        "data center operator"
+      ]
+    },
+    {
+      "id": "cybersecurity",
+      "label": "Cybersecurity",
+      "keywords": [
+        "cybersecurity",
+        "security platform",
+        "endpoint protection",
+        "zero trust",
+        "threat intelligence"
+      ]
+    },
+    {
+      "id": "fintech",
+      "label": "Fintech",
+      "keywords": [
+        "fintech",
+        "financial technology",
+        "neobank",
+        "wealthtech",
+        "lending startup"
+      ]
+    },
+    {
+      "id": "payments",
+      "label": "Payments",
+      "keywords": [
+        "payments",
+        "payment processing",
+        "checkout",
+        "pos payments",
+        "cross-border payments"
+      ]
+    },
+    {
+      "id": "banking_lending",
+      "label": "Banking & Lending",
+      "keywords": [
+        "bank",
+        "lending",
+        "mortgage",
+        "credit union",
+        "commercial banking"
+      ]
+    },
+    {
+      "id": "insurance_insurtech",
+      "label": "Insurance & Insurtech",
+      "keywords": [
+        "insurance",
+        "insurtech",
+        "reinsurance",
+        "claims automation"
+      ]
+    },
+    {
+      "id": "capital_markets",
+      "label": "Capital Markets & Trading",
+      "keywords": [
+        "trading platform",
+        "brokerage",
+        "asset management",
+        "hedge fund",
+        "private equity firm",
+        "venture capital firm"
+      ]
+    },
+    {
+      "id": "crypto_web3",
+      "label": "Crypto & Web3",
+      "keywords": [
+        "crypto",
+        "blockchain",
+        "web3",
+        "defi",
+        "nft",
+        "stablecoin",
+        "digital assets"
+      ]
+    },
+    {
+      "id": "ecommerce",
+      "label": "E-commerce",
+      "keywords": [
+        "e-commerce",
+        "online marketplace",
+        "direct-to-consumer brand",
+        "shopify app"
+      ]
+    },
+    {
+      "id": "retail",
+      "label": "Retail",
+      "keywords": [
+        "retailer",
+        "grocery chain",
+        "brick-and-mortar retail",
+        "department store"
+      ]
+    },
+    {
+      "id": "consumer_internet",
+      "label": "Consumer Internet",
+      "keywords": [
+        "consumer app",
+        "social network",
+        "dating app",
+        "subscription consumer"
+      ]
+    },
+    {
+      "id": "media_entertainment",
+      "label": "Media & Entertainment",
+      "keywords": [
+        "media company",
+        "streaming service",
+        "publisher",
+        "podcast network",
+        "studios"
+      ]
+    },
+    {
+      "id": "gaming",
+      "label": "Gaming",
+      "keywords": [
+        "video game",
+        "game studio",
+        "esports",
+        "gaming platform"
+      ]
+    },
+    {
+      "id": "martech_adtech",
+      "label": "Marketing & Ad Tech",
+      "keywords": [
+        "adtech",
+        "marketing automation",
+        "crm for marketing",
+        "ad platform",
+        "influencer marketing"
+      ]
+    },
+    {
+      "id": "hrtech",
+      "label": "HR Tech & Future of Work",
+      "keywords": [
+        "hr tech",
+        "payroll platform",
+        "recruiting software",
+        "remote work tools"
+      ]
+    },
+    {
+      "id": "edtech",
+      "label": "Education & EdTech",
+      "keywords": [
+        "edtech",
+        "online learning",
+        "education platform",
+        "upskilling"
+      ]
+    },
+    {
+      "id": "legaltech",
+      "label": "Legal & Compliance Tech",
+      "keywords": [
+        "legal tech",
+        "contract lifecycle",
+        "regtech",
+        "compliance software"
+      ]
+    },
+    {
+      "id": "govtech_defense",
+      "label": "GovTech & Defense",
+      "keywords": [
+        "government software",
+        "defense tech",
+        "dual-use technology",
+        "public sector procurement"
+      ]
+    },
+    {
+      "id": "healthtech",
+      "label": "Health Tech",
+      "keywords": [
+        "health tech",
+        "digital health",
+        "telehealth",
+        "patient engagement",
+        "medical software"
+      ]
+    },
+    {
+      "id": "biotech_pharma",
+      "label": "Biotech & Pharma",
+      "keywords": [
+        "biotech",
+        "pharmaceutical",
+        "drug discovery",
+        "therapeutics",
+        "clinical stage"
+      ]
+    },
+    {
+      "id": "medtech_devices",
+      "label": "Medical Devices",
+      "keywords": [
+        "medical device",
+        "diagnostics company",
+        "wearable medical",
+        "surgical robotics"
+      ]
+    },
+    {
+      "id": "agtech_food",
+      "label": "AgTech & Food Systems",
+      "keywords": [
+        "agritech",
+        "precision agriculture",
+        "foodtech",
+        "alternative protein",
+        "vertical farming"
+      ]
+    },
+    {
+      "id": "energy_transition",
+      "label": "Energy Transition & Climate",
+      "keywords": [
+        "cleantech",
+        "climate tech",
+        "carbon capture",
+        "renewable energy developer",
+        "grid software"
+      ]
+    },
+    {
+      "id": "solar_storage",
+      "label": "Solar & Storage",
+      "keywords": [
+        "solar energy",
+        "battery storage",
+        "photovoltaic",
+        "home batteries"
+      ]
+    },
+    {
+      "id": "oil_gas_mining",
+      "label": "Oil, Gas & Mining",
+      "keywords": [
+        "oil and gas",
+        "upstream operator",
+        "mining company",
+        "commodities producer"
+      ]
+    },
+    {
+      "id": "utilities",
+      "label": "Utilities",
+      "keywords": [
+        "utility company",
+        "electric utility",
+        "water utility"
+      ]
+    },
+    {
+      "id": "mobility_ev",
+      "label": "Mobility & EV",
+      "keywords": [
+        "electric vehicle",
+        "ev charging",
+        "micromobility",
+        "ride-hailing",
+        "ev maker"
+      ]
+    },
+    {
+      "id": "autonomous_vehicles",
+      "label": "Autonomous Vehicles",
+      "keywords": [
+        "autonomous driving",
+        "self-driving",
+        "robotaxi",
+        "adas"
+      ]
+    },
+    {
+      "id": "automotive_aerospace",
+      "label": "Automotive & Aerospace",
+      "keywords": [
+        "automaker",
+        "aerospace manufacturer",
+        "aviation",
+        "space company",
+        "satellite operator"
+      ]
+    },
+    {
+      "id": "logistics_supply_chain",
+      "label": "Logistics & Supply Chain",
+      "keywords": [
+        "logistics tech",
+        "freight",
+        "last-mile delivery",
+        "warehouse automation",
+        "supply chain software"
+      ]
+    },
+    {
+      "id": "transportation_infra",
+      "label": "Transportation & Infrastructure",
+      "keywords": [
+        "rail",
+        "shipping lines",
+        "ports",
+        "tolling",
+        "infrastructure operator"
+      ]
+    },
+    {
+      "id": "robotics_hardware",
+      "label": "Robotics & Industrial Hardware",
+      "keywords": [
+        "robotics company",
+        "robotics startup",
+        "industrial robots",
+        "warehouse robots",
+        "humanoid robot",
+        "drones manufacturer",
+        "robotics"
+      ]
+    },
+    {
+      "id": "semiconductors",
+      "label": "Semiconductors",
+      "keywords": [
+        "chipmaker",
+        "semiconductor",
+        "fabless",
+        "foundry",
+        "gpu maker",
+        "eda software"
+      ]
+    },
+    {
+      "id": "consumer_electronics",
+      "label": "Consumer Electronics & IoT",
+      "keywords": [
+        "smart home devices",
+        "wearables maker",
+        "consumer gadgets",
+        "iot platform"
+      ]
+    },
+    {
+      "id": "telecom_networking",
+      "label": "Telecom & Networking",
+      "keywords": [
+        "telecom operator",
+        "network equipment",
+        "5g",
+        "satellite internet",
+        "isp"
+      ]
+    },
+    {
+      "id": "quantum_advanced_compute",
+      "label": "Quantum & Advanced Compute",
+      "keywords": [
+        "quantum computing",
+        "photonic computing",
+        "hpc startup",
+        "neuromorphic"
+      ]
+    },
+    {
+      "id": "proptech_realestate",
+      "label": "PropTech & Real Estate",
+      "keywords": [
+        "proptech",
+        "real estate marketplace",
+        "property management software",
+        "construction tech",
+        "modular construction"
+      ]
+    },
+    {
+      "id": "manufacturing_industrial",
+      "label": "Manufacturing & Industrial",
+      "keywords": [
+        "industrial manufacturer",
+        "factory automation software",
+        "3d printing company",
+        "advanced materials"
+      ]
+    },
+    {
+      "id": "chemicals_materials",
+      "label": "Chemicals & Materials",
+      "keywords": [
+        "specialty chemicals",
+        "battery materials",
+        "synthetic biology materials"
+      ]
+    },
+    {
+      "id": "travel_hospitality",
+      "label": "Travel & Hospitality",
+      "keywords": [
+        "travel tech",
+        "hotel chain",
+        "booking platform",
+        "airline",
+        "short-term rental"
+      ]
+    },
+    {
+      "id": "restaurants_delivery",
+      "label": "Restaurants & Delivery",
+      "keywords": [
+        "restaurant chain",
+        "food delivery",
+        "ghost kitchens",
+        "meal kits"
+      ]
+    },
+    {
+      "id": "sports_fitness",
+      "label": "Sports & Fitness",
+      "keywords": [
+        "sports tech",
+        "fitness app",
+        "connected fitness hardware",
+        "sports franchise"
+      ]
+    },
+    {
+      "id": "fashion_apparel",
+      "label": "Fashion & Apparel",
+      "keywords": [
+        "fashion brand",
+        "apparel company",
+        "luxury goods",
+        "footwear brand"
+      ]
+    },
+    {
+      "id": "professional_services",
+      "label": "Professional Services",
+      "keywords": [
+        "consulting firm",
+        "accounting firm",
+        "staffing agency",
+        "law firm"
+      ]
+    },
+    {
+      "id": "staffing_workforce",
+      "label": "Staffing & Workforce Solutions",
+      "keywords": [
+        "staffing platform",
+        "gig economy platform",
+        "outsourcing provider"
+      ]
+    },
+    {
+      "id": "other_diversified",
+      "label": "Diversified / No Sector Signal",
+      "keywords": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$comment": "Model routing (FR-12) + pricing for cost accounting. Prices are USD per 1M tokens (in/out). Override models via env MODEL_MINI/BIG/JUDGE/EMBED.",
+  "version": "2026.08.1",
+  "tiers": {
+    "mini": { "model": "gpt-4o-mini", "purpose": "classification, tagging, filtering, NER-lite" },
+    "big": { "model": "gpt-4o", "purpose": "summaries, adjudication, listgen interpretation" },
+    "judge": { "model": "gpt-4.1", "purpose": "benchmark judging only (neutral family vs production)" },
+    "embed": { "model": "text-embedding-3-small", "dimensions": 256, "purpose": "story clustering" }
+  },
+  "pricing_per_1m_tokens": {
+    "gpt-4o-mini": { "input": 0.15, "output": 0.6 },
+    "gpt-4o": { "input": 2.5, "output": 10 },
+    "gpt-4.1": { "input": 2.0, "output": 8 },
+    "text-embedding-3-small": { "input": 0.02, "output": 0 },
+    "*default*": { "input": 1.0, "output": 2.0 }
+  }
+}

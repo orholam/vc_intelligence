@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+.env.local
+data/
+coverage/
+.tsbuildinfo/
+*.tsbuildinfo
+benchmarks/raw/
+.dbg/
+.tmp/
+.freebuff/
+.snapshots/
+mongo-church/
+tmp_*.mts
+*.dump

@@ -1,0 +1,1018 @@
+{
+  "period": "2026-08",
+  "days": 31,
+  "samples": {
+    "articles": [
+      {
+        "kind": "article",
+        "id": "art_01M0KKCCB9ZC9RG2GCPQGMKW2S",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0KKQDC3Q0J7QGBZWSSW2G9E",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0KMV6SXH0SM9X8KFSE08VFN",
+        "stratum": "tier:1|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0KMVPYZB131T8EQV4X7Q6CB",
+        "stratum": "tier:2|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0KNRC52ZBKHW9KT3QMGG773",
+        "stratum": "tier:3|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0KNS672A0JVQDW11X4QC47B",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0KWWJ8T7MD4HQZ0EJYXPNSF",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0KWZGKSE1G06H6RC1YRN2ZK",
+        "stratum": "tier:?|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0KX2BPXMRNEBCQ001QXGS4T",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M250FG4QW701YEFB51YDA8",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M28RBNKZ1CYAJC7K8RSZDP",
+        "stratum": "tier:?|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M2CQDZ4JZGHM54MVR44Y6E",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M375A3XZMTBR1WX0M4T3E5",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M38TGGT7CMM9BXZC89YVTZ",
+        "stratum": "tier:?|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M3A6B8YBM2DNRPXB732KWB",
+        "stratum": "tier:1|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M3AQ3K34MQ2YEW1ZY6RCJ8",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M3M1MFQFFK7P3ZNACY44S4",
+        "stratum": "tier:1|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M3MN6NRZFJ1J7NJEMRBPX7",
+        "stratum": "tier:1|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M3NDRMC9EFW6S6NMWJXEET",
+        "stratum": "tier:1|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M3P15A0QKAYENYSDG8ZKRQ",
+        "stratum": "tier:2|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M3PJ1KZA49NWJ4R4YZX2JD",
+        "stratum": "tier:1|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M3PZKA9P0AQDQZFGQ4CNWD",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M3QD2VHCYTN6CP6541B23T",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M4GY97GP6XMAJCSYXJAZRA",
+        "stratum": "tier:3|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M4HADNBMCWZ9PDDRMEEMWE",
+        "stratum": "tier:1|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M4HQP4MGD71SJM2Z8KMQRK",
+        "stratum": "tier:1|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M4J5PKA8T1D76G78T47ECG",
+        "stratum": "tier:2|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M4JGH7GMF19TYW78715P0R",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M4JW334AJMD7B810A1FPDV",
+        "stratum": "tier:2|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M4K5G6WS1GEZ5N485ERWZK",
+        "stratum": "tier:1|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M4KFVVB0RRNT0TZKN0CX99",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M7S58V0N2C67KJMQQQ6BRK",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M7TDY9A7Z4Q3MMKSD8VA8J",
+        "stratum": "tier:3|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M7TXP3VGKKW0JQQK50Q5PK",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M7V8G6JNZVZXKK1FWTBW1R",
+        "stratum": "tier:3|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M7VJRNVFASDD7QQ41D2XN8",
+        "stratum": "tier:2|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M7VYH3DEQNYF52MY337Y4X",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M7WD1AX86VD25VD7YT3E7D",
+        "stratum": "tier:1|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M8DK0D71PXPY31C2WSYK3K",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M8DYWTFAPC06GNBYJGCDPW",
+        "stratum": "tier:2|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M8E4TJ7EAXE7X4BF6TYGX6",
+        "stratum": "tier:1|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M8EPXY6BW3YMARWKQ8BAAW",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0M8FHQTTAR4AKXV90DSCG95",
+        "stratum": "tier:2|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0NEM1X6M7772G7DR0YDSXCW",
+        "stratum": "tier:1|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0NFCAB6XQ3B7G1QS5XRRAV5",
+        "stratum": "tier:3|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0NH66SX1ZJQSSK8HP9DPDR1",
+        "stratum": "tier:2|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_01M0NH66ZETZNXYRPYKAHE6ATE",
+        "stratum": "tier:2|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_1K21EN0M1043201APHEZS2M1HQ",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_3931EN0M10AM9XSR3JV7YNZM9E",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_5N21EN0M109C9T6C25AFWAHEXH",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_8B31EN0M104Y87DAHEBE9PMGY9",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_A531EN0M10R0JK2Q5ANH329Z3S",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_CN21EN0M10SKS0B08SRNTR8036",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_EK21EN0M10F6ZPZ9QP852VA6WT",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_HG21EN0M10AARBY7DR9CM3CZ20",
+        "stratum": "tier:?|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_K431EN0M10R1YN900K7HBK3EAH",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_NP21EN0M10S820JKMZRQ4VS6WK",
+        "stratum": "tier:?|nw:medium"
+      },
+      {
+        "kind": "article",
+        "id": "art_QW21EN0M10JWMZ54GG64HKQSGQ",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_T031EN0M10AE95Q096MV5PFXNZ",
+        "stratum": "tier:?|nw:high"
+      },
+      {
+        "kind": "article",
+        "id": "art_WP21EN0M10JQRPMKCPAYC6C7XK",
+        "stratum": "tier:?|nw:high"
+      }
+    ],
+    "entities": [
+      {
+        "kind": "entity",
+        "id": "ent_01M0NEMVM4H1GVH53XN86VGN5F",
+        "stratum": "autocreate|d4"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0KKDZ5QJ784G862S79X17A9",
+        "stratum": "autocreate|d5"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NF7MKTAR7D4ADNKMDGT1K8",
+        "stratum": "formd|d7"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0M2KVFPY0ZAT0MAFJEVPFWN",
+        "stratum": "import:edgar|d9"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0KJG7NXNSEWCSNX56EP9BH5",
+        "stratum": "import:seed|d6"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NEJCNQY5KRKXK2KE4TWDPJ",
+        "stratum": "launch:hn|d5"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_0AHMDN0M103RZ3ZKKKWRJH7RF9",
+        "stratum": "launchmonitor|d6"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_00JMDN0M10EGHB0BJ9X3V3XC3C",
+        "stratum": "launchmonitor|d7"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NHDK6NNTCY7SG453QQ87X5",
+        "stratum": "xmonitor|d6"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NEMVSQ6R33P0NGNWXDHJK0",
+        "stratum": "autocreate|d4"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0KNAH0KYSPDBP1HDWP5DSNM",
+        "stratum": "autocreate|d5"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NF7MM6ANQV9FTCWPERTFYE",
+        "stratum": "formd|d7"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0M2KW3K94VVE9M9B3VTS79F",
+        "stratum": "import:edgar|d9"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0KJG7PQ32JMHG4DGF9681DQ",
+        "stratum": "import:seed|d6"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NEJCPJW55Y1JS89RPJRMY5",
+        "stratum": "launch:hn|d5"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_0KJMDN0M109ACFHBCDY7KJ0ERS",
+        "stratum": "launchmonitor|d6"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_02JMDN0M10F1A46TKR0QBFV06C",
+        "stratum": "launchmonitor|d7"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NHDK7P9A0XNSBG5YD8MP4D",
+        "stratum": "xmonitor|d6"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NEMWW7YGK43QCM7FA43F65",
+        "stratum": "autocreate|d4"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0KNAV2FT3R8WYFSAFHDCQXE",
+        "stratum": "autocreate|d5"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NF7MMBCX09GJK9V2QBAKV4",
+        "stratum": "formd|d7"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0M2KW7260MHXJ6PA7S6WMM2",
+        "stratum": "import:edgar|d9"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0KJG7Q55K8H0XMK5BQZBF5T",
+        "stratum": "import:seed|d6"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NEJCPW18MXYA5B0FM5N9TW",
+        "stratum": "launch:hn|d5"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_27JMDN0M10ZDQ10SQ8RM6FX3PM",
+        "stratum": "launchmonitor|d6"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_0CJMDN0M10ZXTE1RMZS2N6KJF7",
+        "stratum": "launchmonitor|d7"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NHDK8808EBN1C046Q7VJNS",
+        "stratum": "xmonitor|d6"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NEN1P15QXA2SYY1WVBYGG4",
+        "stratum": "autocreate|d4"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0KX69YQK8D4NEJ3RPS37K3J",
+        "stratum": "autocreate|d5"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NF7MMFBF0XERFX3P9QMW0X",
+        "stratum": "formd|d7"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0M2KW8BZ34EW76YTZ1R5HGZ",
+        "stratum": "import:edgar|d9"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0KJG7QC3097N4PFQZH43HHV",
+        "stratum": "import:seed|d6"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NEJCQ6CXA6EDC5RX46C7HG",
+        "stratum": "launch:hn|d5"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_2DHMDN0M10XZNQT7P46D701B0B",
+        "stratum": "launchmonitor|d6"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_0EHMDN0M10A8Y91YF5CZFZDZR3",
+        "stratum": "launchmonitor|d7"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NHDK8JJ15VPKBYPQW3TEFN",
+        "stratum": "xmonitor|d6"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NEN50D4DDVNSYZRZ6F7A6V",
+        "stratum": "autocreate|d4"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0KX7J4RPW765CSY63BEMX03",
+        "stratum": "autocreate|d5"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0NF7MMK8KXVJSEZHPKQQT33",
+        "stratum": "formd|d7"
+      },
+      {
+        "kind": "entity",
+        "id": "ent_01M0M2KW9VRNY1DFZSGH28T6AV",
+        "stratum": "import:edgar|d9"
+      }
+    ],
+    "facts": [
+      {
+        "kind": "fact",
+        "id": "fct_01M0KMW8M7KD4JB7F6TRAR93DH",
+        "stratum": "type:acquisition"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0M3CYTHGVX3GX2R0PWS7DX9",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NEJCQKQZVCD3F4759Q8E0Z",
+        "stratum": "type:product_launch"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7MR5WQRR4T8D7KZ2XXWY",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7MXE463YZX94PK4KMNKF",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7N1MK125NX5W54A5K259",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7N5B99HR2VQV4H4WAP2C",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7NG1Q9DTB4GY48FAF268",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7NRRHWNXHHKGMS1ZAC27",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7P18N4ZT05WZYK9PFXB2",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7P91KR58XDP36H8VXX0D",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7PHRJ3FSAJGPC3J6YZ6P",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7Q0Q39RGQ52BMXRYTQAG",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7QAVK8QND30NCVQQXCJ9",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7QJV0TD8PY9W72HRX62M",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7QWQCD7TKXKXQ8ZRT6NP",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7RBCWG7WXP7W7Z39VGQ8",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7RMSRC7XVYGBWTATT2S8",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7RVVW341P7G2CEA5FSNZ",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7S442DR8ACN6YF8BAMQY",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7SDJK29Q3ZFHC3HJRES0",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7ST03W57T58QRZJ43NEV",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7TA0DTC6ZX3KG6BN4FG0",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7TXG2J8FE4A8PZMHX4BC",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7VF9CYJ0AKBYWWXSCKFA",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7W327CMNSA0Y1V7RXJBV",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7WPX8B7F1HJW6NGX9NHW",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7XCCJARCSSX5YNCWMC44",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7XZGY2RZP92VQ5NWAB3V",
+        "stratum": "type:funding_round"
+      },
+      {
+        "kind": "fact",
+        "id": "fct_01M0NF7YAR96WHN0JTC32041EW",
+        "stratum": "type:funding_round"
+      }
+    ],
+    "summaries": [
+      {
+        "kind": "summary",
+        "id": "art_01M0KKCCB9ZC9RG2GCPQGMKW2S",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0KMV3JA2724JH6ZYR30S0YJ",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0KMVPYZB131T8EQV4X7Q6CB",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0KNRYG52HFRSVM5TX38CB6T",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0KWWFWVVRHT3PJT853PCWV5",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0KX0GAK8WG83E2Z7SPM6X5C",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M24W7KN37B1PHYWZ8MEY6E",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M29FWZ5JEKY958MX79JBX8",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M371G0EP17YKB0X7J7YJSB",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M38X5AN6EZ04HQSY4EJTA3",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M3AKYV7QMCT2DVX1G54R0E",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M3M57QM8JVW17BJ2FNHMNG",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M3N72NM42XXAJCMPH97XQM",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M3P500D6CBN3R125KX1V9E",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M3PV3HJ3YJH3RYSTGHGFB3",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M3QHX27YFPWACZ16DRVN36",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M4H6CW0QEQHXZWG909ZV3X",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M4HWQSCPY4RE85XJ7GMKE0",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M4JE8888N0RMTSMF8FPC15",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M4JYQZB5TZ0WZFF4P8S2TM",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M4KCX56QJX44GVNHWR942R",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M7SAEP47T79E58DD0XHPMB",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M7TSGN93C4B0HKJ12BZBTM",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M7VAXFTKK8YSBWB5D7GKZ2",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M7VV8X1KQDAW094SHE76WS",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M7WGTXASXRKEWNMZX4WE29",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M8DV2VF2WV5NBKB16ZT6RF",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M8EAKDVMW8M4DBN3T9MY5C",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0M8FFTXPJAHGD0YY6ZKHP6T",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0NEMCA8MQ5X5P1PX64N3NER",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0NH66SE0BCS4EFZVZBZQF1H",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_01M0NH67147SK8H2GM5J5C4NYS",
+        "stratum": "nw:medium"
+      },
+      {
+        "kind": "summary",
+        "id": "art_3231EN0M100KZANWH8JRNJMDQ3",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_6731EN0M10RY4FAY8RP7G892GZ",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_9Y21EN0M10AGBVB4WEJSYB5QH7",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_D331EN0M10WBMFEQPY6PJ841NJ",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_H531EN0M10SN360YG2FZ9RX4ES",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_M131EN0M10S1RV0MS7W4CKKFMQ",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_Q231EN0M107P0PSAGNAMF2T026",
+        "stratum": "nw:high"
+      },
+      {
+        "kind": "summary",
+        "id": "art_T931EN0M10BB1W2HYQ6SDQKCHT",
+        "stratum": "nw:high"
+      }
+    ],
+    "clusters": [
+      {
+        "kind": "cluster",
+        "id": "sto_01M0KX399S8XN9TC5QEM4QD75W",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0KX3BASJZEPGBF4XZ52KAJT",
+        "stratum": "size:3"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M2FXEKM9FM3A88CDY5FDHJ",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M2FYNYDDXRA03FX2DKHBYK",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M3CJ2P4Z5KWGMMS3FR3M74",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M3CJQBRHA1WWYSVYZ3T4EG",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M3D3C6RWTKH1HFX8WBR48P",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M3S4M01643QG3K55G74B64",
+        "stratum": "size:4"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M3SCM7XD3W79HRDTBNQ835",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M3SG46VD9SBRTX5T2BEB7R",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M4MEG1QPWWKD5JJ05C21XG",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M4MH4HYVYR97MDADTVS0YP",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M4MKABHZFBS47X58EZNFBK",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M4MRPQFXT03QCT6M5RX764",
+        "stratum": "size:4"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M4MRRHTBF6N75KW47FV0NE",
+        "stratum": "size:3"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M4MXJXJ7KKE9S0V3813BN5",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M4MZCA4H00V0A3RJJMZPRV",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M7WX0C3AY2X2084KBFSREJ",
+        "stratum": "size:2"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M7WY9MT7PQXCP8QGQ6FC1C",
+        "stratum": "size:4"
+      },
+      {
+        "kind": "cluster",
+        "id": "sto_01M0M7XBY4NNZ353VNYS1NGYAV",
+        "stratum": "size:2"
+      }
+    ],
+    "listgen": [
+      {
+        "kind": "listgen",
+        "id": "query-1",
+        "stratum": "canned"
+      },
+      {
+        "kind": "listgen",
+        "id": "query-2",
+        "stratum": "canned"
+      },
+      {
+        "kind": "listgen",
+        "id": "query-3",
+        "stratum": "canned"
+      },
+      {
+        "kind": "listgen",
+        "id": "query-4",
+        "stratum": "canned"
+      },
+      {
+        "kind": "listgen",
+        "id": "query-5",
+        "stratum": "canned"
+      },
+      {
+        "kind": "listgen",
+        "id": "query-6",
+        "stratum": "canned"
+      },
+      {
+        "kind": "listgen",
+        "id": "query-7",
+        "stratum": "canned"
+      },
+      {
+        "kind": "listgen",
+        "id": "query-8",
+        "stratum": "canned"
+      },
+      {
+        "kind": "listgen",
+        "id": "query-9",
+        "stratum": "canned"
+      },
+      {
+        "kind": "listgen",
+        "id": "query-10",
+        "stratum": "canned"
+      }
+    ]
+  }
+}

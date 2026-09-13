@@ -1,0 +1,7 @@
+# Intelligence is an INDEPENDENT service (REQUIREMENTS.md §1.1): this file stops
+# pnpm from walking up into the Copyr monorepo workspace.
+packages:
+  - "."
+  - "web"
+  - "xmonitor"
+  - "launchmonitor"

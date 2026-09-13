@@ -1,0 +1,352 @@
+{
+  "$comment": "D1 merge-correctness truth set. positives: same live company under different surface names; negatives: confusable near-names that must NOT merge. Sampled from KB entities + public confusables.",
+  "version": "2026.08.1",
+  "positive_pairs": [
+    {
+      "a": "Apple",
+      "b": "Apple Inc."
+    },
+    {
+      "a": "Meta Platforms",
+      "b": "Facebook"
+    },
+    {
+      "a": "Google",
+      "b": "Alphabet Inc."
+    },
+    {
+      "a": "OpenAI",
+      "b": "OpenAI OpCo"
+    },
+    {
+      "a": "Stripe",
+      "b": "Stripe Inc"
+    },
+    {
+      "a": "Revolut",
+      "b": "Revolut Ltd"
+    },
+    {
+      "a": "Wise",
+      "b": "TransferWise"
+    },
+    {
+      "a": "Klarna",
+      "b": "Klarna Bank AB"
+    },
+    {
+      "a": "Monzo",
+      "b": "Monzo Bank"
+    },
+    {
+      "a": "SpaceX",
+      "b": "Space Exploration Technologies"
+    },
+    {
+      "a": "Palantir",
+      "b": "Palantir Technologies"
+    },
+    {
+      "a": "Databricks",
+      "b": "Databricks Inc"
+    },
+    {
+      "a": "Snowflake",
+      "b": "Snowflake Inc."
+    },
+    {
+      "a": "Figma",
+      "b": "Figma Inc"
+    },
+    {
+      "a": "Canva",
+      "b": "Canva Pty Ltd"
+    },
+    {
+      "a": "ByteDance",
+      "b": "TikTok"
+    },
+    {
+      "a": "Nvidia",
+      "b": "NVIDIA Corporation"
+    },
+    {
+      "a": "Anthropic",
+      "b": "Anthropic PBC"
+    },
+    {
+      "a": "Perplexity AI",
+      "b": "Perplexity"
+    },
+    {
+      "a": "Scale AI",
+      "b": "Scale Business Operations"
+    },
+    {
+      "a": "Anduril",
+      "b": "Anduril Industries"
+    },
+    {
+      "a": "Boston Dynamics",
+      "b": "Boston Dynamics Inc"
+    },
+    {
+      "a": "Ramp",
+      "b": "Ramp Business International"
+    },
+    {
+      "a": "Brex",
+      "b": "Brex Inc"
+    },
+    {
+      "a": "Deel",
+      "b": "Deel Inc"
+    },
+    {
+      "a": "Shopify",
+      "b": "Shopify Inc"
+    },
+    {
+      "a": "Snap Inc",
+      "b": "Snapchat"
+    },
+    {
+      "a": "Coinbase",
+      "b": "Coinbase Global"
+    },
+    {
+      "a": "Mistral AI",
+      "b": "Mistral"
+    },
+    {
+      "a": "xAI",
+      "b": "X.AI Corp"
+    },
+    {
+      "a": "Waymo",
+      "b": "Waymo LLC"
+    },
+    {
+      "a": "Tesla",
+      "b": "Tesla Inc"
+    },
+    {
+      "a": "Amazon",
+      "b": "Amazon.com"
+    },
+    {
+      "a": "Microsoft",
+      "b": "Microsoft Corporation"
+    },
+    {
+      "a": "Uber",
+      "b": "Uber Technologies"
+    },
+    {
+      "a": "Rivian",
+      "b": "Rivian Automotive"
+    },
+    {
+      "a": "Moog",
+      "b": "Moog Inc"
+    },
+    {
+      "a": "Helsing",
+      "b": "Helsing GmbH"
+    },
+    {
+      "a": "SambaNova",
+      "b": "SambaNova Systems"
+    }
+  ],
+  "negative_pairs": [
+    {
+      "a": "Acme AI",
+      "b": "Acme Labs"
+    },
+    {
+      "a": "Vertex Pharmaceuticals",
+      "b": "Vertex Software"
+    },
+    {
+      "a": "Anthem Biosciences",
+      "b": "Anthemis Group"
+    },
+    {
+      "a": "Nova Systems",
+      "b": "Nova Ltd"
+    },
+    {
+      "a": "Orion Health",
+      "b": "Orion Network"
+    },
+    {
+      "a": "Pulse Secure",
+      "b": "Pulse Labs"
+    },
+    {
+      "a": "Atlas Copco",
+      "b": "Atlas Corp"
+    },
+    {
+      "a": "Mercury Systems",
+      "b": "Mercury Financial"
+    },
+    {
+      "a": "Foundry Industrial",
+      "b": "Foundry Digital"
+    },
+    {
+      "a": "Prism Analytics",
+      "b": "Prism Data"
+    },
+    {
+      "a": "Beacon Therapeutics",
+      "b": "Beacon Biosignals"
+    },
+    {
+      "a": "Element Labs",
+      "b": "Elements Financial"
+    },
+    {
+      "a": "CoreWeave",
+      "b": "Core Scientific"
+    },
+    {
+      "a": "Ironclad",
+      "b": "Iron Mountain"
+    },
+    {
+      "a": "Relay Network",
+      "b": "Relay Payments"
+    },
+    {
+      "a": "Loop Industries",
+      "b": "Loopt Works"
+    },
+    {
+      "a": "Base Power",
+      "b": "Baseload Capital"
+    },
+    {
+      "a": "Vantage Data Centers",
+      "b": "Vantage Point Solutions"
+    },
+    {
+      "a": "Harbor Freight Tools",
+      "b": "Harbor Logistics"
+    },
+    {
+      "a": "Crescent Energy",
+      "b": "Crescent Point Energy"
+    },
+    {
+      "a": "Summit Materials",
+      "b": "Summit Partners"
+    },
+    {
+      "a": "Vector Institute",
+      "b": "Vector Solutions"
+    },
+    {
+      "a": "Axiom Space",
+      "b": "Axiom Global"
+    },
+    {
+      "a": "Helion Energy",
+      "b": "Helion Inc"
+    },
+    {
+      "a": "Radiant Nuclear",
+      "b": "Radiant Logistics"
+    },
+    {
+      "a": "Sierra Space",
+      "b": "Sierra Nevada Corp"
+    },
+    {
+      "a": "Epirus",
+      "b": "Epirus Inc"
+    },
+    {
+      "a": "Shield AI",
+      "b": "Shield Therapeutics"
+    },
+    {
+      "a": "Firefly Aerospace",
+      "b": "Firefly Health"
+    },
+    {
+      "a": "Rocket Lab",
+      "b": "Rocket Lab USA"
+    },
+    {
+      "a": "One Web",
+      "b": "OneWeb Technologies"
+    },
+    {
+      "a": "Planet Labs",
+      "b": "Planet Fitness"
+    },
+    {
+      "a": "Graphcore",
+      "b": "Graphika"
+    },
+    {
+      "a": "Groq",
+      "b": "Grok (xAI)"
+    },
+    {
+      "a": "Saronic",
+      "b": "Saronic Technologies"
+    },
+    {
+      "a": "Applied Intuition",
+      "b": "Applied Materials"
+    },
+    {
+      "a": "Skydio",
+      "b": "Skydio Inc vs Skydio Ltd UK"
+    },
+    {
+      "a": "Figure AI",
+      "b": "Figure Eight Federal"
+    },
+    {
+      "a": "Physical Intelligence",
+      "b": "Intelligent Systems"
+    },
+    {
+      "a": "Skild AI",
+      "b": "Skylark Labs"
+    },
+    {
+      "a": "Standard Bots",
+      "b": "Standard Industries"
+    },
+    {
+      "a": "Collinear Networks",
+      "b": "Collinearity Pharma"
+    },
+    {
+      "a": "Together AI",
+      "b": "Together Health"
+    },
+    {
+      "a": "Notable Health",
+      "b": "Notable Labs"
+    },
+    {
+      "a": "Inflection Bio",
+      "b": "Inflection AI"
+    },
+    {
+      "a": "Ambient.ai",
+      "b": "Ambient Scientific"
+    },
+    {
+      "a": "Cranium",
+      "b": "Cranium Inc vs Cranium Studios"
+    }
+  ]
+}

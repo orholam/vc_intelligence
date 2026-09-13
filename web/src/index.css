@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — shared with the Copyr platform */
+  --color-brand-50: #eceefc;
+  --color-brand-100: #dfe3f8;
+  --color-brand-200: #c3c9f0;
+  --color-brand-300: #a3abe6;
+  --color-brand-400: #7c85db;
+  --color-brand-500: #5e6ad2;
+  --color-brand-600: #4f59bd;
+  --color-brand-700: #434aa3;
+  --color-brand-800: #373c82;
+  --color-brand-900: #2e3370;
+
+  /* Warm paper neutrals — the Copyr landing look */
+  --color-paper-50: #f7f6f2;
+  --color-paper-100: #ecebe6;
+  --color-paper-200: #ddd8cf;
+  --color-paper-300: #c4bfb5;
+  --color-paper-400: #a29d93;
+  --color-paper-500: #7f7a71;
+  --color-paper-600: #635f58;
+  --color-paper-700: #474440;
+  --color-paper-800: #2e2c28;
+  --color-paper-900: #171613;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Newsreader", ui-serif, Georgia, serif;
+}
+
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.011em;
+}
+
+body {
+  margin: 0;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.15s ease both;
+}
+
+/* New feed rows: fade + gentle slide so arrivals don't slam in. */
+@keyframes feed-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-7px);
+  }
+}
+.feed-enter {
+  animation: feed-enter 0.28s ease-out both;
+}
+
+::selection {
+  background: rgba(94, 106, 210, 0.25);
+  color: #171613;
+}

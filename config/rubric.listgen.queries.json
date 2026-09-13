@@ -1,0 +1,160 @@
+{
+  "$comment": "G2/\u00a78 canned ListGen thesis queries with expected filter intent for interpretation scoring.",
+  "version": "2026.08.1",
+  "queries": [
+    {
+      "query": "pre-seed and seed fintech startups in Europe that raised recently",
+      "limit": 25,
+      "expected": {
+        "sectors": [
+          "fintech",
+          "payments",
+          "banking_lending"
+        ],
+        "countries": [
+          "GB",
+          "DE",
+          "FR",
+          "NL",
+          "SE",
+          "ES",
+          "IT",
+          "CH",
+          "IE"
+        ],
+        "funding_stage": [
+          "pre_seed",
+          "seed"
+        ],
+        "signals": [
+          "raised_recently"
+        ]
+      }
+    },
+    {
+      "query": "Series A AI infrastructure companies in the US",
+      "limit": 20,
+      "expected": {
+        "sectors": [
+          "ai_ml",
+          "cloud_infra",
+          "semiconductors"
+        ],
+        "countries": [
+          "US"
+        ],
+        "funding_stage": [
+          "series_a"
+        ]
+      }
+    },
+    {
+      "query": "climate and energy storage startups hiring aggressively",
+      "limit": 25,
+      "expected": {
+        "sectors": [
+          "energy_transition",
+          "solar_storage"
+        ],
+        "signals": [
+          "hiring"
+        ]
+      }
+    },
+    {
+      "query": "biotech companies with accepted funding facts last month",
+      "limit": 30,
+      "expected": {
+        "sectors": [
+          "biotech_pharma"
+        ],
+        "signals": [
+          "raised_recently"
+        ]
+      }
+    },
+    {
+      "query": "early-stage devtools startups outside the US",
+      "limit": 25,
+      "expected": {
+        "sectors": [
+          "devtools"
+        ],
+        "funding_stage": [
+          "pre_seed",
+          "seed"
+        ]
+      }
+    },
+    {
+      "query": "defense tech companies expanding internationally",
+      "limit": 15,
+      "expected": {
+        "sectors": [
+          "govtech_defense",
+          "robotics_hardware"
+        ],
+        "signals": [
+          "expanding"
+        ]
+      }
+    },
+    {
+      "query": "fintech companies showing distress signals layoffs or shutdowns",
+      "limit": 20,
+      "expected": {
+        "sectors": [
+          "fintech",
+          "payments",
+          "banking_lending"
+        ],
+        "signals": [
+          "distress"
+        ]
+      }
+    },
+    {
+      "query": "healthtech Series B companies founded after 2020",
+      "limit": 20,
+      "expected": {
+        "sectors": [
+          "healthtech",
+          "medtech_devices"
+        ],
+        "funding_stage": [
+          "series_b"
+        ],
+        "founded_after": 2020
+      }
+    },
+    {
+      "query": "e-commerce and retail AI startups in the UK raising money",
+      "limit": 20,
+      "expected": {
+        "sectors": [
+          "ecommerce",
+          "retail",
+          "ai_ml"
+        ],
+        "countries": [
+          "GB"
+        ],
+        "signals": [
+          "raised_recently"
+        ]
+      }
+    },
+    {
+      "query": "robotics companies acquiring competitors roll-up candidates",
+      "limit": 15,
+      "expected": {
+        "sectors": [
+          "robotics_hardware"
+        ],
+        "signals": [
+          "acquiring"
+        ]
+      }
+    }
+  ]
+}
